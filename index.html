@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FixerTools - Free Online Calculators, Converters & Text Tools</title>
+<meta name="description" content="Use 30 free online tools: age, BMI and EMI calculators, word counter, unit converter, JSON formatter, image compressor and more. No sign-up needed.">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="theme-color" content="#0f5c8a">
+<link rel="canonical" href="https://fixertools.online/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='10' fill='%230f5c8a'/%3E%3Ctext x='32' y='45' font-size='38' font-family='Arial' font-weight='700' text-anchor='middle' fill='white'%3EF%3C/text%3E%3C/svg%3E">
+<meta property="og:type" content="website"><meta property="og:site_name" content="FixerTools">
+<meta property="og:title" content="FixerTools - Free Online Calculators, Converters & Text Tools"><meta property="og:description" content="Use 30 free online tools: age, BMI and EMI calculators, word counter, unit converter, JSON formatter, image compressor and more. No sign-up needed."><meta property="og:url" content="https://fixertools.online/">
+<meta name="twitter:card" content="summary"><meta name="twitter:title" content="FixerTools - Free Online Calculators, Converters & Text Tools"><meta name="twitter:description" content="Use 30 free online tools: age, BMI and EMI calculators, word counter, unit converter, JSON formatter, image compressor and more. No sign-up needed.">
+<style>
+:root{--bg:#fff;--soft:#f5f6f7;--ink:#1c2230;--muted:#5f6b7a;--line:#dfe3e8;--brand:#0f5c8a;--brand-d:#0a4467;--ok:#eef5f1}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.65 system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:var(--brand);text-decoration:none}a:hover{text-decoration:underline}
+button,input,select,textarea{font:inherit;color:inherit}button{cursor:pointer}
+.wrap{width:min(1100px,92%);margin:0 auto}
+.hidden{display:none!important}.muted{color:var(--muted)}
+header.site{position:sticky;top:0;z-index:20;background:#fff;border-bottom:1px solid var(--line)}
+.bar{display:flex;align-items:center;justify-content:space-between;gap:24px;min-height:62px}
+.logo{font-size:1.25rem;font-weight:700;color:var(--ink);letter-spacing:-.3px}.logo:hover{text-decoration:none}.logo b{color:var(--brand)}
+nav.main{display:flex;gap:22px;font-size:.92rem;overflow-x:auto;white-space:nowrap;scrollbar-width:none}nav.main::-webkit-scrollbar{display:none}
+nav.main a{color:#3b4658;padding:6px 0;border-bottom:2px solid transparent}nav.main a:hover{color:var(--brand);text-decoration:none;border-color:var(--brand)}
+.hero{background:var(--soft);border-bottom:1px solid var(--line);padding:56px 0 48px}
+.hero h1{font-size:clamp(2rem,4.6vw,3rem);line-height:1.12;letter-spacing:-1px;margin:0 0 14px;max-width:720px}
+.hero p{max-width:620px;margin:0 0 24px;color:var(--muted);font-size:1.07rem}
+.search{display:flex;max-width:560px;border:1px solid #c5ccd5;background:#fff;border-radius:6px;overflow:hidden}
+.search input{flex:1;min-width:0;border:0;outline:0;padding:13px 14px;background:transparent}.search:focus-within{border-color:var(--brand);box-shadow:0 0 0 3px #0f5c8a22}
+.search button,.primary{border:0;background:var(--brand);color:#fff;font-weight:600;padding:11px 20px;border-radius:6px}.search button{border-radius:0}.search button:hover,.primary:hover{background:var(--brand-d)}
+.facts{display:flex;flex-wrap:wrap;gap:8px 26px;margin:20px 0 0;padding:0;list-style:none;color:var(--muted);font-size:.9rem}
+section.blk{padding:56px 0;border-bottom:1px solid var(--line)}section.blk.alt{background:var(--soft)}
+h2.t{font-size:1.65rem;letter-spacing:-.5px;margin:0 0 6px;line-height:1.25}.lead{margin:0 0 26px;color:var(--muted);max-width:680px}
+.head{display:flex;justify-content:space-between;align-items:flex-end;gap:16px;flex-wrap:wrap;margin-bottom:6px}
+.filters{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 20px}
+.chip{border:1px solid var(--line);background:#fff;padding:7px 14px;border-radius:5px;font-size:.88rem;color:#3b4658}.chip:hover{border-color:#aab3bf}.chip.active{background:var(--ink);border-color:var(--ink);color:#fff}
+.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.tool-card{background:#fff;border:1px solid var(--line);border-radius:6px;padding:16px 18px;cursor:pointer;transition:border-color .15s,box-shadow .15s}
+.tool-card:hover,.tool-card:focus-visible{border-color:var(--brand);box-shadow:0 2px 10px #1c223014;outline:0}
+.tool-card h3{margin:6px 0 4px;font-size:1rem}.tool-card p{margin:0;color:var(--muted);font-size:.88rem;line-height:1.5}
+.tag{font-size:.7rem;text-transform:uppercase;letter-spacing:.9px;color:var(--brand);font-weight:700}
+.panel{background:#fff;border:1px solid var(--line);border-radius:8px;padding:26px;margin-top:26px;border-top:3px solid var(--brand)}
+.panel h2{margin:0}.panel .sub{margin:2px 0 18px;color:var(--muted);font-size:.93rem}
+.section-head{display:flex;justify-content:space-between;gap:12px;align-items:flex-start}.section-head h2{font-size:1.3rem}
+.tool-ui,.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}.field{display:flex;flex-direction:column;gap:6px}.field.full{grid-column:1/-1}
+.field label{font-size:.85rem;font-weight:600;color:#3b4658}
+.field input,.field select,.field textarea{width:100%;border:1px solid #c5ccd5;border-radius:6px;background:#fff;padding:10px 12px;outline:0}
+.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--brand);box-shadow:0 0 0 3px #0f5c8a22}.field textarea{min-height:120px;resize:vertical}
+.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px;grid-column:1/-1}
+.secondary{border:1px solid #c5ccd5;background:#fff;color:#3b4658;padding:10px 16px;border-radius:6px;font-weight:600}.secondary:hover{background:var(--soft)}
+.result{margin-top:16px;padding:14px 16px;border:1px solid #cfe3d8;background:var(--ok);border-radius:6px;white-space:pre-wrap;overflow-wrap:anywhere}.result:empty{display:none}
+.result a.primary{display:inline-block;color:#fff;text-decoration:none}
+.notice{margin-top:16px;padding:10px 14px;border-left:3px solid #9aa7b6;background:var(--soft);color:var(--muted);font-size:.85rem}
+.two{display:grid;grid-template-columns:1.2fr 1fr;gap:40px}.two p{margin:0 0 14px}
+.list{margin:0;padding:0;list-style:none}.list li{padding:11px 0;border-top:1px solid var(--line)}.list li:first-child{border-top:0;padding-top:0}.list b{display:block}.list span{color:var(--muted);font-size:.92rem}
+details{border-top:1px solid var(--line);padding:15px 0}details:last-of-type{border-bottom:1px solid var(--line)}summary{cursor:pointer;font-weight:600;list-style:none;display:flex;justify-content:space-between;gap:12px}summary::-webkit-details-marker{display:none}summary:after{content:"+";color:var(--brand);font-size:1.25rem;line-height:1}details[open] summary:after{content:"\2013"}details p{margin:10px 0 0;color:var(--muted)}
+.legal-wrap{display:grid;grid-template-columns:210px minmax(0,1fr);gap:44px;align-items:start}
+.sidenav{position:sticky;top:84px;display:flex;flex-direction:column;border-left:2px solid var(--line)}.sidenav a{padding:8px 14px;color:#3b4658;font-size:.93rem;margin-left:-2px;border-left:2px solid transparent}.sidenav a:hover{color:var(--brand);border-color:var(--brand);text-decoration:none}
+.policy{padding-bottom:40px;margin-bottom:40px;border-bottom:1px solid var(--line)}.policy:last-child{border:0;margin:0;padding:0}
+.policy h2{font-size:1.5rem;margin:0 0 4px;letter-spacing:-.4px}.policy .date{font-size:.85rem;color:var(--muted);margin:0 0 18px}
+.policy h3{font-size:1.02rem;margin:22px 0 6px}.policy p{margin:0 0 12px;color:#333d4d}.policy ul{margin:0 0 14px;padding-left:20px;color:#333d4d}.policy li{margin:5px 0}
+.contact-grid{display:grid;grid-template-columns:1fr 1.3fr;gap:40px}.contact-grid dl{margin:0}.contact-grid dt{font-size:.78rem;text-transform:uppercase;letter-spacing:.9px;color:var(--muted);font-weight:700;margin-top:18px}.contact-grid dt:first-child{margin-top:0}.contact-grid dd{margin:3px 0 0;overflow-wrap:anywhere}
+footer.site{background:#1c2230;color:#b4bdca;padding:34px 0 26px;font-size:.9rem}footer.site a{color:#d5dbe4}.fcols{display:flex;justify-content:space-between;gap:30px;flex-wrap:wrap}.fl{display:flex;gap:10px 22px;flex-wrap:wrap}.copy{margin-top:22px;padding-top:16px;border-top:1px solid #ffffff1f;font-size:.83rem}
+@media(max-width:860px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}.two,.contact-grid{grid-template-columns:1fr;gap:24px}.legal-wrap{grid-template-columns:1fr;gap:0}.sidenav{display:none}}
+@media(max-width:560px){.grid,.tool-ui,.form-grid{grid-template-columns:1fr}.hero{padding:38px 0 34px}section.blk{padding:40px 0}.bar{flex-direction:column;align-items:flex-start;gap:0;padding:10px 0 0}nav.main{width:100%;gap:18px}.panel{padding:18px}}
+</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebSite", "name": "FixerTools", "url": "https://fixertools.online/", "description": "Free online calculators, converters, text tools, developer tools and image tools."}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "FixerTools", "url": "https://fixertools.online/", "email": "supportfixertools@gmail.com"}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Are FixerTools online tools really free?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. All tools on FixerTools are free to use, and you do not need to create an account."}}, {"@type": "Question", "name": "Is my data uploaded to your servers?", "acceptedAnswer": {"@type": "Answer", "text": "Many of our tools process information directly in your browser, so the content you enter or upload is not intentionally sent to our servers by that tool. Still, avoid entering passwords, confidential documents or sensitive personal information into any online tool. See the Privacy Policy."}}, {"@type": "Question", "name": "Do the tools work on mobile phones?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. FixerTools works on phones, tablets and desktop browsers."}}, {"@type": "Question", "name": "How accurate are the calculators and converters?", "acceptedAnswer": {"@type": "Answer", "text": "We aim to provide useful and accurate results, but you should verify important calculations before relying on them. See the Disclaimer."}}, {"@type": "Question", "name": "Can I suggest a new tool?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Send your idea through the contact form or email supportfixertools@gmail.com."}}]}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "ItemList", "name": "FixerTools free online tools", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Age Calculator", "description": "Free age calculator to find your exact age in years, months and days."}, {"@type": "ListItem", "position": 2, "name": "Percentage Calculator", "description": "Percentage calculator to find any percent of a number instantly."}, {"@type": "ListItem", "position": 3, "name": "BMI Calculator", "description": "BMI calculator to check your body mass index from height and weight."}, {"@type": "ListItem", "position": 4, "name": "Date Difference Calculator", "description": "Date difference calculator to count the days between two dates."}, {"@type": "ListItem", "position": 5, "name": "Discount Calculator", "description": "Discount calculator to work out the sale price and how much you save."}, {"@type": "ListItem", "position": 6, "name": "Tip Calculator", "description": "Tip calculator to add a tip and split the bill between people."}, {"@type": "ListItem", "position": 7, "name": "Loan EMI Calculator", "description": "Loan EMI calculator to estimate monthly payments, interest and total repayment."}, {"@type": "ListItem", "position": 8, "name": "GST Calculator", "description": "GST calculator to add or remove tax (GST, VAT or sales tax) from any amount."}, {"@type": "ListItem", "position": 9, "name": "Word Counter", "description": "Word counter to count words, characters, sentences and lines online."}, {"@type": "ListItem", "position": 10, "name": "Case Converter", "description": "Case converter to change text to uppercase, lowercase, title case or sentence case."}, {"@type": "ListItem", "position": 11, "name": "Reverse Text Tool", "description": "Reverse text tool to flip the order of characters in any text."}, {"@type": "ListItem", "position": 12, "name": "Remove Duplicate Lines", "description": "Remove duplicate lines from a list or block of text in one click."}, {"@type": "ListItem", "position": 13, "name": "URL Slug Generator", "description": "URL slug generator to turn any title into a clean, SEO-friendly slug."}, {"@type": "ListItem", "position": 14, "name": "Lorem Ipsum Generator", "description": "Lorem ipsum generator for dummy placeholder text in designs and mockups."}, {"@type": "ListItem", "position": 15, "name": "Strong Password Generator", "description": "Random strong password generator with custom length and character types."}, {"@type": "ListItem", "position": 16, "name": "Character Frequency Counter", "description": "Character frequency counter to see how often each character appears."}, {"@type": "ListItem", "position": 17, "name": "Text Length Checker", "description": "Text length checker for characters, words and lines."}, {"@type": "ListItem", "position": 18, "name": "Find and Replace Text", "description": "Find and replace tool to swap words or phrases in your text online."}, {"@type": "ListItem", "position": 19, "name": "Unit Converter", "description": "Unit converter for length and weight: meters, km, miles, kg, pounds and more."}, {"@type": "ListItem", "position": 20, "name": "Temperature Converter", "description": "Temperature converter for Celsius, Fahrenheit and Kelvin."}, {"@type": "ListItem", "position": 21, "name": "Data Size Converter", "description": "Data size converter for bytes, KB, MB and GB."}, {"@type": "ListItem", "position": 22, "name": "Time Converter", "description": "Time converter for seconds, minutes and hours."}, {"@type": "ListItem", "position": 23, "name": "Text to Binary Converter", "description": "Text to binary converter and binary to text decoder."}, {"@type": "ListItem", "position": 24, "name": "Base64 Encoder & Decoder", "description": "Base64 encoder and decoder for text, online and free."}, {"@type": "ListItem", "position": 25, "name": "URL Encoder & Decoder", "description": "URL encoder and decoder for query strings and URL components."}, {"@type": "ListItem", "position": 26, "name": "JSON Formatter & Validator", "description": "JSON formatter and validator to beautify and check JSON data."}, {"@type": "ListItem", "position": 27, "name": "HTML Entity Encoder & Decoder", "description": "HTML entity encoder and decoder for special characters and safe markup."}, {"@type": "ListItem", "position": 28, "name": "HEX to RGB Color Converter", "description": "HEX to RGB color converter for web design and CSS."}, {"@type": "ListItem", "position": 29, "name": "Image Compressor", "description": "Image compressor to reduce photo file size right in your browser."}, {"@type": "ListItem", "position": 30, "name": "Image Resizer", "description": "Image resizer to change image width and height in pixels."}, {"@type": "ListItem", "position": 31, "name": "Image Format Converter", "description": "Image converter to change pictures to PNG, JPEG or WebP."}]}</script>
+</head>
+<body id="top">
+<header class="site"><div class="wrap bar">
+<a class="logo" href="#top">Fixer<b>Tools</b></a>
+<nav class="main" aria-label="Main navigation"><a href="#tools">Tools</a><a href="#about">About</a><a href="#faq">FAQ</a><a href="#privacy">Privacy</a><a href="#terms">Terms</a><a href="#disclaimer">Disclaimer</a><a href="#cookies">Cookies</a><a href="#contact">Contact</a></nav>
+</div></header>
+<main>
+<section class="hero"><div class="wrap">
+<h1>Free online calculators, converters and text tools</h1>
+<p>FixerTools brings together 30 simple utilities for everyday work: calculate an age or a loan EMI, count words, convert units, format JSON, or compress an image. No account needed, and most tools run right in your browser.</p>
+<div class="search" role="search"><input id="search" type="search" placeholder="Search tools, e.g. word counter" aria-label="Search free online tools"><button onclick="filterTools()">Search</button></div>
+<ul class="facts"><li>30 free tools</li><li>No sign-up</li><li>Works on mobile</li><li>Browser-based processing</li></ul>
+</div></section>
+
+<section class="blk" id="tools"><div class="wrap">
+<div class="head"><div><h2 class="t">Free online tools</h2><p class="lead" style="margin:0 0 18px">Pick a tool below. It opens right here on the page.</p></div><span class="muted" id="count">30 tools</span></div>
+<div class="filters" role="group" aria-label="Filter tools by category"><button class="chip active" data-cat="All">All</button><button class="chip" data-cat="Calculators">Calculators</button><button class="chip" data-cat="Text">Text tools</button><button class="chip" data-cat="Converters">Converters</button><button class="chip" data-cat="Developer">Developer tools</button><button class="chip" data-cat="Images">Image tools</button></div>
+<div class="grid" id="toolGrid"></div>
+<div class="panel" id="workspace" aria-live="polite">
+<div class="section-head"><div><h2 id="toolTitle">Tool</h2><p id="toolDesc" class="sub"></p></div><button class="secondary" onclick="closeTool()">Close</button></div>
+<div id="toolForm"></div><div class="result" id="output"></div></div>
+</div></section>
+
+<section class="blk" id="popular"><div class="wrap"><h2 class="t">Popular tool pages</h2><p class="lead">Open a tool on its own page.</p><div class="more"><a href="/age-calculator">Age Calculator</a><a href="/percentage-calculator">Percentage Calculator</a><a href="/bmi-calculator">BMI Calculator</a><a href="/loan-emi-calculator">Loan EMI Calculator</a><a href="/gst-calculator">GST Calculator</a><a href="/word-counter">Word Counter</a><a href="/case-converter">Case Converter</a><a href="/password-generator">Password Generator</a><a href="/json-formatter">JSON Formatter</a><a href="/image-compressor">Image Compressor</a></div></div></section>
+
+<section class="blk alt" id="about"><div class="wrap two">
+<div><h2 class="t">About FixerTools</h2>
+<p style="margin-top:14px">FixerTools is a collection of free browser-based utilities built to make everyday digital tasks quicker. Each tool does one job: you enter your values, press a button and get the result.</p>
+<p>The library is still growing. If there is a tool you would like to see, tell us through the <a href="#contact">contact form</a>.</p></div>
+<ul class="list"><li><b>Calculators</b><span>Age, percentage, BMI, discount, tip, loan EMI, GST and date difference.</span></li><li><b>Text tools</b><span>Word counter, case converter, duplicate line remover, slug and password generators.</span></li><li><b>Converters</b><span>Units, temperature, data size, time, binary, Base64 and URL encoding.</span></li><li><b>Developer and image tools</b><span>JSON formatter, HTML entities, HEX to RGB, image compress, resize and convert.</span></li></ul>
+</div></section>
+
+<section class="blk" id="faq"><div class="wrap" style="max-width:820px">
+<h2 class="t">Frequently asked questions</h2><p class="lead">Short answers about using FixerTools.</p>
+<details><summary>Are FixerTools online tools really free?</summary><p>Yes. All tools on FixerTools are free to use, and you do not need to create an account.</p></details><details><summary>Is my data uploaded to your servers?</summary><p>Many of our tools process information directly in your browser, so the content you enter or upload is not intentionally sent to our servers by that tool. Still, avoid entering passwords, confidential documents or sensitive personal information into any online tool. See the <a href="#privacy">Privacy Policy</a>.</p></details><details><summary>Do the tools work on mobile phones?</summary><p>Yes. FixerTools works on phones, tablets and desktop browsers.</p></details><details><summary>How accurate are the calculators and converters?</summary><p>We aim to provide useful and accurate results, but you should verify important calculations before relying on them. See the <a href="#disclaimer">Disclaimer</a>.</p></details><details><summary>Can I suggest a new tool?</summary><p>Yes. Send your idea through the <a href="#contact">contact form</a> or email supportfixertools@gmail.com.</p></details>
+</div></section>
+
+<section class="blk alt" id="legal"><div class="wrap">
+<h2 class="t">Policies</h2><p class="lead">Our privacy, terms, disclaimer and cookie information, all in one place.</p>
+<div class="legal-wrap">
+<nav class="sidenav" aria-label="Policies"><a href="#privacy">Privacy Policy</a><a href="#terms">Terms &amp; Conditions</a><a href="#disclaimer">Disclaimer</a><a href="#cookies">Cookie Policy</a></nav>
+<div>
+
+<article class="policy" id="privacy"><h2>Privacy Policy</h2><p class="date">Effective date: November 4, 2026</p>
+<p>At FixerTools, accessible from <a href="https://fixertools.online">https://fixertools.online</a>, we respect your privacy. This Privacy Policy explains how information may be handled when you use our website.</p>
+<h3>Information We Collect</h3><p>FixerTools does not require users to create an account to use its basic online tools.</p>
+<p>We may receive limited technical information through our hosting provider, such as browser type, device information, IP address and server logs, for security and website operation.</p>
+<p>If you contact us by email, we may receive your email address and the information you voluntarily provide.</p>
+<h3>How Our Tools Work</h3><p>Many of our tools are designed to process information directly in your browser. When processing happens locally, the content you enter or upload is not intentionally sent to our servers by that tool.</p>
+<p>However, avoid entering passwords, confidential documents or sensitive personal information into online tools.</p>
+<h3>Cookies</h3><p>Our website or third-party services may use cookies or similar technologies for essential functionality, analytics or performance. You can manage cookies through your browser settings. See also the <a href="#cookies">Cookie Policy</a>.</p>
+<h3>Third-Party Services</h3><p>Our website may use third-party services, including hosting, analytics or advertising providers. These providers may process information under their own privacy policies.</p>
+<h3>Data Security</h3><p>We take reasonable measures to protect our website. However, no internet transmission or electronic storage system can be guaranteed to be completely secure.</p>
+<h3>Children's Privacy</h3><p>FixerTools is not intentionally designed to collect personal information from children.</p>
+<h3>Policy Updates</h3><p>We may update this Privacy Policy from time to time. Changes will be published on this page.</p>
+<h3>Contact Us</h3><p>For privacy-related questions, contact: <a href="mailto:supportfixertools@gmail.com">supportfixertools@gmail.com</a></p></article>
+
+<article class="policy" id="terms"><h2>Terms &amp; Conditions</h2><p class="date">Effective date: November 4, 2026</p>
+<p>Welcome to FixerTools. By accessing or using our website, you agree to these Terms &amp; Conditions.</p>
+<h3>Use of Website</h3><p>You agree to use FixerTools only for lawful purposes. You must not:</p>
+<ul><li>Use the website for illegal activities.</li><li>Attempt to damage or disrupt the website.</li><li>Attempt unauthorized access to our systems.</li><li>Abuse or misuse our tools.</li></ul>
+<h3>Tools and Services</h3><p>FixerTools provides online utilities for convenience and general use. We may add, modify, suspend or discontinue any tool or feature without prior notice.</p>
+<h3>Accuracy</h3><p>We try to provide useful and accurate results, but we do not guarantee that every result will be error-free or suitable for every purpose. Users are responsible for checking important results.</p>
+<h3>Intellectual Property</h3><p>The FixerTools website design, branding, content and original code are protected by applicable intellectual property laws. You may not reproduce or redistribute our website content without permission, except where permitted by law.</p>
+<h3>Limitation of Liability</h3><p>FixerTools is provided on an "as is" and "as available" basis. To the extent permitted by applicable law, we are not responsible for losses or damages resulting from the use or inability to use our website or tools.</p>
+<h3>Changes to Terms</h3><p>We may update these Terms &amp; Conditions at any time. Continued use of the website means you accept the updated terms.</p>
+<h3>Contact</h3><p><a href="mailto:supportfixertools@gmail.com">supportfixertools@gmail.com</a></p></article>
+
+<article class="policy" id="disclaimer"><h2>Disclaimer</h2><p class="date">Effective date: November 4, 2026</p>
+<p>The information and tools provided by FixerTools are intended for general informational and utility purposes.</p>
+<p>We make reasonable efforts to maintain our tools, but we do not guarantee their accuracy, reliability, completeness or availability.</p>
+<p>Users should independently verify important calculations, conversions and generated results before relying on them.</p>
+<p>FixerTools is not responsible for decisions made solely on the basis of results generated by its tools.</p>
+<p>Use of the website is at your own discretion and risk, subject to applicable law.</p>
+<p>For questions, contact <a href="mailto:supportfixertools@gmail.com">supportfixertools@gmail.com</a>.</p></article>
+
+<article class="policy" id="cookies"><h2>Cookie Policy</h2><p class="date">Effective date: November 4, 2026</p>
+<p>FixerTools may use cookies and similar technologies to improve website functionality and user experience. Cookies are small files stored on your device by websites.</p>
+<h3>Types of Cookies</h3>
+<ul><li><b>Essential cookies:</b> may be required for basic website functionality and security.</li><li><b>Analytics cookies:</b> may help us understand website traffic and improve our services.</li><li><b>Advertising cookies:</b> if advertising services are enabled, third-party providers may use cookies to deliver or measure advertisements.</li></ul>
+<h3>Managing Cookies</h3><p>You can disable or delete cookies through your browser settings. Some website features may not function properly if certain cookies are disabled.</p>
+<p>For questions, contact <a href="mailto:supportfixertools@gmail.com">supportfixertools@gmail.com</a>.</p></article>
+
+</div></div></div></section>
+
+<section class="blk" id="contact"><div class="wrap">
+<h2 class="t">Contact Us</h2><p class="lead">Questions, suggestions, feedback, technical issues or business inquiries are all welcome. We aim to respond as soon as reasonably possible.</p>
+<div class="contact-grid">
+<dl><dt>Official support email</dt><dd><a href="mailto:supportfixertools@gmail.com">supportfixertools@gmail.com</a></dd><dt>Website</dt><dd><a href="https://fixertools.online">https://fixertools.online</a></dd><dt>Technical support</dt><dd>Email us with a description of your issue, the name of the tool and the browser you use.</dd></dl>
+<div class="panel" style="margin:0"><div class="form-grid">
+<div class="field"><label for="c_name">Your name</label><input id="c_name" type="text" autocomplete="name"></div>
+<div class="field"><label for="c_email">Your email</label><input id="c_email" type="email" autocomplete="email"></div>
+<div class="field full"><label for="c_topic">Topic</label><select id="c_topic"><option>Technical support</option><option>Feedback</option><option>Tool suggestion</option><option>Business inquiry</option><option>Privacy question</option></select></div>
+<div class="field full"><label for="c_msg">Message</label><textarea id="c_msg"></textarea></div>
+<div class="actions"><button class="primary" onclick="sendMail()">Send message</button></div></div>
+<div class="notice">This opens your email app with the message ready to send. Please do not include passwords or sensitive personal information.</div></div>
+</div></div></section>
+</main>
+<footer class="site"><div class="wrap"><div class="fcols"><div><strong style="color:#fff">FixerTools</strong><br>Free online tools for everyday tasks.</div>
+<div class="fl"><a href="#tools">Tools</a><a href="#about">About</a><a href="/privacy-policy">Privacy</a><a href="/terms-and-conditions">Terms</a><a href="/disclaimer">Disclaimer</a><a href="/cookie-policy">Cookies</a><a href="/contact">Contact</a></div></div>
+<div class="copy">&copy; <span id="year">2026</span> FixerTools. All rights reserved. &middot; <a href="https://fixertools.online">fixertools.online</a></div></div></footer>
+<script>
+const tools=[
+{id:'age',name:'Age Calculator',cat:'Calculators',icon:'🎂',desc:'Free age calculator to find your exact age in years, months and days.'},
+{id:'percentage',name:'Percentage Calculator',cat:'Calculators',icon:'％',desc:'Percentage calculator to find any percent of a number instantly.'},
+{id:'bmi',name:'BMI Calculator',cat:'Calculators',icon:'⚖️',desc:'BMI calculator to check your body mass index from height and weight.'},
+{id:'date',name:'Date Difference Calculator',cat:'Calculators',icon:'📅',desc:'Date difference calculator to count the days between two dates.'},
+{id:'discount',name:'Discount Calculator',cat:'Calculators',icon:'🏷️',desc:'Discount calculator to work out the sale price and how much you save.'},
+{id:'tip',name:'Tip Calculator',cat:'Calculators',icon:'🧾',desc:'Tip calculator to add a tip and split the bill between people.'},
+{id:'emi',name:'Loan EMI Calculator',cat:'Calculators',icon:'🏦',desc:'Loan EMI calculator to estimate monthly payments, interest and total repayment.'},
+{id:'gst',name:'GST Calculator',cat:'Calculators',icon:'🧮',desc:'GST calculator to add or remove tax (GST, VAT or sales tax) from any amount.'},
+{id:'word',name:'Word Counter',cat:'Text',icon:'📝',desc:'Word counter to count words, characters, sentences and lines online.'},
+{id:'case',name:'Case Converter',cat:'Text',icon:'Aa',desc:'Case converter to change text to uppercase, lowercase, title case or sentence case.'},
+{id:'reverse',name:'Reverse Text Tool',cat:'Text',icon:'↔️',desc:'Reverse text tool to flip the order of characters in any text.'},
+{id:'remove',name:'Remove Duplicate Lines',cat:'Text',icon:'☷',desc:'Remove duplicate lines from a list or block of text in one click.'},
+{id:'slug',name:'URL Slug Generator',cat:'Text',icon:'🔗',desc:'URL slug generator to turn any title into a clean, SEO-friendly slug.'},
+{id:'lorem',name:'Lorem Ipsum Generator',cat:'Text',icon:'¶',desc:'Lorem ipsum generator for dummy placeholder text in designs and mockups.'},
+{id:'password',name:'Strong Password Generator',cat:'Text',icon:'🔐',desc:'Random strong password generator with custom length and character types.'},
+{id:'char',name:'Character Frequency Counter',cat:'Text',icon:'🔠',desc:'Character frequency counter to see how often each character appears.'},
+{id:'length',name:'Text Length Checker',cat:'Text',icon:'📏',desc:'Text length checker for characters, words and lines.'},
+{id:'wordreplace',name:'Find and Replace Text',cat:'Text',icon:'🔎',desc:'Find and replace tool to swap words or phrases in your text online.'},
+{id:'unit',name:'Unit Converter',cat:'Converters',icon:'📐',desc:'Unit converter for length and weight: meters, km, miles, kg, pounds and more.'},
+{id:'temp',name:'Temperature Converter',cat:'Converters',icon:'🌡️',desc:'Temperature converter for Celsius, Fahrenheit and Kelvin.'},
+{id:'data',name:'Data Size Converter',cat:'Converters',icon:'💾',desc:'Data size converter for bytes, KB, MB and GB.'},
+{id:'time',name:'Time Converter',cat:'Converters',icon:'⏱️',desc:'Time converter for seconds, minutes and hours.'},
+{id:'binary',name:'Text to Binary Converter',cat:'Converters',icon:'010',desc:'Text to binary converter and binary to text decoder.'},
+{id:'base64',name:'Base64 Encoder & Decoder',cat:'Converters',icon:'🔡',desc:'Base64 encoder and decoder for text, online and free.'},
+{id:'url',name:'URL Encoder & Decoder',cat:'Converters',icon:'🌐',desc:'URL encoder and decoder for query strings and URL components.'},
+{id:'json',name:'JSON Formatter & Validator',cat:'Developer',icon:'{}',desc:'JSON formatter and validator to beautify and check JSON data.'},
+{id:'html',name:'HTML Entity Encoder & Decoder',cat:'Developer',icon:'</>',desc:'HTML entity encoder and decoder for special characters and safe markup.'},
+{id:'color',name:'HEX to RGB Color Converter',cat:'Developer',icon:'🎨',desc:'HEX to RGB color converter for web design and CSS.'},
+{id:'imagecompress',name:'Image Compressor',cat:'Images',icon:'🖼️',desc:'Image compressor to reduce photo file size right in your browser.'},
+{id:'imageresize',name:'Image Resizer',cat:'Images',icon:'↗️',desc:'Image resizer to change image width and height in pixels.'},
+{id:'imageconvert',name:'Image Format Converter',cat:'Images',icon:'📷',desc:'Image converter to change pictures to PNG, JPEG or WebP.'}
+];
+let activeCat='All', current=null;
+const grid=document.getElementById('toolGrid');
+function render(){
+ const q=document.getElementById('search').value.toLowerCase();
+ const list=tools.filter(t=>(activeCat==='All'||t.cat===activeCat)&&(t.name+' '+t.desc+' '+t.cat).toLowerCase().includes(q));
+ grid.innerHTML=list.map(t=>`<article class="tool-card" tabindex="0" role="button" onclick="openTool('${t.id}')" onkeydown="if(event.key==='Enter')openTool('${t.id}')"><span class="tag">${t.cat==="Text"?"Text":t.cat==="Images"?"Image":t.cat.replace(/s$/,"")}</span><h3>${t.name}</h3><p>${t.desc}</p></article>`).join('')||'<p class="muted">No tools match your search. Try another keyword.</p>';
+ document.getElementById('count').textContent=list.length+(list.length===1?' tool':' tools');
+}
+function filterTools(){render()}
+document.getElementById('search').addEventListener('input',render);
+document.querySelectorAll('.chip').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('.chip').forEach(x=>x.classList.remove('active'));b.classList.add('active');activeCat=b.dataset.cat;render()}));
+function field(label,id,placeholder='',type='text',value=''){return `<div class="field"><label for="${id}">${label}</label><input id="${id}" type="${type}" placeholder="${placeholder}" value="${value}"></div>`}
+function area(label,id,placeholder='Enter text here...'){return `<div class="field full"><label for="${id}">${label}</label><textarea id="${id}" placeholder="${placeholder}"></textarea></div>`}
+function select(label,id,opts){return `<div class="field"><label for="${id}">${label}</label><select id="${id}">${opts.map(o=>`<option value="${o[0]}">${o[1]}</option>`).join('')}</select></div>`}
+function btn(label,fn='runTool()'){return `<div class="actions"><button class="primary" onclick="${fn}">${label}</button><button class="secondary" onclick="clearOutput()">Clear</button></div>`}
+function openTool(id){
+ current=tools.find(t=>t.id===id);document.getElementById('workspace').classList.remove('hidden');
+ document.getElementById('toolTitle').textContent=current.name;document.getElementById('toolDesc').textContent=current.desc;
+ document.getElementById('output').textContent='';
+ const forms={
+ age:field('Date of birth','a_dob','','date')+btn('Calculate age'),
+ percentage:field('Percentage (%)','a_pct','e.g. 15','number')+field('Number','a_num','e.g. 200','number')+btn('Calculate'),
+ bmi:field('Weight (kg)','a_w','e.g. 70','number')+field('Height (cm)','a_h','e.g. 175','number')+btn('Calculate BMI'),
+ date:field('Start date','a_start','','date')+field('End date','a_end','','date')+btn('Count days'),
+ discount:field('Original price','a_price','e.g. 1000','number')+field('Discount (%)','a_disc','e.g. 20','number')+btn('Calculate price'),
+ tip:field('Bill amount','a_bill','e.g. 2500','number')+field('Tip (%)','a_tip','e.g. 10','number')+field('People','a_people','e.g. 2','number')+btn('Split bill'),
+ emi:field('Loan amount','a_loan','e.g. 100000','number')+field('Annual interest (%)','a_rate','e.g. 12','number')+field('Term (months)','a_months','e.g. 24','number')+btn('Calculate EMI'),
+ gst:field('Amount','a_amount','e.g. 1000','number')+field('Tax rate (%)','a_tax','e.g. 18','number')+select('Calculation','a_mode',[['add','Add tax'],['remove','Remove tax']])+btn('Calculate'),
+ word:area('Your text','a_text')+btn('Count words'),
+ case:area('Your text','a_text')+select('Convert to','a_case',[['upper','UPPERCASE'],['lower','lowercase'],['title','Title Case'],['sentence','Sentence case']])+btn('Convert text'),
+ reverse:area('Your text','a_text')+btn('Reverse text'),
+ remove:area('Your lines','a_text')+btn('Remove duplicates'),
+ slug:area('Title or phrase','a_text')+btn('Generate slug'),
+ lorem:field('Number of paragraphs','a_count','3','number')+btn('Generate text'),
+ password:field('Password length','a_len','16','number','16')+select('Include characters','a_chars',[['all','Letters, numbers & symbols'],['noSymbols','Letters & numbers'],['numbers','Numbers only']])+btn('Generate password'),
+ char:area('Your text','a_text')+btn('Analyze characters'),
+ length:area('Your text','a_text')+btn('Measure text'),
+ wordreplace:area('Text','a_text')+field('Find','a_find')+field('Replace with','a_replace')+btn('Replace all'),
+ unit:field('Value','a_val','e.g. 5','number')+select('Convert from','a_from',[['m','Meters'],['km','Kilometers'],['cm','Centimeters'],['mi','Miles'],['kg','Kilograms'],['g','Grams'],['lb','Pounds']])+select('Convert to','a_to',[['km','Kilometers'],['m','Meters'],['cm','Centimeters'],['mi','Miles'],['kg','Kilograms'],['g','Grams'],['lb','Pounds']])+btn('Convert'),
+ temp:field('Temperature','a_val','e.g. 25','number')+select('From','a_from',[['C','Celsius'],['F','Fahrenheit'],['K','Kelvin']])+select('To','a_to',[['F','Fahrenheit'],['C','Celsius'],['K','Kelvin']])+btn('Convert'),
+ data:field('Value','a_val','e.g. 10','number')+select('From','a_from',[['B','Bytes'],['KB','KB'],['MB','MB'],['GB','GB']])+select('To','a_to',[['MB','MB'],['B','Bytes'],['KB','KB'],['GB','GB']])+btn('Convert'),
+ time:field('Value','a_val','e.g. 90','number')+select('From','a_from',[['sec','Seconds'],['min','Minutes'],['hr','Hours']])+select('To','a_to',[['min','Minutes'],['sec','Seconds'],['hr','Hours']])+btn('Convert'),
+ binary:area('Text or binary','a_text')+select('Action','a_mode',[['encode','Text to binary'],['decode','Binary to text']])+btn('Convert'),
+ base64:area('Text','a_text')+select('Action','a_mode',[['encode','Encode'],['decode','Decode']])+btn('Convert'),
+ url:area('Text or URL component','a_text')+select('Action','a_mode',[['encode','Encode'],['decode','Decode']])+btn('Convert'),
+ json:area('JSON input','a_text','{"name":"FixerTools"}')+btn('Format JSON'),
+ html:area('Text or HTML entities','a_text')+select('Action','a_mode',[['encode','Encode entities'],['decode','Decode entities']])+btn('Convert'),
+ color:field('HEX color','a_hex','#6ee7c2','text','#6ee7c2')+btn('Convert to RGB'),
+ imagecompress: `<div class="field full"><label>Select image</label><input id="a_file" type="file" accept="image/*"></div>`+field('JPEG quality (0.1–1)','a_quality','0.75','number','0.75')+btn('Compress image'),
+ imageresize:`<div class="field full"><label>Select image</label><input id="a_file" type="file" accept="image/*"></div>`+field('Width (px)','a_width','800','number')+field('Height (px)','a_height','600','number')+btn('Resize image'),
+ imageconvert:`<div class="field full"><label>Select image</label><input id="a_file" type="file" accept="image/*"></div>`+select('Output format','a_format',[['image/png','PNG'],['image/jpeg','JPEG'],['image/webp','WebP']])+btn('Convert image')
+ };
+ document.getElementById('toolForm').innerHTML=`<div class="tool-ui">${forms[id]||''}</div><div class="notice">Your inputs are processed in your browser for this tool. Do not use this page to process highly sensitive information on a shared device.</div>`;
+ if(!window.__init)document.getElementById('workspace').scrollIntoView({behavior:'smooth',block:'start'});
+}
+function val(id){return document.getElementById(id)?.value??''}
+function num(id){return Number(val(id))}
+function out(s){document.getElementById('output').textContent=s}
+function clearOutput(){document.getElementById('output').textContent=''}
+function closeTool(){document.getElementById('workspace').classList.add('hidden');current=null}
+const units={m:1,km:1000,cm:.01,mi:1609.344,kg:1,g:.001,lb:.45359237,B:1,KB:1024,MB:1048576,GB:1073741824,sec:1,min:60,hr:3600};
+function runTool(){
+try{
+switch(current.id){
+case'age':{let d=new Date(val('a_dob')+'T00:00:00'),n=new Date();if(!val('a_dob')||d>n)return out('Please enter a valid date of birth.');let y=n.getFullYear()-d.getFullYear(),m=n.getMonth()-d.getMonth(),day=n.getDate()-d.getDate();if(day<0){m--;day+=new Date(n.getFullYear(),n.getMonth(),0).getDate()}if(m<0){y--;m+=12}out(`You are ${y} years, ${m} months and ${day} days old.`);break}
+case'percentage':out(`${num('a_pct')}% of ${num('a_num')} = ${(num('a_pct')*num('a_num')/100).toLocaleString()}`);break;
+case'bmi':{let w=num('a_w'),h=num('a_h')/100;if(w<=0||h<=0)return out('Enter valid weight and height.');let b=w/(h*h);out(`Your BMI is ${b.toFixed(1)}. ${b<18.5?'Underweight':b<25?'Normal range':b<30?'Overweight':'Obesity range'}.\nBMI is a screening measure, not a diagnosis.`);break}
+case'date':{let a=new Date(val('a_start')),b=new Date(val('a_end'));if(!val('a_start')||!val('a_end'))return out('Select both dates.');out(`${Math.abs(Math.round((b-a)/86400000)).toLocaleString()} days between the dates.`);break}
+case'discount':{let p=num('a_price'),d=num('a_disc');out(`You save: ${(p*d/100).toFixed(2)}\nFinal price: ${(p-p*d/100).toFixed(2)}`);break}
+case'tip':{let b=num('a_bill'),t=num('a_tip'),p=Math.max(1,num('a_people'));out(`Tip: ${(b*t/100).toFixed(2)}\nTotal: ${(b+b*t/100).toFixed(2)}\nPer person: ${((b+b*t/100)/p).toFixed(2)}`);break}
+case'emi':{let p=num('a_loan'),r=num('a_rate')/1200,n=num('a_months');if(p<=0||n<=0)return out('Enter valid loan amount and term.');let e=r===0?p/n:p*r*Math.pow(1+r,n)/(Math.pow(1+r,n)-1);out(`Estimated monthly EMI: ${e.toFixed(2)}\nTotal repayment: ${(e*n).toFixed(2)}\nTotal interest: ${(e*n-p).toFixed(2)}`);break}
+case'gst':{let a=num('a_amount'),t=num('a_tax')/100;if(val('a_mode')==='add')out(`Tax: ${(a*t).toFixed(2)}\nTotal including tax: ${(a*(1+t)).toFixed(2)}`);else out(`Base amount: ${(a/(1+t)).toFixed(2)}\nIncluded tax: ${(a-a/(1+t)).toFixed(2)}`);break}
+case'word':{let s=val('a_text'),words=s.trim()?s.trim().split(/\s+/).length:0;out(`Words: ${words}\nCharacters (with spaces): ${s.length}\nCharacters (without spaces): ${s.replace(/\s/g,'').length}\nSentences: ${(s.match(/[.!?]+/g)||[]).length}\nLines: ${s? s.split(/\r\n|\r|\n/).length:0}`);break}
+case'case':{let s=val('a_text'),m=val('a_case');out(m==='upper'?s.toUpperCase():m==='lower'?s.toLowerCase():m==='title'?s.toLowerCase().replace(/\b\w/g,c=>c.toUpperCase()):s.toLowerCase().replace(/(^\s*\w|[.!?]\s+\w)/g,c=>c.toUpperCase()));break}
+case'reverse':out([...val('a_text')].reverse().join(''));break;
+case'remove':out([...new Set(val('a_text').split(/\r?\n/))].join('\n'));break;
+case'slug':out(val('a_text').toLowerCase().trim().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,''));break;
+case'lorem':{let p=Math.max(1,Math.min(20,num('a_count')||1)),S=['Lorem ipsum dolor sit amet, consectetur adipiscing elit.','Integer vitae justo sed arcu consequat feugiat.','Curabitur at magna non ipsum blandit posuere.','Sed ut perspiciatis unde omnis iste natus error sit voluptatem.','Vivamus luctus urna sed urna ultricies ac tempor dui sagittis.','Nulla facilisi, maecenas faucibus mollis interdum.','Praesent commodo cursus magna, vel scelerisque nisl consectetur et.','Donec ullamcorper nulla non metus auctor fringilla.'];out(Array.from({length:p},(_,i)=>Array.from({length:4},(_,j)=>S[(i*3+j)%S.length]).join(' ')).join('\n\n'));break}
+case'password':{let n=Math.max(6,Math.min(128,num('a_len')||16)),c=val('a_chars'),chars=c==='numbers'?'0123456789':c==='noSymbols'?'ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz23456789':'ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz23456789!@#$%^&*()-_=+';let a=new Uint32Array(n);crypto.getRandomValues(a);out(Array.from(a,x=>chars[x%chars.length]).join(''));break}
+case'char':{let m={};for(let c of val('a_text'))m[c]=(m[c]||0)+1;out(Object.entries(m).sort((a,b)=>b[1]-a[1]).map(([c,n])=>`${c===' '?'[space]':c==='\n'?'[newline]':c}: ${n}`).join('\n')||'No characters entered.');break}
+case'length':{let s=val('a_text');out(`Characters: ${s.length}\nCharacters without spaces: ${s.replace(/\s/g,'').length}\nWords: ${s.trim()?s.trim().split(/\s+/).length:0}\nLines: ${s?s.split(/\r\n|\r|\n/).length:0}`);break}
+case'wordreplace':out(val('a_text').split(val('a_find')).join(val('a_replace')));break;
+case'unit':case'data':case'time':{let a=val('a_from'),b=val('a_to'),v=num('a_val');if(!(a in units)||!(b in units))return out('Choose compatible units.');out(`${v} ${a} = ${(v*units[a]/units[b]).toLocaleString(undefined,{maximumFractionDigits:8})} ${b}`);break}
+case'temp':{let v=num('a_val'),f=val('a_from'),t=val('a_to'),c=f==='C'?v:f==='F'?(v-32)*5/9:v-273.15,r=t==='C'?c:t==='F'?c*9/5+32:c+273.15;out(`${v}°${f} = ${r.toFixed(2)}°${t}`);break}
+case'binary':{let s=val('a_text');if(val('a_mode')==='encode')out([...new TextEncoder().encode(s)].map(x=>x.toString(2).padStart(8,'0')).join(' '));else{let bits=s.trim().split(/\s+/);if(bits.some(x=>!/^[01]{1,8}$/.test(x)))return out('Enter binary bytes separated by spaces.');out(new TextDecoder().decode(new Uint8Array(bits.map(x=>parseInt(x,2)))))}break}
+case'base64':{let s=val('a_text');out(val('a_mode')==='encode'?btoa(unescape(encodeURIComponent(s))):decodeURIComponent(escape(atob(s.trim()))));break}
+case'url':out(val('a_mode')==='encode'?encodeURIComponent(val('a_text')):decodeURIComponent(val('a_text')));break;
+case'json':out(JSON.stringify(JSON.parse(val('a_text')),null,2));break;
+case'html':{let s=val('a_text');if(val('a_mode')==='encode'){let d=document.createElement('div');d.textContent=s;out(d.innerHTML)}else{let d=document.createElement('textarea');d.innerHTML=s;out(d.value)}break}
+case'color':{let h=val('a_hex').trim().replace('#','');if(!/^[0-9a-fA-F]{3}$|^[0-9a-fA-F]{6}$/.test(h))return out('Enter a valid HEX color, e.g. #6ee7c2');if(h.length===3)h=[...h].map(x=>x+x).join('');let r=parseInt(h.slice(0,2),16),g=parseInt(h.slice(2,4),16),b=parseInt(h.slice(4,6),16);out(`RGB: rgb(${r}, ${g}, ${b})\nHEX: #${h.toLowerCase()}`);break}
+case'imagecompress':case'imageresize':case'imageconvert':processImage();break;
+}
+}catch(e){out('Could not process this input. Please check your values and try again.\n'+e.message)}
+}
+function processImage(){
+ let f=document.getElementById('a_file').files[0];if(!f)return out('Please choose an image first.');
+ let img=new Image(),url=URL.createObjectURL(f);img.onload=()=>{let c=document.createElement('canvas'),w=img.width,h=img.height;
+ if(current.id==='imageresize'){w=Math.max(1,num('a_width')||w);h=Math.max(1,num('a_height')||h)}
+ c.width=w;c.height=h;let type=current.id==='imageconvert'?val('a_format'):(current.id==='imageresize'&&/png|webp/.test(f.type)?f.type:'image/jpeg'),cx=c.getContext('2d');if(type==='image/jpeg'){cx.fillStyle='#fff';cx.fillRect(0,0,w,h)}cx.drawImage(img,0,0,w,h);
+ let q=current.id==='imagecompress'?Math.min(1,Math.max(.1,num('a_quality')||.75)):.9;
+ c.toBlob(blob=>{if(!blob)return out('Could not create the image.');let link=document.createElement('a'),u=URL.createObjectURL(blob);link.href=u;link.download='fixertools-'+current.id+(type==='image/png'?'.png':type==='image/webp'?'.webp':'.jpg');link.textContent='Download processed image';link.className='primary';link.style.display='inline-block';link.style.marginTop='10px';let o=document.getElementById('output');o.textContent=`Original: ${img.width} × ${img.height}px, ${(f.size/1024).toFixed(1)} KB\nNew: ${w} × ${h}px, ${(blob.size/1024).toFixed(1)} KB\n`;o.appendChild(document.createElement('br'));o.appendChild(link);URL.revokeObjectURL(url)},type,q);};img.onerror=()=>out('This image could not be opened.');img.src=url;
+}
+document.getElementById('year').textContent=new Date().getFullYear();render();window.__init=true;openTool('age');window.__init=false;
+
+function sendMail(){var n=document.getElementById('c_name').value.trim(),e=document.getElementById('c_email').value.trim(),t=document.getElementById('c_topic').value,m=document.getElementById('c_msg').value.trim();
+if(!m){alert('Please write a message first.');return}
+var body=m+'\n\n- '+(n||'Anonymous')+(e?' ('+e+')':'');
+location.href='mailto:supportfixertools@gmail.com?subject='+encodeURIComponent('FixerTools: '+t)+'&body='+encodeURIComponent(body)}
+</script>
+</body>
+</html>
