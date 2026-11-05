@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Loan EMI Calculator – Monthly Payment, Interest &amp; Schedule | FixerTools</title>
+<meta name="description" content="Free loan EMI calculator. Enter the loan amount, interest rate and tenure to see your monthly payment, total interest, total cost and a year-by-year repayment schedule. Works for any currency.">
+<link rel="canonical" href="https://fixertools.online/loan-emi-calculator.html">
+<meta name="theme-color" content="#080d1b">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Loan EMI Calculator | FixerTools">
+<meta property="og:description" content="See your monthly loan payment, total interest and yearly repayment schedule. Free, fast and private.">
+<meta property="og:url" content="https://fixertools.online/loan-emi-calculator.html">
+<meta name="twitter:card" content="summary">
+<style>
+:root{--bg:#080d1b;--field:#0b1324;--line:rgba(148,163,184,.16);--text:#f4f7ff;--muted:#9ba9c2;--teal:#4de4ce;--coral:#ff7a59;--sun:#ffb36b;--blue:#5da8ff;--max:1160px}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;overflow-x:hidden;color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;line-height:1.6;background:
+radial-gradient(ellipse at 90% 0%,rgba(255,122,89,.17),transparent 40%),
+radial-gradient(ellipse at 0% 30%,rgba(93,168,255,.10),transparent 40%),
+repeating-linear-gradient(135deg,transparent 0 26px,rgba(148,163,184,.045) 26px 27px),var(--bg)}
+a{color:inherit;text-decoration:none}button,input,select{font:inherit}
+.wrap{width:min(var(--max),calc(100% - 40px));margin:auto}
+:focus-visible{outline:2px solid var(--sun);outline-offset:2px}
+
+/* header — identical to homepage */
+.topbar{height:78px;border-bottom:1px solid var(--line);display:flex;align-items:center;position:relative;z-index:5;background:rgba(8,13,27,.82);backdrop-filter:blur(14px)}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:24px}
+.brand{display:flex;align-items:center;gap:10px;font-size:22px;font-weight:850;letter-spacing:-.8px}
+.brand-mark{width:36px;height:36px;border-radius:11px;background:linear-gradient(135deg,var(--teal),#48a8e9);display:grid;place-items:center;color:#07131d;font-size:21px;box-shadow:0 6px 22px #4de4ce35}
+.brand span span{color:var(--teal)}
+.navlinks{display:flex;align-items:center;gap:30px;color:#c3cce0;font-size:14px}.navlinks a:hover{color:var(--teal)}
+.nav-cta{background:linear-gradient(100deg,var(--teal),#7ad9f5);color:#07131d;font-weight:800;border-radius:10px;padding:11px 17px;display:inline-flex;gap:8px;box-shadow:0 8px 26px #4de4ce20}
+.menu-btn{display:none;background:none;border:1px solid var(--line);color:#fff;border-radius:9px;padding:8px 11px;cursor:pointer}
+
+/* page */
+.crumbs{padding:26px 0 0;font-size:14px;color:var(--muted)}.crumbs a:hover{color:var(--sun)}.crumbs b{font-weight:500;color:#dbe3f5}.crumbs i{margin:0 8px;font-style:normal;opacity:.6}
+.badge{display:inline-flex;align-items:center;gap:9px;margin-top:22px;border:1px solid #ff7a5955;background:#ff7a5912;color:var(--sun);border-radius:30px;padding:7px 13px;font-size:12px;font-weight:750;letter-spacing:.6px}
+.badge i{width:7px;height:7px;border-radius:50%;background:var(--coral);box-shadow:0 0 12px var(--coral)}
+h1{font-size:clamp(40px,5.4vw,64px);line-height:1.06;letter-spacing:-2.4px;margin:18px 0 14px;font-weight:850}
+.grad{display:block;background:linear-gradient(95deg,var(--coral),var(--sun) 55%,#ffd9a8);-webkit-background-clip:text;background-clip:text;color:transparent}
+.lead{color:var(--muted);font-size:17px;max-width:580px;margin:0 0 32px}
+
+.tool{display:grid;grid-template-columns:1.05fr .95fr;gap:26px;align-items:start;padding-bottom:40px}
+.card{background:linear-gradient(145deg,#131d35,#0e1729);border:1px solid var(--line);border-radius:20px;padding:26px}
+.card h2{font-size:21px;margin:0 0 4px;letter-spacing:-.4px}.sub{color:var(--muted);font-size:14px;margin:0 0 22px}
+
+.fld{margin-bottom:22px}
+.lab{display:flex;justify-content:space-between;align-items:center;font-size:13px;font-weight:700;color:#cfd8ec;margin:0 0 8px}
+.amt{display:flex;align-items:center;background:var(--field);border:1px solid var(--line);border-radius:14px;padding:0 16px}
+.amt:focus-within{border-color:var(--coral);box-shadow:0 0 0 3px #ff7a5926}
+.amt input{flex:1;min-width:0;background:none;border:0;outline:0;color:#fff;font-size:24px;font-weight:800;padding:12px 0;letter-spacing:-.4px}
+.amt b{color:var(--sun);font-size:18px;margin-left:10px;white-space:nowrap}
+input[type=range]{width:100%;margin:14px 0 0;accent-color:var(--coral);height:26px;cursor:pointer}
+.seg{display:flex;gap:4px;background:var(--field);border:1px solid var(--line);border-radius:10px;padding:3px}
+.seg button{border:0;background:none;color:#aab7cc;padding:5px 12px;border-radius:7px;font-size:12px;font-weight:700;cursor:pointer}
+.seg button.on{background:linear-gradient(135deg,var(--coral),var(--sun));color:#2b1000}
+::placeholder{color:#4d5b76}
+.btnrow{display:flex;gap:10px;margin-top:4px}
+.btn{border:0;cursor:pointer;border-radius:11px;padding:13px 20px;font-weight:800;font-size:15px}
+.btn.main{background:linear-gradient(100deg,var(--coral),var(--sun));color:#2b1000;box-shadow:0 8px 26px #ff7a5930;flex:1}
+.btn.ghost{background:#ffffff08;border:1px solid #64748b55;color:#e8eefb}.btn.ghost:hover{border-color:var(--sun);color:var(--sun)}
+
+/* result */
+.side{position:sticky;top:20px}
+.emi{border-radius:16px;padding:22px;margin-bottom:20px;background:linear-gradient(135deg,#ff7a5922,#ffb36b10);border:1px solid #ff7a5944}
+.emi small{display:block;color:#ffcfae;font-size:13px;font-weight:700}
+.emi b{display:block;font-size:clamp(34px,7vw,46px);letter-spacing:-1.8px;line-height:1.15;word-break:break-all}
+.emi span{color:var(--muted);font-size:13px}
+.donut{display:flex;align-items:center;gap:22px;margin-bottom:20px}
+.ring{position:relative;width:140px;height:140px;flex:none}
+.ring svg{width:100%;height:100%;transform:rotate(-90deg)}
+.ring circle{fill:none;stroke-width:15}
+.ring .bg{stroke:var(--blue)}.ring .int{stroke:var(--coral);transition:stroke-dasharray .4s}
+.ring div{position:absolute;inset:0;display:grid;place-content:center;text-align:center;line-height:1.2}
+.ring div b{font-size:22px}.ring div span{font-size:11px;color:var(--muted)}
+.leg{flex:1;min-width:0}
+.leg p{margin:0 0 12px;font-size:13px;color:var(--muted)}.leg p:last-child{margin:0}
+.leg p i{display:inline-block;width:10px;height:10px;border-radius:3px;margin-right:7px}
+.leg p b{display:block;font-size:18px;color:#fff;word-break:break-all}
+.tot{display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:4px 12px;border-top:1px dashed #64748b66;padding-top:16px}
+.tot span{color:#cfd8ec;font-size:14px;font-weight:700}.tot b{font-size:22px;word-break:break-all}
+
+/* chart + table */
+.chartcard{margin-bottom:64px}
+.bars{display:flex;align-items:flex-end;gap:4px;height:170px;margin-top:6px}
+.bars div{flex:1;min-width:3px;display:flex;flex-direction:column;justify-content:flex-end;height:100%}
+.bars i{display:block;width:100%}.bars .p{background:var(--blue);border-radius:0 0 3px 3px}.bars .n{background:var(--coral);border-radius:3px 3px 0 0}
+.axis{display:flex;justify-content:space-between;color:var(--muted);font-size:12px;margin-top:8px}
+.key{display:flex;gap:18px;font-size:13px;color:var(--muted);margin-top:12px;flex-wrap:wrap}.key i{display:inline-block;width:10px;height:10px;border-radius:3px;margin-right:7px}
+details{border:1px solid var(--line);border-radius:13px;background:#ffffff05;margin-bottom:10px;padding:0 18px}
+summary{cursor:pointer;padding:16px 0;font-weight:700;list-style:none;display:flex;justify-content:space-between;gap:12px}
+summary::after{content:"+";color:var(--sun);font-size:20px;line-height:1}details[open] summary::after{content:"–"}
+details p{margin:0 0 16px;color:var(--muted);font-size:14px}
+.tw{overflow-x:auto;margin-bottom:16px}
+table{width:100%;border-collapse:collapse;font-size:14px;min-width:420px}
+th,td{padding:10px 8px;text-align:right;border-bottom:1px solid var(--line)}th:first-child,td:first-child{text-align:left}
+th{color:var(--sun);font-size:12px;font-weight:700}
+
+.section{padding:0 0 56px}.section h2{font-size:clamp(26px,3.2vw,34px);letter-spacing:-1.1px;margin:0 0 20px}
+.formula{padding:22px;border:1px solid var(--line);border-radius:14px;background:#ffffff05}
+.formula code{display:block;font-family:ui-monospace,Menlo,Consolas,monospace;font-size:15px;color:#ffe3cc;line-height:1.9}.formula p{margin:10px 0 0;color:var(--muted);font-size:14px}
+.related{display:flex;gap:10px;flex-wrap:wrap}.related a{border:1px solid var(--line);background:#ffffff05;border-radius:30px;padding:9px 16px;font-size:14px;color:#c3cce0}.related a:hover{border-color:var(--coral);color:var(--sun)}
+
+footer{border-top:1px solid var(--line);padding:35px 0 25px;background:#070b16}
+.foot-top{display:flex;justify-content:space-between;gap:30px;flex-wrap:wrap}.foot-about{max-width:340px}.foot-about p{color:var(--muted);font-size:13px}
+.foot-links{display:flex;gap:20px;flex-wrap:wrap;color:#aebbd0;font-size:13px}.foot-links a:hover{color:var(--teal)}
+.copyright{border-top:1px solid var(--line);margin-top:25px;padding-top:18px;color:#78869e;font-size:12px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+
+@media(max-width:900px){.tool{grid-template-columns:1fr}.side{position:static}}
+@media(max-width:650px){
+.wrap{width:calc(100% - 28px)}.topbar{height:68px}.menu-btn{display:block}.nav-cta{display:none}
+.navlinks{display:none;position:absolute;top:67px;left:0;right:0;background:#0c1425;border-bottom:1px solid var(--line);padding:18px 22px;flex-direction:column;align-items:flex-start;gap:17px}.navlinks.open{display:flex}
+h1{font-size:42px;letter-spacing:-1.8px}.lead{font-size:15px}.card{padding:20px;border-radius:18px}
+.donut{flex-direction:column;align-items:stretch;gap:16px}.ring{margin:0 auto}.foot-top{flex-direction:column}
+}
+@media(prefers-reduced-motion:reduce){.ring .int{transition:none}html{scroll-behavior:auto}}
+</style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"Loan EMI Calculator","url":"https://fixertools.online/loan-emi-calculator.html","applicationCategory":"FinanceApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}
+</script>
+</head>
+<body>
+<header class="topbar">
+<div class="wrap nav">
+<a class="brand" href="/" aria-label="FixerTools home"><span class="brand-mark">⌁</span><span>Fixer<span>Tools</span></span></a>
+<nav class="navlinks" id="navlinks" aria-label="Main navigation">
+<a href="/#tools">All Tools</a><a href="/#categories">Categories</a><a href="/#why-us">Why FixerTools</a><a href="/about.html">About</a><a href="/contact.html">Contact</a>
+</nav>
+<a class="nav-cta" href="/#tools">Explore Tools <span>→</span></a>
+<button class="menu-btn" id="menuBtn" aria-label="Open navigation" aria-expanded="false">☰</button>
+</div>
+</header>
+
+<main class="wrap">
+<div class="crumbs"><a href="/">Home</a><i>›</i><a href="/#tools">Calculators</a><i>›</i><b>Loan EMI Calculator</b></div>
+<span class="badge"><i></i>Free loan calculator</span>
+<h1>Loan EMI Calculator <span class="grad">See every payment before you sign.</span></h1>
+<p class="lead">Enter the loan amount, interest rate and tenure. Get your monthly payment, total interest and a year-by-year repayment chart. Works with any currency.</p>
+
+<div class="tool">
+<section class="card" aria-label="Loan details">
+<h2>Loan details</h2>
+<p class="sub">Type a value or drag a slider. Results update instantly.</p>
+
+<div class="fld">
+<label class="lab" for="amount">Loan amount</label>
+<div class="amt"><input id="amount" type="text" inputmode="decimal" autocomplete="off" value="100000"></div>
+<input type="range" id="amountR" min="1000" max="1000000" step="1000" value="100000" aria-label="Loan amount slider">
+</div>
+
+<div class="fld">
+<label class="lab" for="rate">Interest rate per year</label>
+<div class="amt"><input id="rate" type="text" inputmode="decimal" autocomplete="off" value="8"><b>%</b></div>
+<input type="range" id="rateR" min="0" max="30" step="0.1" value="8" aria-label="Interest rate slider">
+</div>
+
+<div class="fld">
+<div class="lab"><label for="term">Loan tenure</label>
+<div class="seg" id="unit" role="group" aria-label="Tenure unit"><button class="on" data-u="y">Years</button><button data-u="m">Months</button></div></div>
+<div class="amt"><input id="term" type="text" inputmode="numeric" autocomplete="off" value="5"><b id="uTxt">years</b></div>
+<input type="range" id="termR" min="1" max="40" step="1" value="5" aria-label="Tenure slider">
+</div>
+
+<div class="btnrow"><button class="btn main" id="copy">Copy summary</button><button class="btn ghost" id="reset">Reset</button></div>
+</section>
+
+<aside class="card side" aria-label="Loan results">
+<div class="emi"><small>Monthly payment (EMI)</small><b id="emi">0.00</b><span id="emiNote">for 60 months</span></div>
+<div class="donut">
+<div class="ring"><svg viewBox="0 0 140 140" aria-hidden="true"><circle class="bg" cx="70" cy="70" r="55"/><circle class="int" id="ringI" cx="70" cy="70" r="55" stroke-dasharray="0 345.6"/></svg><div><b id="ipct">0%</b><span>is interest</span></div></div>
+<div class="leg"><p><i style="background:var(--blue)"></i>Principal<b id="prin">0</b></p><p><i style="background:var(--coral)"></i>Total interest<b id="int">0</b></p></div>
+</div>
+<div class="tot"><span>Total you will pay</span><b id="total">0</b></div>
+</aside>
+</div>
+
+<section class="card chartcard" aria-label="Yearly repayment chart">
+<h2>Where each year’s payments go</h2>
+<p class="sub">Early payments are mostly interest. Over time more of each payment reduces the loan.</p>
+<div class="bars" id="bars" role="img" aria-label="Bar chart of principal and interest paid each year"></div>
+<div class="axis"><span id="ax1">Year 1</span><span id="ax2">Year 5</span></div>
+<div class="key"><span><i style="background:var(--blue)"></i>Principal paid</span><span><i style="background:var(--coral)"></i>Interest paid</span></div>
+<details style="margin-top:20px"><summary>Show yearly schedule</summary>
+<div class="tw"><table><thead><tr><th>Year</th><th>Principal</th><th>Interest</th><th>Balance</th></tr></thead><tbody id="sched"></tbody></table></div></details>
+</section>
+
+<section class="section">
+<h2>How EMI is worked out</h2>
+<div class="formula"><code>EMI = P × r × (1 + r)ⁿ ÷ ((1 + r)ⁿ − 1)</code><p>P is the loan amount, r is the monthly interest rate (yearly rate ÷ 12 ÷ 100) and n is the number of monthly payments. At 0% interest the EMI is simply P ÷ n.</p></div>
+</section>
+
+<section class="section">
+<h2>Questions</h2>
+<details><summary>What does EMI mean?</summary><p>EMI stands for equated monthly instalment. It is the fixed amount you pay every month until the loan is repaid. Part of each payment covers interest and the rest reduces the loan.</p></details>
+<details><summary>Does a longer tenure save money?</summary><p>A longer tenure lowers the monthly payment but increases the total interest you pay. A shorter tenure does the opposite. Try both and compare the total cost.</p></details>
+<details><summary>Which currency does this use?</summary><p>Any. The calculator works with plain numbers, so enter the amount in your own currency.</p></details>
+<details><summary>Will my bank’s figure match exactly?</summary><p>It should be very close for a standard fixed-rate loan. Fees, insurance, variable rates or different rounding can change the final figure, so confirm with your lender.</p></details>
+</section>
+
+<section class="section">
+<h2>More free tools</h2>
+<div class="related"><a href="/gst-calculator.html">GST Calculator</a><a href="/percentage-calculator.html">Percentage Calculator</a><a href="/bmi-calculator.html">BMI Calculator</a><a href="/age-calculator.html">Age Calculator</a><a href="/qr-code-generator.html">QR Code Generator</a></div>
+</section>
+</main>
+
+<footer>
+<div class="wrap">
+<div class="foot-top">
+<div class="foot-about"><a class="brand" href="/"><span class="brand-mark">⌁</span><span>Fixer<span>Tools</span></span></a><p>Every little tool, one fast place. Free online tools designed to make everyday digital tasks simpler.</p></div>
+<nav class="foot-links" aria-label="Footer links"><a href="/about.html">About</a><a href="/privacy-policy.html">Privacy Policy</a><a href="/terms-and-conditions.html">Terms</a><a href="/disclaimer.html">Disclaimer</a><a href="/cookie-policy.html">Cookie Policy</a><a href="/contact.html">Contact</a></nav>
+</div>
+<div class="copyright"><span>© <span id="year"></span> FixerTools. All rights reserved.</span><span>Free tools. Simple solutions.</span></div>
+</div>
+</footer>
+
+<script>
+const $=s=>document.querySelector(s);
+const menuBtn=$('#menuBtn'),nav=$('#navlinks');
+menuBtn.addEventListener('click',()=>{const o=nav.classList.toggle('open');menuBtn.setAttribute('aria-expanded',String(o));});
+$('#year').textContent=new Date().getFullYear();
+
+const D={amount:100000,rate:8,term:5,unit:'y'};
+const num=v=>{const n=parseFloat(String(v).replace(/,/g,''));return isFinite(n)&&n>0?n:0;};
+const f0=n=>n.toLocaleString(undefined,{maximumFractionDigits:0});
+const f2=n=>n.toLocaleString(undefined,{minimumFractionDigits:2,maximumFractionDigits:2});
+let unit='y';
+
+function calc(){
+  const P=num($('#amount').value),R=num($('#rate').value),T=num($('#term').value);
+  const n=Math.max(0,Math.round(unit==='y'?T*12:T)),r=R/1200;
+  let emi=0;
+  if(P>0&&n>0)emi=r===0?P/n:P*r*Math.pow(1+r,n)/(Math.pow(1+r,n)-1);
+  const total=emi*n,intr=Math.max(0,total-P),ip=total>0?intr/total*100:0;
+  $('#emi').textContent=f2(emi);$('#emiNote').textContent='for '+n+' month'+(n===1?'':'s');
+  $('#prin').textContent=f0(P);$('#int').textContent=f0(intr);$('#total').textContent=f0(total);
+  $('#ipct').textContent=Math.round(ip)+'%';
+  $('#ringI').setAttribute('stroke-dasharray',(ip/100*345.6)+' 345.6');
+
+  // yearly schedule
+  const rows=[];let bal=P,py=0,iy=0;
+  for(let m=1;m<=n;m++){
+    const i=bal*r,pr=Math.min(bal,emi-i);bal=Math.max(0,bal-pr);py+=pr;iy+=i;
+    if(m%12===0||m===n){rows.push({y:Math.ceil(m/12),p:py,i:iy,b:bal});py=0;iy=0;}
+  }
+  const mx=Math.max(1,...rows.map(x=>x.p+x.i));
+  $('#bars').innerHTML=rows.map(x=>'<div title="Year '+x.y+': principal '+f0(x.p)+', interest '+f0(x.i)+'"><i class="n" style="height:'+(x.i/mx*100)+'%"></i><i class="p" style="height:'+(x.p/mx*100)+'%"></i></div>').join('');
+  $('#ax1').textContent=rows.length?'Year 1':'';$('#ax2').textContent=rows.length>1?'Year '+rows.length:'';
+  $('#sched').innerHTML=rows.map(x=>'<tr><td>'+x.y+'</td><td>'+f0(x.p)+'</td><td>'+f0(x.i)+'</td><td>'+f0(x.b)+'</td></tr>').join('');
+  return {P,R,n,emi,total,intr};
+}
+
+function link(t,rg,fn){
+  $(t).addEventListener('input',()=>{$(rg).value=$(t).value;calc();});
+  $(rg).addEventListener('input',()=>{$(t).value=$(rg).value;calc();});
+}
+link('#amount','#amountR');link('#rate','#rateR');link('#term','#termR');
+
+document.querySelectorAll('#unit button').forEach(b=>b.addEventListener('click',()=>{
+  const u=b.dataset.u;if(u===unit)return;
+  const t=num($('#term').value);
+  const v=u==='m'?Math.round(t*12):Math.max(1,Math.round(t/12));
+  unit=u;document.querySelectorAll('#unit button').forEach(x=>x.classList.toggle('on',x===b));
+  $('#termR').max=u==='y'?40:480;$('#termR').step=1;$('#term').value=v;$('#termR').value=v;
+  $('#uTxt').textContent=u==='y'?'years':'months';calc();
+}));
+
+$('#copy').addEventListener('click',async()=>{
+  const d=calc();
+  const txt=['Loan summary','Loan amount: '+f0(d.P),'Interest rate: '+d.R+'% per year','Tenure: '+d.n+' months','Monthly payment (EMI): '+f2(d.emi),'Total interest: '+f0(d.intr),'Total payment: '+f0(d.total),'fixertools.online/loan-emi-calculator.html'].join('\n'),b=$('#copy');
+  try{await navigator.clipboard.writeText(txt);}catch(e){const t=document.createElement('textarea');t.value=txt;document.body.appendChild(t);t.select();try{document.execCommand('copy');}catch(_){}t.remove();}
+  b.textContent='Copied';setTimeout(()=>b.textContent='Copy summary',1500);
+});
+$('#reset').addEventListener('click',()=>{
+  unit='y';document.querySelectorAll('#unit button').forEach(x=>x.classList.toggle('on',x.dataset.u==='y'));
+  $('#uTxt').textContent='years';$('#termR').max=40;
+  $('#amount').value=$('#amountR').value=D.amount;$('#rate').value=$('#rateR').value=D.rate;$('#term').value=$('#termR').value=D.term;calc();
+});
+calc();
+</script>
+</body>
+</html>
