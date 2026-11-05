@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Free QR Code Generator – Link, Wi-Fi, Email &amp; Text | FixerTools</title>
+<meta name="description" content="Create a free QR code for a link, text, Wi-Fi network, email or phone number. Pick colors, choose a size and download a PNG. No sign-up, runs in your browser.">
+<link rel="canonical" href="https://fixertools.online/qr-code-generator.html">
+<meta name="theme-color" content="#080d1b">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Free QR Code Generator – FixerTools">
+<meta property="og:description" content="Make a QR code for a link, Wi-Fi, email or text and download it as a PNG. Free, private, no sign-up.">
+<meta property="og:url" content="https://fixertools.online/qr-code-generator.html">
+<meta name="twitter:card" content="summary">
+<style>
+:root{--bg:#080d1b;--panel:#10182b;--field:#0b1324;--line:rgba(148,163,184,.16);--text:#f4f7ff;--muted:#9ba9c2;--teal:#4de4ce;--a:#8b83ff;--a2:#5da8ff;--max:1160px}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;line-height:1.6;background:
+radial-gradient(ellipse at 85% 0%,rgba(139,131,255,.22),transparent 40%),
+radial-gradient(circle,rgba(139,131,255,.13) 1px,transparent 1.5px) 0 0/22px 22px,var(--bg)}
+a{color:inherit;text-decoration:none}button,input,select,textarea{font:inherit}
+.wrap{width:min(var(--max),calc(100% - 40px));margin:auto}
+:focus-visible{outline:2px solid var(--a2);outline-offset:2px}
+
+/* header — identical to homepage */
+.topbar{height:78px;border-bottom:1px solid var(--line);display:flex;align-items:center;position:relative;z-index:5;background:rgba(8,13,27,.82);backdrop-filter:blur(14px)}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:24px}
+.brand{display:flex;align-items:center;gap:10px;font-size:22px;font-weight:850;letter-spacing:-.8px}
+.brand-mark{width:36px;height:36px;border-radius:11px;background:linear-gradient(135deg,var(--teal),#48a8e9);display:grid;place-items:center;color:#07131d;font-size:21px;box-shadow:0 6px 22px #4de4ce35}
+.brand span span{color:var(--teal)}
+.navlinks{display:flex;align-items:center;gap:30px;color:#c3cce0;font-size:14px}.navlinks a:hover{color:var(--teal)}
+.nav-cta{background:linear-gradient(100deg,var(--teal),#7ad9f5);color:#07131d;font-weight:800;border-radius:10px;padding:11px 17px;display:inline-flex;gap:8px;box-shadow:0 8px 26px #4de4ce20}
+.menu-btn{display:none;background:none;border:1px solid var(--line);color:#fff;border-radius:9px;padding:8px 11px;cursor:pointer}
+
+/* page */
+.crumbs{padding:26px 0 0;font-size:14px;color:var(--muted)}.crumbs a:hover{color:var(--a2)}.crumbs b{font-weight:500;color:#dbe3f5}.crumbs i{margin:0 8px;font-style:normal;opacity:.6}
+.badge{display:inline-flex;align-items:center;gap:9px;margin-top:22px;border:1px solid #8b83ff55;background:#8b83ff14;color:#b9b4ff;border-radius:30px;padding:7px 13px;font-size:12px;font-weight:750;letter-spacing:.6px}
+.badge i{width:7px;height:7px;border-radius:2px;background:var(--a);box-shadow:0 0 12px var(--a)}
+h1{font-size:clamp(40px,5.4vw,64px);line-height:1.06;letter-spacing:-2.4px;margin:18px 0 14px;font-weight:850}
+.grad{display:block;background:linear-gradient(95deg,#fff 0%,#b7b2ff 40%,var(--a2) 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.lead{color:var(--muted);font-size:17px;max-width:560px;margin:0 0 32px}
+
+.tool{display:grid;grid-template-columns:1.12fr .88fr;gap:24px;align-items:start;padding-bottom:64px}
+.card{background:linear-gradient(145deg,#131d35,#0e1729);border:1px solid var(--line);border-radius:20px;padding:26px}
+.card h2{font-size:21px;margin:0 0 4px;letter-spacing:-.4px}.card .sub{color:var(--muted);font-size:14px;margin:0 0 20px}
+
+.tabs{display:flex;gap:6px;background:var(--field);border:1px solid var(--line);border-radius:13px;padding:5px;margin-bottom:20px}
+.tab{flex:1;border:0;background:none;color:#aab7cc;padding:10px 6px;border-radius:9px;font-size:13px;font-weight:700;cursor:pointer;white-space:nowrap}
+.tab:hover{color:#fff}.tab.on{background:linear-gradient(135deg,var(--a),#6f8dff);color:#0a0f24;box-shadow:0 6px 18px #8b83ff40}
+
+label{display:block;font-size:13px;font-weight:700;color:#cfd8ec;margin:0 0 7px}
+.f{margin-bottom:16px}
+input[type=text],input[type=email],input[type=tel],input[type=password],textarea,select{width:100%;background:var(--field);border:1px solid var(--line);border-radius:12px;color:#fff;padding:13px 14px;font-size:15px;outline:none}
+textarea{min-height:104px;resize:vertical}
+input:focus,textarea:focus,select:focus{border-color:var(--a);box-shadow:0 0 0 3px #8b83ff26}
+::placeholder{color:#62708b}
+.panel{display:none}.panel.on{display:block}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+
+.opts{border-top:1px solid var(--line);margin-top:8px;padding-top:20px}
+.opts h3{font-size:14px;margin:0 0 14px;color:#dbe3f5}
+.colors{display:flex;gap:14px}
+.color{flex:1;display:flex;align-items:center;gap:11px;background:var(--field);border:1px solid var(--line);border-radius:12px;padding:8px 12px}
+.color input{width:38px;height:38px;border:0;border-radius:9px;background:none;padding:0;cursor:pointer}
+.color span{font-size:13px;color:#cfd8ec;font-weight:700}.color small{display:block;color:var(--muted);font-weight:500;font-size:12px}
+.note{font-size:13px;color:#ffcf7a;margin:12px 0 0;min-height:20px}
+
+/* preview: viewfinder */
+.preview{position:sticky;top:20px;text-align:center}
+.frame{position:relative;margin:6px auto 20px;width:min(100%,340px);aspect-ratio:1;display:grid;place-items:center;border-radius:6px;padding:7%;background:#fff;transition:background .2s;overflow:hidden}
+.frame #qr{width:100%;height:100%;display:grid;place-items:center}
+.frame #qr img,.frame #qr canvas{width:100%!important;height:auto!important;display:block;image-rendering:pixelated}
+.frame #qr canvas{display:none!important}
+.corner{position:absolute;width:30px;height:30px;border:0 solid var(--a);z-index:2;pointer-events:none}
+.c1{top:0;left:0;border-width:4px 0 0 4px;border-top-left-radius:6px}.c2{top:0;right:0;border-width:4px 4px 0 0;border-top-right-radius:6px}
+.c3{bottom:0;left:0;border-width:0 0 4px 4px;border-bottom-left-radius:6px}.c4{bottom:0;right:0;border-width:0 4px 4px 0;border-bottom-right-radius:6px}
+.frame::after{content:"";position:absolute;left:0;right:0;top:0;height:3px;background:linear-gradient(90deg,transparent,var(--a2),transparent);box-shadow:0 0 22px 6px #5da8ff66;opacity:0;pointer-events:none}
+.frame.scan::after{animation:sweep .9s ease-out 1}
+@keyframes sweep{0%{top:0;opacity:1}100%{top:calc(100% - 3px);opacity:0}}
+.empty{position:absolute;inset:0;display:none;place-items:center;text-align:center;padding:28px;background:#0b1324;color:var(--muted);font-size:14px;z-index:1}
+.frame.blank .empty{display:grid}
+.frame.blank{background:#0b1324!important}
+.actions{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+.btn{border:0;cursor:pointer;border-radius:11px;padding:13px 20px;font-weight:800;font-size:15px}
+.btn.main{background:linear-gradient(100deg,var(--a),var(--a2));color:#0a0f24;box-shadow:0 8px 26px #8b83ff33}
+.btn.ghost{background:#ffffff08;border:1px solid #64748b55;color:#e8eefb}
+.btn:disabled{opacity:.4;cursor:not-allowed}.btn.ghost:hover:not(:disabled){border-color:var(--a);color:#c9c5ff}
+.meta{color:var(--muted);font-size:13px;margin:14px 0 0}
+
+/* info */
+.section{padding:20px 0 64px}.section h2{font-size:clamp(26px,3.2vw,34px);letter-spacing:-1.1px;margin:0 0 20px}
+.how{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.how div{padding:22px;border:1px solid var(--line);border-radius:14px;background:#ffffff05}.how b{display:block;margin-bottom:5px}.how p{margin:0;color:var(--muted);font-size:14px}
+details{border:1px solid var(--line);border-radius:13px;background:#ffffff05;margin-bottom:10px;padding:0 18px}
+summary{cursor:pointer;padding:16px 0;font-weight:700;list-style:none;display:flex;justify-content:space-between;gap:12px}
+summary::after{content:"+";color:var(--a2);font-size:20px;line-height:1}details[open] summary::after{content:"–"}
+details p{margin:0 0 16px;color:var(--muted);font-size:14px}
+.related{display:flex;gap:10px;flex-wrap:wrap}.related a{border:1px solid var(--line);background:#ffffff05;border-radius:30px;padding:9px 16px;font-size:14px;color:#c3cce0}.related a:hover{border-color:var(--a);color:#c9c5ff}
+
+footer{border-top:1px solid var(--line);padding:35px 0 25px;background:#070b16}
+.foot-top{display:flex;justify-content:space-between;gap:30px;flex-wrap:wrap}.foot-about{max-width:340px}.foot-about p{color:var(--muted);font-size:13px}
+.foot-links{display:flex;gap:20px;flex-wrap:wrap;color:#aebbd0;font-size:13px}.foot-links a:hover{color:var(--teal)}
+.copyright{border-top:1px solid var(--line);margin-top:25px;padding-top:18px;color:#78869e;font-size:12px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+
+@media(max-width:900px){.tool{grid-template-columns:1fr}.preview{position:static}.how{grid-template-columns:1fr}}
+@media(max-width:650px){
+.wrap{width:calc(100% - 28px)}.topbar{height:68px}.menu-btn{display:block}.nav-cta{display:none}
+.navlinks{display:none;position:absolute;top:67px;left:0;right:0;background:#0c1425;border-bottom:1px solid var(--line);padding:18px 22px;flex-direction:column;align-items:flex-start;gap:17px}.navlinks.open{display:flex}
+h1{font-size:42px;letter-spacing:-1.8px}.lead{font-size:15px}.card{padding:20px;border-radius:18px}
+.tab{font-size:12px;padding:10px 2px}.row{grid-template-columns:1fr}.colors{flex-direction:column}.foot-top{flex-direction:column}
+}
+@media(prefers-reduced-motion:reduce){.frame.scan::after{animation:none}html{scroll-behavior:auto}}
+</style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"QR Code Generator","url":"https://fixertools.online/qr-code-generator.html","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}
+</script>
+</head>
+<body>
+<header class="topbar">
+<div class="wrap nav">
+<a class="brand" href="/" aria-label="FixerTools home"><span class="brand-mark">⌁</span><span>Fixer<span>Tools</span></span></a>
+<nav class="navlinks" id="navlinks" aria-label="Main navigation">
+<a href="/#tools">All Tools</a><a href="/#categories">Categories</a><a href="/#why-us">Why FixerTools</a><a href="/about.html">About</a><a href="/contact.html">Contact</a>
+</nav>
+<a class="nav-cta" href="/#tools">Explore Tools <span>→</span></a>
+<button class="menu-btn" id="menuBtn" aria-label="Open navigation" aria-expanded="false">☰</button>
+</div>
+</header>
+
+<main class="wrap">
+<div class="crumbs"><a href="/">Home</a><i>›</i><a href="/#tools">Developer</a><i>›</i><b>QR Code Generator</b></div>
+<span class="badge"><i></i>Free QR code generator</span>
+<h1>QR Code Generator <span class="grad">Turn anything into a scan.</span></h1>
+<p class="lead">Make a QR code for a link, text, Wi-Fi network, email or phone number. Choose your colors, then download it as a PNG.</p>
+
+<div class="tool">
+<section class="card" aria-label="QR code settings">
+<h2>What should the code open?</h2>
+<p class="sub">Pick a type and fill it in. Your QR code updates as you type.</p>
+
+<div class="tabs" role="tablist" aria-label="QR code type">
+<button class="tab on" role="tab" data-type="text">Link / Text</button>
+<button class="tab" role="tab" data-type="wifi">Wi-Fi</button>
+<button class="tab" role="tab" data-type="email">Email</button>
+<button class="tab" role="tab" data-type="phone">Phone</button>
+</div>
+
+<div class="panel on" id="p-text"><div class="f"><label for="t-text">Link or text</label><textarea id="t-text" placeholder="https://fixertools.online"></textarea></div></div>
+
+<div class="panel" id="p-wifi">
+<div class="f"><label for="w-ssid">Network name (SSID)</label><input type="text" id="w-ssid" placeholder="Home Wi-Fi" autocomplete="off"></div>
+<div class="row">
+<div class="f"><label for="w-pass">Password</label><input type="text" id="w-pass" placeholder="Wi-Fi password" autocomplete="off"></div>
+<div class="f"><label for="w-sec">Security</label><select id="w-sec"><option value="WPA">WPA / WPA2 / WPA3</option><option value="WEP">WEP</option><option value="nopass">No password</option></select></div>
+</div></div>
+
+<div class="panel" id="p-email">
+<div class="f"><label for="e-to">Email address</label><input type="email" id="e-to" placeholder="name@example.com"></div>
+<div class="f"><label for="e-sub">Subject (optional)</label><input type="text" id="e-sub" placeholder="Hello"></div>
+<div class="f"><label for="e-body">Message (optional)</label><textarea id="e-body" style="min-height:80px" placeholder="Write a message"></textarea></div>
+</div>
+
+<div class="panel" id="p-phone"><div class="f"><label for="ph">Phone number</label><input type="tel" id="ph" placeholder="+92 300 1234567"></div></div>
+
+<div class="opts">
+<h3>Style</h3>
+<div class="colors">
+<label class="color"><input type="color" id="fg" value="#0b1020" aria-label="Code color"><span>Code<small>Dark squares</small></span></label>
+<label class="color"><input type="color" id="bg" value="#ffffff" aria-label="Background color"><span>Background<small>Light area</small></span></label>
+</div>
+<div class="row" style="margin-top:16px">
+<div class="f" style="margin:0"><label for="size">Download size</label><select id="size"><option value="256">256 × 256 px</option><option value="512" selected>512 × 512 px</option><option value="1024">1024 × 1024 px</option></select></div>
+<div class="f" style="margin:0"><label for="ec">Error correction</label><select id="ec"><option value="L">Low (smallest code)</option><option value="M" selected>Medium</option><option value="Q">Quartile</option><option value="H">High (most durable)</option></select></div>
+</div>
+<p class="note" id="note" role="status"></p>
+</div>
+</section>
+
+<aside class="card preview" aria-label="QR code preview">
+<div class="frame blank" id="frame">
+<span class="corner c1"></span><span class="corner c2"></span><span class="corner c3"></span><span class="corner c4"></span>
+<div id="qr" aria-live="polite"></div>
+<div class="empty" id="empty">Your QR code appears here.<br>Start typing on the left.</div>
+</div>
+<div class="actions">
+<button class="btn main" id="dl" disabled>Download PNG</button>
+<button class="btn ghost" id="clear">Clear</button>
+</div>
+<p class="meta">Made in your browser. Nothing you type is uploaded.</p>
+</aside>
+</div>
+
+<section class="section">
+<h2>How to make a QR code</h2>
+<div class="how">
+<div><b>Choose a type</b><p>Link or text, Wi-Fi, email or phone. Each type fills in the right format for you.</p></div>
+<div><b>Add your details</b><p>Type or paste. The code redraws on every change, so you can check it right away.</p></div>
+<div><b>Download and test</b><p>Save the PNG, then scan it with your phone before you print or share it.</p></div>
+</div>
+</section>
+
+<section class="section" style="padding-top:0">
+<h2>Questions</h2>
+<details><summary>Is this QR code generator free?</summary><p>Yes. There is no sign-up, no watermark and no limit on how many codes you make.</p></details>
+<details><summary>Do my codes expire?</summary><p>No. The code stores your text directly, so it works for as long as the link or details inside it stay valid.</p></details>
+<details><summary>Which colors scan best?</summary><p>Use a dark code on a light background with strong contrast. Light code on a dark background fails on many scanner apps.</p></details>
+<details><summary>What does error correction do?</summary><p>Higher levels let a code still scan when it is smudged or partly covered, but make the pattern denser. Medium suits most uses.</p></details>
+</section>
+
+<section class="section" style="padding-top:0">
+<h2>More free tools</h2>
+<div class="related"><a href="/password-generator.html">Password Generator</a><a href="/json-formatter.html">JSON Formatter</a><a href="/word-counter.html">Word Counter</a><a href="/age-calculator.html">Age Calculator</a><a href="/image-compressor.html">Image Compressor</a></div>
+</section>
+</main>
+
+<footer>
+<div class="wrap">
+<div class="foot-top">
+<div class="foot-about"><a class="brand" href="/"><span class="brand-mark">⌁</span><span>Fixer<span>Tools</span></span></a><p>Every little tool, one fast place. Free online tools designed to make everyday digital tasks simpler.</p></div>
+<nav class="foot-links" aria-label="Footer links"><a href="/about.html">About</a><a href="/privacy-policy.html">Privacy Policy</a><a href="/terms-and-conditions.html">Terms</a><a href="/disclaimer.html">Disclaimer</a><a href="/cookie-policy.html">Cookie Policy</a><a href="/contact.html">Contact</a></nav>
+</div>
+<div class="copyright"><span>© <span id="year"></span> FixerTools. All rights reserved.</span><span>Free tools. Simple solutions.</span></div>
+</div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+<script>
+const $=s=>document.querySelector(s);
+const menuBtn=$('#menuBtn'),nav=$('#navlinks');
+menuBtn.addEventListener('click',()=>{const o=nav.classList.toggle('open');menuBtn.setAttribute('aria-expanded',String(o));});
+$('#year').textContent=new Date().getFullYear();
+
+let type='text',timer;
+const frame=$('#frame'),box=$('#qr'),dl=$('#dl'),note=$('#note');
+const esc=s=>s.replace(/([\\;,:"])/g,'\\$1');
+
+function payload(){
+  if(type==='text')return $('#t-text').value.trim();
+  if(type==='wifi'){
+    const ssid=$('#w-ssid').value.trim(),pass=$('#w-pass').value,sec=$('#w-sec').value;
+    if(!ssid)return '';
+    return 'WIFI:T:'+sec+';S:'+esc(ssid)+';'+(sec==='nopass'?'':'P:'+esc(pass)+';')+';';
+  }
+  if(type==='email'){
+    const to=$('#e-to').value.trim();if(!to)return '';
+    const q=[];const s=$('#e-sub').value.trim(),b=$('#e-body').value.trim();
+    if(s)q.push('subject='+encodeURIComponent(s));if(b)q.push('body='+encodeURIComponent(b));
+    return 'mailto:'+to+(q.length?'?'+q.join('&'):'');
+  }
+  const p=$('#ph').value.replace(/[^\d+]/g,'');return p?'tel:'+p:'';
+}
+
+function lum(h){const n=parseInt(h.slice(1),16),c=[n>>16&255,n>>8&255,n&255].map(v=>{v/=255;return v<=.03928?v/12.92:Math.pow((v+.055)/1.055,2.4)});return .2126*c[0]+.7152*c[1]+.0722*c[2];}
+
+function render(){
+  const data=payload(),fg=$('#fg').value,bg=$('#bg').value,size=+$('#size').value;
+  box.innerHTML='';note.textContent='';
+  const l1=lum(fg),l2=lum(bg);
+  if(l1>l2)note.textContent='Tip: a dark code on a light background scans best.';
+  else if((l2+.05)/(l1+.05)<3)note.textContent='Low contrast. Some phones may not scan this code.';
+  if(!data){frame.classList.add('blank');dl.disabled=true;return;}
+  try{
+    new QRCode(box,{text:data,width:size,height:size,colorDark:fg,colorLight:bg,correctLevel:QRCode.CorrectLevel[$('#ec').value]});
+    frame.classList.remove('blank');frame.style.background=bg;dl.disabled=false;
+    frame.classList.remove('scan');void frame.offsetWidth;frame.classList.add('scan');
+  }catch(e){
+    frame.classList.add('blank');dl.disabled=true;
+    note.textContent='That is too much for one QR code. Shorten the text or lower the error correction.';
+  }
+}
+const queue=()=>{clearTimeout(timer);timer=setTimeout(render,250);};
+
+document.querySelectorAll('.tab').forEach(t=>t.addEventListener('click',()=>{
+  type=t.dataset.type;
+  document.querySelectorAll('.tab').forEach(x=>x.classList.toggle('on',x===t));
+  document.querySelectorAll('.panel').forEach(p=>p.classList.toggle('on',p.id==='p-'+type));
+  render();
+}));
+document.querySelectorAll('input,textarea,select').forEach(el=>{el.addEventListener('input',queue);el.addEventListener('change',queue);});
+
+dl.addEventListener('click',()=>{
+  const src=box.querySelector('canvas')||box.querySelector('img');if(!src)return;
+  const s=+$('#size').value,m=Math.round(s*.08),c=document.createElement('canvas');
+  c.width=c.height=s+m*2;const x=c.getContext('2d');
+  x.fillStyle=$('#bg').value;x.fillRect(0,0,c.width,c.height);x.imageSmoothingEnabled=false;x.drawImage(src,m,m,s,s);
+  const a=document.createElement('a');a.href=c.toDataURL('image/png');a.download='fixertools-qr-code.png';document.body.appendChild(a);a.click();a.remove();
+});
+$('#clear').addEventListener('click',()=>{
+  document.querySelectorAll('input[type=text],input[type=email],input[type=tel],textarea').forEach(i=>i.value='');
+  render();
+});
+render();
+</script>
+</body>
+</html>
