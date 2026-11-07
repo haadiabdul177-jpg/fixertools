@@ -1,4 +1,78 @@
+# Fixertools.online — search allowed, AI training disallowed
+# Public search engines and selected AI search/fetch agents may access public pages.
+# AI model-training use is disallowed where the crawler/provider honors these signals.
+
+Content-Signal: search=yes, ai-input=yes, ai-train=no, use=reference
+
+# General web search
 User-agent: *
 Allow: /
 
+# Google Search (including Google Search AI features governed by Googlebot)
+User-agent: Googlebot
+Allow: /
+
+# Google AdSense crawler
+User-agent: Mediapartners-Google
+Allow: /
+
+# Google Ads landing page quality crawler
+User-agent: AdsBot-Google
+Allow: /
+
+# Microsoft Bing Search
+User-agent: Bingbot
+Allow: /
+
+# ChatGPT Search
+User-agent: OAI-SearchBot
+Allow: /
+
+# User-initiated page retrieval in ChatGPT
+User-agent: ChatGPT-User
+Allow: /
+
+# Claude Search and user-initiated retrieval
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
+# Perplexity Search and user-initiated retrieval
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+# AI training / dataset crawlers — disallowed
+User-agent: __usage_ai-training
+Disallow: /
+
+User-agent: GPTBot
+Disallow: /
+
+User-agent: ClaudeBot
+Disallow: /
+
+User-agent: Google-Extended
+Disallow: /
+
+User-agent: CCBot
+Disallow: /
+
+User-agent: Bytespider
+Disallow: /
+
+User-agent: Amazonbot
+Disallow: /
+
+User-agent: Applebot-Extended
+Disallow: /
+
+User-agent: meta-externalagent
+Disallow: /
+
+# Sitemap
 Sitemap: https://fixertools.online/sitemap.xml
