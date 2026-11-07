@@ -62,6 +62,17 @@
     .dock-item:hover,.dock-item:focus-visible{border-color:#4de4ce88;transform:translateY(-3px);box-shadow:0 14px 30px #0005;outline:none}.dock-item:hover::after,.dock-item:focus-visible::after{opacity:1;transform:none}
     @media(max-width:420px){.dock-grid{grid-template-columns:repeat(2,1fr)}}
     @media(prefers-reduced-motion:reduce){.sidebar,.overlay,.dock-item{transition:none}}
+    .founder-link {
+      display: inline-block;
+      color: #38bdf8;
+      text-decoration: none;
+      font-weight: 600;
+      transition: 0.3s ease;
+    }
+    .founder-link:hover,.navlinks a.founder-link:hover,.side-links a.founder-link:hover,.foot-links a.founder-link:hover {
+      color: #ffffff;
+      text-decoration: underline;
+    }
   </style>
   <script type="application/ld+json">
   {"@context":"https://schema.org","@type":"WebSite","name":"FixerTools","url":"https://fixertools.online/","description":"Free online calculators, converters, text and image tools."}
@@ -72,7 +83,7 @@
   <div class="wrap nav">
     <a class="brand" href="/" aria-label="FixerTools home"><span class="brand-mark">⌁</span><span>Fixer<span>Tools</span></span></a>
     <nav class="navlinks" id="navlinks" aria-label="Main navigation">
-      <a href="#tools">All Tools</a><a href="#categories">Categories</a><a href="#why-us">Why FixerTools</a><a href="/about">About</a><a href="/contact">Contact</a>
+      <a href="#tools">All Tools</a><a href="#categories">Categories</a><a href="#why-us">Why FixerTools</a><a href="/about">About</a><a href="/contact">Contact</a><a href="/founder.html" class="founder-link">Meet the Founder</a>
     </nav>
     <a class="nav-cta" href="#tools">Explore Tools <span>→</span></a>
     <button class="menu-btn" id="menuBtn" aria-label="Open navigation" aria-expanded="false">☰</button>
@@ -142,7 +153,7 @@
   <div class="wrap">
     <div class="foot-top">
       <div class="foot-about"><a class="brand" href="/"><span class="brand-mark">⌁</span><span>Fixer<span>Tools</span></span></a><p>Every little tool, one fast place. Free online tools designed to make everyday digital tasks simpler.</p></div>
-      <nav class="foot-links" aria-label="Footer links"><a href="/about">About</a><a href="/privacy-policy">Privacy Policy</a><a href="/terms-and-conditions">Terms</a><a href="/disclaimer">Disclaimer</a><a href="/cookie-policy">Cookie Policy</a><a href="/contact">Contact</a></nav>
+      <nav class="foot-links" aria-label="Footer links"><a href="/about">About</a><a href="/privacy-policy">Privacy Policy</a><a href="/terms-and-conditions">Terms</a><a href="/disclaimer">Disclaimer</a><a href="/cookie-policy">Cookie Policy</a><a href="/contact">Contact</a><a href="/founder.html" class="founder-link">Meet the Founder</a></nav>
     </div>
     <div class="copyright"><span>© <span id="year"></span> FixerTools. All rights reserved.</span><span>Free tools. Simple solutions.</span></div>
   </div>
@@ -152,7 +163,7 @@
   <div class="side-head"><a class="brand" href="/"><span class="brand-mark">⌁</span><span>Fixer<span>Tools</span></span></a><button class="menu-btn" id="sideClose" aria-label="Close menu">✕</button></div>
   <div class="side-body">
     <div class="side-label">Menu</div>
-    <nav class="side-links"><a href="#tools">All Tools</a><a href="#categories">Categories</a><a href="#why-us">Why FixerTools</a><a href="/about">About</a><a href="/contact">Contact</a></nav>
+    <nav class="side-links"><a href="#tools">All Tools</a><a href="#categories">Categories</a><a href="#why-us">Why FixerTools</a><a href="/about">About</a><a href="/contact">Contact</a><a href="/founder.html" class="founder-link">Meet the Founder</a></nav>
     <div class="side-label">Legal</div>
     <nav class="side-links"><a href="/privacy-policy">Privacy Policy</a><a href="/terms-and-conditions">Terms &amp; Conditions</a><a href="/disclaimer">Disclaimer</a><a href="/cookie-policy">Cookie Policy</a></nav>
   </div>
@@ -193,23 +204,5 @@
   render();
   $('year').textContent=new Date().getFullYear();
 </script>
-<a href="/founder.html" class="founder-link">
-  Meet the Founder
-</a>
-
-<style>
-.founder-link {
-  display: inline-block;
-  color: #38bdf8;
-  text-decoration: none;
-  font-weight: 600;
-  transition: 0.3s ease;
-}
-
-.founder-link:hover {
-  color: #ffffff;
-  text-decoration: underline;
-}
-</style>
 </body>
 </html>
