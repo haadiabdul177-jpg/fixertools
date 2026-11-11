@@ -22,7 +22,7 @@ window.FIXERTOOLS = {
     { name: "Text Tools",      description: "Count, format, clean and transform text in seconds." },
     { name: "Converters",      description: "Convert common units and data formats with ease." },
     { name: "Developer Tools", description: "Helpful utilities for formatting, encoding and generating data." },
-    { name: "Image Tools",     description: "Resize  images for everyday use." },
+    { name: "Image Tools",     description: "Resize and compress images for everyday use." },
     { name: "Other Tools",     description: "More useful tools that do not fit another category." }
   ],
 
@@ -165,7 +165,7 @@ window.FIXERTOOLS = {
       description: "Reduce image file size for easier sharing and upload.",
       keywords: ["image", "photo", "compress", "reduce size", "jpeg", "jpg", "webp", "png", "resize"],
       icon: "🗜️",
-      relatedTools: ["youtube-thumbnail-downloader",  "volume-converter", "qr-code-generator", "json-formatter", "password-generator", "word-counter", "case-converter", "age-calculator"],
+      relatedTools: ["youtube-thumbnail-downloader", "volume-converter", "qr-code-generator", "json-formatter", "password-generator", "word-counter", "case-converter", "age-calculator"],
       status: "active"
     },
     {
@@ -176,6 +176,8 @@ window.FIXERTOOLS = {
       description: "Download YouTube thumbnails in HD quality for free.",
       keywords: ["youtube", "thumbnail", "download", "video", "image", "hd", "maxres", "youtube thumbnail", "yt thumbnail"],
       icon: "🖼️",
-      relatedTools: ["image-compressor",  "qr-code-generator", "password-generator", "json-formatter", "word-counter"],
+      relatedTools: ["image-compressor", "qr-code-generator", "password-generator", "json-formatter", "word-counter"],
       status: "active"
-    },
+    }
+  ]
+};
