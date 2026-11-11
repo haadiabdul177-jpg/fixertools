@@ -3109,3 +3109,111 @@ html body .ft-related__link:hover{transform:none}
 html body .ft-featured{margin:0 0 36px}
 html body .ft-subhead{margin:0 0 16px;font-size:17px;font-weight:700;letter-spacing:-.01em;text-align:left}
 html body #allToolsTitle{margin-top:4px}
+
+/* ===== youtube-thumbnail-downloader.html page styles (scoped; edit in this file) ===== */
+
+body[data-page="youtube-thumbnail-downloader"][data-page="youtube-thumbnail-downloader"]{--bg:#080d1b;--panel:#10182b;--panel2:#121d33;--line:rgba(148,163,184,.15);--line2:rgba(148,163,184,.28);--text:#f4f7ff;--muted:#9ba9c2;--teal:#4de4ce;--purple:#8b83ff;--blue:#5da8ff;--field:#0b1324;--warn:#fbbf24;--err:#ff9a9a;--max:1160px}
+body[data-page="youtube-thumbnail-downloader"] *{box-sizing:border-box}body[data-page="youtube-thumbnail-downloader"][data-page="youtube-thumbnail-downloader"]{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body[data-page="youtube-thumbnail-downloader"]{margin:0;background:radial-gradient(ellipse at 80% 0%,rgba(76,91,190,.16),transparent 35%),var(--bg);color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;line-height:1.6;-webkit-font-smoothing:antialiased}
+body[data-page="youtube-thumbnail-downloader"] a{color:inherit;text-decoration:none}body[data-page="youtube-thumbnail-downloader"] button, body[data-page="youtube-thumbnail-downloader"] input, body[data-page="youtube-thumbnail-downloader"] select, body[data-page="youtube-thumbnail-downloader"] textarea{font:inherit;color:inherit}body[data-page="youtube-thumbnail-downloader"] button{cursor:pointer}
+body[data-page="youtube-thumbnail-downloader"] :focus-visible{outline:2px solid var(--teal);outline-offset:2px}
+body[data-page="youtube-thumbnail-downloader"] .wrap{width:min(var(--max),calc(100% - 40px));margin:auto}
+body[data-page="youtube-thumbnail-downloader"] [hidden]{display:none!important}
+/* top bar (same as home page) */
+body[data-page="youtube-thumbnail-downloader"] .topbar{height:78px;border-bottom:1px solid var(--line);display:flex;align-items:center;position:sticky;top:0;z-index:30;background:rgba(8,13,27,.92);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px)}
+body[data-page="youtube-thumbnail-downloader"] .nav{display:flex;align-items:center;justify-content:space-between;gap:24px}
+body[data-page="youtube-thumbnail-downloader"] .brand{display:flex;align-items:center;gap:10px;font-size:22px;font-weight:850;letter-spacing:-.8px}
+body[data-page="youtube-thumbnail-downloader"] .brand-mark{width:36px;height:36px;border-radius:11px;background:linear-gradient(135deg,var(--teal),#48a8e9);display:grid;place-items:center;color:#07131d;font-size:21px;box-shadow:0 6px 22px #4de4ce35}
+body[data-page="youtube-thumbnail-downloader"] .brand span span{color:var(--teal)}
+body[data-page="youtube-thumbnail-downloader"] .navlinks{display:flex;align-items:center;gap:30px;color:#c3cce0;font-size:14px}body[data-page="youtube-thumbnail-downloader"] .navlinks a:hover, body[data-page="youtube-thumbnail-downloader"] .navlinks a.on{color:var(--teal)}
+body[data-page="youtube-thumbnail-downloader"] .nav-cta, body[data-page="youtube-thumbnail-downloader"] .primary{background:linear-gradient(100deg,var(--teal),#7ad9f5);color:#07131d;font-weight:800;border:0;border-radius:10px;padding:11px 17px;display:inline-flex;align-items:center;justify-content:center;gap:8px;box-shadow:0 8px 26px #4de4ce20;font-size:15px;line-height:1.2;transition:transform .15s,filter .15s}
+body[data-page="youtube-thumbnail-downloader"] .nav-cta:hover, body[data-page="youtube-thumbnail-downloader"] .primary:hover{filter:brightness(1.06);transform:translateY(-1px)}
+body[data-page="youtube-thumbnail-downloader"] .primary{min-height:48px;padding:12px 20px}
+body[data-page="youtube-thumbnail-downloader"] .secondary{border:1px solid var(--line2);background:#ffffff06;color:#dbe4f5;font-weight:700;border-radius:10px;padding:12px 18px;min-height:48px;display:inline-flex;align-items:center;justify-content:center;gap:8px;font-size:15px;transition:border-color .15s,color .15s,background .15s}
+body[data-page="youtube-thumbnail-downloader"] .secondary:hover{border-color:#4de4ce80;color:var(--teal);background:#4de4ce0d}
+body[data-page="youtube-thumbnail-downloader"] .menu-btn{display:inline-grid;place-items:center;background:none;border:1px solid var(--line);color:white;border-radius:9px;padding:8px 12px;cursor:pointer;font-size:18px;line-height:1}body[data-page="youtube-thumbnail-downloader"] .menu-btn:hover{border-color:var(--teal);color:var(--teal)}
+/* side menu */
+body[data-page="youtube-thumbnail-downloader"] .overlay{position:fixed;inset:0;background:#0009;opacity:0;pointer-events:none;transition:opacity .2s;z-index:40}
+body[data-page="youtube-thumbnail-downloader"] .sidebar{position:fixed;top:0;left:0;bottom:0;width:min(340px,88vw);background:#0c1425;border-right:1px solid var(--line);z-index:50;transform:translateX(-100%);visibility:hidden;transition:transform .25s,visibility .25s;display:flex;flex-direction:column}
+body[data-page="youtube-thumbnail-downloader"].side-open{overflow:hidden}body[data-page="youtube-thumbnail-downloader"].side-open .overlay{opacity:1;pointer-events:auto}body[data-page="youtube-thumbnail-downloader"].side-open .sidebar{transform:none;visibility:visible}
+body[data-page="youtube-thumbnail-downloader"] .side-head{display:flex;justify-content:space-between;align-items:center;padding:16px;border-bottom:1px solid var(--line)}body[data-page="youtube-thumbnail-downloader"] .side-body{padding:14px;overflow:auto;flex:1}
+body[data-page="youtube-thumbnail-downloader"] .side-label{font-size:12px;color:var(--muted);margin:18px 4px 6px;font-weight:700}body[data-page="youtube-thumbnail-downloader"] .side-label:first-child{margin-top:4px}
+body[data-page="youtube-thumbnail-downloader"] .side-links{display:flex;flex-direction:column;gap:2px;font-size:14px;color:#c3cce0}body[data-page="youtube-thumbnail-downloader"] .side-links a{padding:11px 10px;border-radius:9px}body[data-page="youtube-thumbnail-downloader"] .side-links a:hover{background:#4de4ce14;color:var(--teal)}
+/* page header */
+body[data-page="youtube-thumbnail-downloader"] .eyebrow{display:inline-flex;align-items:center;gap:9px;border:1px solid #4de4ce42;background:#4de4ce0d;color:var(--teal);border-radius:30px;padding:7px 12px;font-size:12px;font-weight:750;letter-spacing:.7px;text-transform:uppercase}
+body[data-page="youtube-thumbnail-downloader"] .dot{width:7px;height:7px;border-radius:50%;background:var(--teal);box-shadow:0 0 12px var(--teal)}
+body[data-page="youtube-thumbnail-downloader"] .gradient{background:linear-gradient(95deg,var(--teal),#8aa7ff 75%);-webkit-background-clip:text;background-clip:text;color:transparent}
+body[data-page="youtube-thumbnail-downloader"] .crumb{font-size:13px;color:var(--muted);margin:0 0 16px}body[data-page="youtube-thumbnail-downloader"] .crumb a:hover{color:var(--teal)}
+body[data-page="youtube-thumbnail-downloader"] .phero{padding:52px 0 26px}
+body[data-page="youtube-thumbnail-downloader"] .phero h1{font-size:clamp(36px,5.2vw,56px);line-height:1.07;letter-spacing:-2.2px;margin:18px 0 14px;font-weight:850}
+body[data-page="youtube-thumbnail-downloader"] .phero .lead{font-size:17px;color:var(--muted);max-width:660px;margin:0}
+body[data-page="youtube-thumbnail-downloader"] .badges{display:flex;flex-wrap:wrap;gap:8px 22px;margin-top:22px;color:#aab7cc;font-size:13px}body[data-page="youtube-thumbnail-downloader"] .badges b{color:var(--teal);margin-right:7px}
+/* cards, forms */
+body[data-page="youtube-thumbnail-downloader"] .card{background:linear-gradient(145deg,#121d33,#0e1729);border:1px solid var(--line);border-radius:18px;padding:26px;box-shadow:0 20px 50px rgba(0,0,0,.25)}
+body[data-page="youtube-thumbnail-downloader"] label, body[data-page="youtube-thumbnail-downloader"] .lbl{display:block;font-size:13px;font-weight:700;color:#c3cce0;margin-bottom:7px}
+body[data-page="youtube-thumbnail-downloader"] .input{width:100%;min-height:50px;background:var(--field);border:1px solid #26354f;border-radius:12px;padding:12px 14px;color:var(--text);font-size:16px;outline:0;transition:border-color .2s,box-shadow .2s}
+body[data-page="youtube-thumbnail-downloader"] .input::placeholder{color:#6b7a95}
+body[data-page="youtube-thumbnail-downloader"] .input:focus{border-color:var(--teal);box-shadow:0 0 0 4px #4de4ce1f}
+body[data-page="youtube-thumbnail-downloader"] select.input{appearance:none;-webkit-appearance:none;padding-right:42px;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%234de4ce' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 15px center}
+body[data-page="youtube-thumbnail-downloader"] select option{background:#0f1829;color:#fff}
+body[data-page="youtube-thumbnail-downloader"] textarea.input{min-height:150px;resize:vertical;line-height:1.55}
+body[data-page="youtube-thumbnail-downloader"] .note{margin-top:16px;padding:12px 15px;border-left:3px solid var(--teal);border-radius:0 10px 10px 0;background:#4de4ce0d;color:#a9b8cf;font-size:13.5px}
+/* sections */
+body[data-page="youtube-thumbnail-downloader"] .sec{padding:36px 0}body[data-page="youtube-thumbnail-downloader"] .sec h2{font-size:clamp(25px,3vw,33px);letter-spacing:-1px;line-height:1.2;margin:0 0 8px}body[data-page="youtube-thumbnail-downloader"] .sec .sub{color:var(--muted);margin:0 0 22px;max-width:640px}
+body[data-page="youtube-thumbnail-downloader"] .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;counter-reset:s;list-style:none;padding:0;margin:0}
+body[data-page="youtube-thumbnail-downloader"] .steps li{counter-increment:s;background:#ffffff05;border:1px solid var(--line);border-radius:14px;padding:18px;color:#cbd5e6;font-size:14.5px}
+body[data-page="youtube-thumbnail-downloader"] .steps li::before{content:counter(s);display:grid;place-items:center;width:30px;height:30px;border-radius:9px;background:#4de4ce16;border:1px solid #4de4ce40;color:var(--teal);font-weight:800;margin-bottom:11px}
+body[data-page="youtube-thumbnail-downloader"] .steps b{display:block;color:var(--text);margin-bottom:2px}
+body[data-page="youtube-thumbnail-downloader"] details{border:1px solid var(--line);background:#ffffff04;border-radius:14px;margin-bottom:10px}
+body[data-page="youtube-thumbnail-downloader"] summary{cursor:pointer;list-style:none;padding:17px 18px;font-weight:700;display:flex;justify-content:space-between;align-items:center;gap:14px}
+body[data-page="youtube-thumbnail-downloader"] summary::-webkit-details-marker{display:none}body[data-page="youtube-thumbnail-downloader"] summary::after{content:"+";color:var(--teal);font-size:22px;line-height:1;flex:none}body[data-page="youtube-thumbnail-downloader"] details[open] summary::after{content:"–"}
+body[data-page="youtube-thumbnail-downloader"] details[open]{border-color:#4de4ce40}body[data-page="youtube-thumbnail-downloader"] details p{margin:0;padding:0 18px 18px;color:var(--muted);font-size:14.5px}
+body[data-page="youtube-thumbnail-downloader"] .more{display:flex;flex-wrap:wrap;gap:8px}body[data-page="youtube-thumbnail-downloader"] .more a{border:1px solid var(--line);border-radius:30px;padding:9px 16px;font-size:13px;color:#b9c5d8;background:#ffffff05}body[data-page="youtube-thumbnail-downloader"] .more a:hover{border-color:#4de4ce80;color:var(--teal);background:#4de4ce12}
+body[data-page="youtube-thumbnail-downloader"] .tablewrap{overflow-x:auto;border:1px solid var(--line);border-radius:14px;-webkit-overflow-scrolling:touch}
+body[data-page="youtube-thumbnail-downloader"] table{border-collapse:collapse;width:100%;min-width:480px;font-size:14px}body[data-page="youtube-thumbnail-downloader"] th, body[data-page="youtube-thumbnail-downloader"] td{padding:12px 16px;text-align:left;border-bottom:1px solid var(--line);white-space:nowrap}body[data-page="youtube-thumbnail-downloader"] th{background:#ffffff07;color:#c3cce0;font-size:12px;letter-spacing:.8px;text-transform:uppercase}body[data-page="youtube-thumbnail-downloader"] tr:last-child td{border-bottom:0}body[data-page="youtube-thumbnail-downloader"] td:first-child{font-weight:700}
+/* footer (same as home page) */
+body[data-page="youtube-thumbnail-downloader"] footer{border-top:1px solid var(--line);padding:35px 0 25px;background:#070b16;margin-top:40px}
+body[data-page="youtube-thumbnail-downloader"] .foot-top{display:flex;justify-content:space-between;gap:30px;flex-wrap:wrap}body[data-page="youtube-thumbnail-downloader"] .foot-about{max-width:340px}body[data-page="youtube-thumbnail-downloader"] .foot-about p{color:var(--muted);font-size:13px}
+body[data-page="youtube-thumbnail-downloader"] .foot-links{display:flex;gap:12px 20px;flex-wrap:wrap;color:#aebbd0;font-size:13px}body[data-page="youtube-thumbnail-downloader"] .foot-links a:hover{color:var(--teal)}
+body[data-page="youtube-thumbnail-downloader"] .copyright{border-top:1px solid var(--line);margin-top:25px;padding-top:18px;color:#78869e;font-size:12px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+@media(max-width:900px){body[data-page="youtube-thumbnail-downloader"] .steps{grid-template-columns:1fr}}
+@media(max-width:650px){body[data-page="youtube-thumbnail-downloader"] .wrap{width:min(var(--max),calc(100% - 28px))}body[data-page="youtube-thumbnail-downloader"] .topbar{height:68px}body[data-page="youtube-thumbnail-downloader"] .nav-cta, body[data-page="youtube-thumbnail-downloader"] .navlinks{display:none}body[data-page="youtube-thumbnail-downloader"] .phero{padding:34px 0 18px}body[data-page="youtube-thumbnail-downloader"] .phero h1{font-size:38px;letter-spacing:-1.6px}body[data-page="youtube-thumbnail-downloader"] .phero .lead{font-size:15.5px}body[data-page="youtube-thumbnail-downloader"] .card{padding:18px;border-radius:16px}body[data-page="youtube-thumbnail-downloader"] .sec{padding:28px 0}body[data-page="youtube-thumbnail-downloader"] .foot-top{flex-direction:column}body[data-page="youtube-thumbnail-downloader"] .copyright{font-size:11px}}
+@media(prefers-reduced-motion:reduce){body[data-page="youtube-thumbnail-downloader"] *{transition:none!important;scroll-behavior:auto!important}}
+
+/* --- youtube-thumbnail-downloader: tool-specific rules --- */
+body[data-page="youtube-thumbnail-downloader"] .ytd-form{display:flex;gap:10px;align-items:stretch;flex-wrap:wrap}
+body[data-page="youtube-thumbnail-downloader"] .ytd-form .input{flex:1 1 320px;min-width:0}
+body[data-page="youtube-thumbnail-downloader"] .ytd-form .primary,body[data-page="youtube-thumbnail-downloader"] .ytd-form .secondary{flex:0 0 auto}
+body[data-page="youtube-thumbnail-downloader"] .msg{display:none;margin-top:16px;padding:11px 14px;border-radius:10px;font-size:13.5px;overflow-wrap:anywhere}
+body[data-page="youtube-thumbnail-downloader"] .msg.show{display:block}
+body[data-page="youtube-thumbnail-downloader"] .msg.err{background:#fef2f2;border:1px solid #fecaca;color:#991b1b}
+body[data-page="youtube-thumbnail-downloader"] .msg.warn{background:#fffbeb;border:1px solid #fde68a;color:#92400e}
+body[data-page="youtube-thumbnail-downloader"] .msg.ok{background:#f0fdf4;border:1px solid #bbf7d0;color:#166534}
+body[data-page="youtube-thumbnail-downloader"] .spin{width:14px;height:14px;border-radius:50%;border:2px solid #ffffff66;border-top-color:#fff;display:inline-block;animation:ytdsp .8s linear infinite;vertical-align:-2px}
+@keyframes ytdsp{to{transform:rotate(360deg)}}
+body[data-page="youtube-thumbnail-downloader"] .primary[disabled]{opacity:.7;cursor:progress}
+body[data-page="youtube-thumbnail-downloader"] .ytd-result{margin-top:24px;padding-top:22px;border-top:1px solid var(--line)}
+body[data-page="youtube-thumbnail-downloader"] .ytd-top{display:flex;flex-wrap:wrap;gap:10px 14px;align-items:center;justify-content:space-between;margin-bottom:14px}
+body[data-page="youtube-thumbnail-downloader"] .ytd-vid{font-size:14px;color:var(--muted)}
+body[data-page="youtube-thumbnail-downloader"] .ytd-vid b{color:var(--text);font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:13.5px}
+body[data-page="youtube-thumbnail-downloader"] .ytd-best{display:block;width:100%;aspect-ratio:16/9;object-fit:contain;background:#0f172a;border-radius:14px;border:1px solid var(--line)}
+body[data-page="youtube-thumbnail-downloader"] .ytd-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:14px;margin-top:18px}
+body[data-page="youtube-thumbnail-downloader"] .ytd-item{display:flex;flex-direction:column;gap:10px;padding:12px;border:1px solid var(--line);border-radius:14px;background:#fff}
+body[data-page="youtube-thumbnail-downloader"] .ytd-item img{display:block;width:100%;aspect-ratio:16/9;object-fit:contain;background:#0f172a;border-radius:10px}
+body[data-page="youtube-thumbnail-downloader"] .ytd-name{display:flex;flex-wrap:wrap;gap:6px 10px;align-items:center;justify-content:space-between;font-weight:700;font-size:15px}
+body[data-page="youtube-thumbnail-downloader"] .ytd-dim{font-weight:600;font-size:12.5px;color:var(--muted)}
+body[data-page="youtube-thumbnail-downloader"] .ytd-tag{display:inline-block;padding:2px 9px;border-radius:20px;font-size:12px;font-weight:700;background:#eff6ff;color:#1d4ed8;border:1px solid #bfdbfe}
+body[data-page="youtube-thumbnail-downloader"] .ytd-btns{display:flex;gap:8px;flex-wrap:wrap}
+body[data-page="youtube-thumbnail-downloader"] .ytd-btns .primary,body[data-page="youtube-thumbnail-downloader"] .ytd-btns .secondary{min-height:44px;padding:9px 14px;font-size:14px;flex:1 1 auto}
+body[data-page="youtube-thumbnail-downloader"] .ytd-status{min-height:18px;font-size:12.5px;color:var(--muted);margin:0}
+body[data-page="youtube-thumbnail-downloader"] .ytd-status.ok{color:#166534}
+body[data-page="youtube-thumbnail-downloader"] .ytd-status.warn{color:#92400e}
+body[data-page="youtube-thumbnail-downloader"] .ytd-missing{margin:16px 0 0;font-size:13.5px;color:var(--muted)}
+body[data-page="youtube-thumbnail-downloader"] .sec h3{font-size:19px;margin:26px 0 8px;letter-spacing:-.4px}
+body[data-page="youtube-thumbnail-downloader"] .prose p{margin:0 0 14px;max-width:760px}
+body[data-page="youtube-thumbnail-downloader"] .prose ul{margin:0 0 14px;padding-left:20px;max-width:760px}
+body[data-page="youtube-thumbnail-downloader"] .prose li{margin-bottom:6px}
+body[data-page="youtube-thumbnail-downloader"] .steps{grid-template-columns:repeat(5,1fr)}
+body[data-page="youtube-thumbnail-downloader"] .steps li{font-size:14px}
+@media(max-width:1000px){body[data-page="youtube-thumbnail-downloader"] .steps{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:560px){body[data-page="youtube-thumbnail-downloader"] .steps{grid-template-columns:1fr}body[data-page="youtube-thumbnail-downloader"] .ytd-form .primary,body[data-page="youtube-thumbnail-downloader"] .ytd-form .secondary{flex:1 1 100%}body[data-page="youtube-thumbnail-downloader"] .ytd-grid{grid-template-columns:1fr}}
