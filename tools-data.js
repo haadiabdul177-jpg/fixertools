@@ -5,12 +5,6 @@
  * a tool. The homepage (index.html) and the "Explore More Tools" section on
  * every tool page (tools.js) are generated from it.
  *
- * To add a tool:
- *   1. Upload its page, e.g. /unit-converter.html  (served as /unit-converter)
- *   2. Add one object to FIXERTOOLS.tools below.
- *   3. Pick a category from FIXERTOOLS.categories (spelled exactly).
- *   4. (Optional) list related tool ids in relatedTools.
- *
  * Field guide
  *   id            unique, lowercase, hyphenated. Normally equals the page filename.
  *   name          the visible tool name.
@@ -19,13 +13,8 @@
  *   description   one short sentence shown on cards and in search results.
  *   keywords      extra words people may search for (homepage search uses them).
  *   icon          the glyph/emoji shown on the card.
- *   relatedTools  ids of tools to recommend first. Leave [] to let tools.js
- *                 pick tools from the same category automatically.
- *   status        "active" = live. Anything else ("draft", "hidden", ...) is
- *                 ignored everywhere. Never mark a tool "active" before its
- *                 page is uploaded.
- *
- * Only data lives here, so this file is safe to load on every page.
+ *   relatedTools  ids of tools to recommend first.
+ *   status        "active" = live. Anything else is ignored everywhere.
  */
 window.FIXERTOOLS = {
   categories: [
@@ -176,7 +165,7 @@ window.FIXERTOOLS = {
       description: "Reduce image file size for easier sharing and upload.",
       keywords: ["image", "photo", "compress", "reduce size", "jpeg", "jpg", "webp", "png", "resize"],
       icon: "🗜️",
-      relatedTools: ["youtube-thumbnail-downloader", "volume-converter", "qr-code-generator", "json-formatter", "password-generator", "word-counter", "case-converter", "age-calculator"],
+      relatedTools: ["youtube-thumbnail-downloader", "pdf-compressor", "volume-converter", "qr-code-generator", "json-formatter", "password-generator", "word-counter", "case-converter", "age-calculator"],
       status: "active"
     },
     {
@@ -187,7 +176,20 @@ window.FIXERTOOLS = {
       description: "Download YouTube thumbnails in HD quality for free.",
       keywords: ["youtube", "thumbnail", "download", "video", "image", "hd", "maxres", "youtube thumbnail", "yt thumbnail"],
       icon: "🖼️",
-      relatedTools: ["image-compressor", "qr-code-generator", "password-generator", "json-formatter", "word-counter"],
+      relatedTools: ["image-compressor", "pdf-compressor", "qr-code-generator", "password-generator", "json-formatter", "word-counter"],
+      status: "active"
+    },
+
+    /* ---------------- Other Tools ---------------- */
+    {
+      id: "pdf-compressor",
+      name: "PDF Compressor",
+      url: "/pdf-compressor",
+      category: "Other Tools",
+      description: "Compress PDF files to reduce size without losing quality.",
+      keywords: ["pdf", "compress", "reduce size", "shrink", "pdf compressor", "merge", "optimize"],
+      icon: "📄",
+      relatedTools: ["image-compressor", "youtube-thumbnail-downloader", "qr-code-generator", "json-formatter"],
       status: "active"
     }
   ]
