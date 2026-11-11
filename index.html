@@ -1,5 +1,4 @@
-<!DOCTYPE html>
-
+ <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="utf-8"/>
@@ -13,7 +12,6 @@
 <meta content="Free online calculators, converters, text and image tools. No sign-up required." property="og:description"/>
 <meta content="https://fixertools.online/" property="og:url"/>
 <meta content="summary" name="twitter:card"/>
-
 <script type="application/ld+json">
   {"@context":"https://schema.org","@type":"WebSite","name":"FixerTools","url":"https://fixertools.online/","description":"Free online calculators, converters, text and image tools."}
   </script>
@@ -66,11 +64,6 @@
 <button class="filter active" data-filter="All">All tools</button><button class="filter" data-filter="Calculators">Calculators</button><button class="filter" data-filter="Text Tools">Text Tools</button><button class="filter" data-filter="Converters">Converters</button><button class="filter" data-filter="Developer Tools">Developer Tools</button><button class="filter" data-filter="Image Tools">Image Tools</button>
 </div>
 </div>
-<div class="ft-featured" hidden="" id="featuredTools">
-<h3 class="ft-subhead">Featured tools</h3>
-<div class="tool-grid" id="featuredGrid"></div>
-</div>
-<h3 class="ft-subhead" hidden="" id="allToolsTitle">All tools</h3>
 <!-- Static fallback cards: shown if JavaScript or /tools-data.js is unavailable.
      When the script runs, it replaces them with cards generated from /tools-data.js. -->
 <div class="tool-grid" id="toolGrid">
@@ -86,6 +79,7 @@
 <a class="tool-card" data-category="Developer Tools" href="/json-formatter"><span class="tool-icon">{ }</span><h3>JSON Formatter</h3><p>Format and tidy JSON data for easier reading.</p><span class="tool-link">Use tool &rarr;</span></a>
 <a class="tool-card" data-category="Converters" href="/volume-converter"><span class="tool-icon">🧪</span><h3>Volume Converter</h3><p>Convert between common volume measurement units.</p><span class="tool-link">Use tool &rarr;</span></a>
 <a class="tool-card" data-category="Image Tools" href="/image-compressor"><span class="tool-icon">🗜️</span><h3>Image Compressor</h3><p>Reduce image file size for easier sharing and upload.</p><span class="tool-link">Use tool &rarr;</span></a>
+<a class="tool-card" data-category="Image Tools" href="/youtube-thumbnail-downloader"><span class="tool-icon">🖼️</span><h3>YouTube Thumbnail Downloader</h3><p>Download YouTube thumbnails in HD quality for free.</p><span class="tool-link">Use tool &rarr;</span></a>
 </div>
 <div class="empty" id="emptyState">No tools found. Try another search.</div>
 </div>
@@ -116,7 +110,7 @@
 <script>
 (function(){
   const $=id=>document.getElementById(id);
-  const topIn=$('toolSearch'),results=$('results'),grid=$('toolGrid'),featBox=$('featuredTools'),featGrid=$('featuredGrid'),allTitle=$('allToolsTitle');
+  const topIn=$('toolSearch'),results=$('results'),grid=$('toolGrid');
   let TOOLS=[],q='',activeFilter='All',idx=-1;
 
   /* ---- tool list: built from /tools-data.js; falls back to the static cards in this page ---- */
@@ -159,14 +153,10 @@
   const filterButtons=()=>[...document.querySelectorAll('.filter')];
   function render(){
     const found=TOOLS.filter(match);idx=-1;fill(results,found);
-    /* Featured row only on the default view, so no tool card is ever shown twice. */
-    const showFeat=activeFilter==='All'&&!q&&TOOLS.some(t=>t.featured);
-    const feat=showFeat?TOOLS.filter(t=>t.featured):[];
-    const rest=TOOLS.filter(t=>(activeFilter==='All'||t.cat===activeFilter)&&match(t)&&!(showFeat&&t.featured));
-    featGrid.replaceChildren(...feat.map(t=>t.el));
-    grid.replaceChildren(...rest.map(t=>t.el));
-    featBox.hidden=!feat.length;allTitle.hidden=!(feat.length&&rest.length);
-    $('emptyState').style.display=(feat.length+rest.length)?'none':'block';}
+    /* All tools shown in a single grid — no separate "Featured tools" row. */
+    const visible=TOOLS.filter(t=>(activeFilter==='All'||t.cat===activeFilter)&&match(t));
+    grid.replaceChildren(...visible.map(t=>t.el));
+    $('emptyState').style.display=visible.length?'none':'block';}
   function setFilter(f){
     if(!filterButtons().some(b=>b.dataset.filter===f))f='All';
     activeFilter=f;filterButtons().forEach(b=>{const on=b.dataset.filter===f;b.classList.toggle('active',on);b.setAttribute('aria-pressed',String(on));});render();}
