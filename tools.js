@@ -13,7 +13,7 @@
  *  - The current page, duplicates, inactive tools and incomplete entries
  *    are never shown.
  *  - Optional: <div id="related-tools" data-limit="8"></div> changes how many
- *    links are shown (default 6, allowed 1-12).
+ *    links are shown (default: all active tools, allowed 1-100).
  *
  * It also adds BreadcrumbList structured data when the page does not already
  * have one. If the page has a visible breadcrumb trail (.crumbs), the
@@ -26,8 +26,8 @@
 (function () {
   "use strict";
 
-  var DEFAULT_LIMIT = 6;
-  var MAX_LIMIT = 12;
+  var DEFAULT_LIMIT = 100; /* show every other active tool */
+  var MAX_LIMIT = 100;
 
   /* ---------- helpers ---------- */
 
