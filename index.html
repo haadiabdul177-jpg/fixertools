@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="utf-8"/>
@@ -29,7 +29,7 @@
 </div>
 </header>
 <div class="searchstrip"><div class="wrap"><div class="sbox">
-<label class="sfield"><svg aria-hidden="true" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-width="2.2" viewbox="0 0 24 24" width="20"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-3.5-3.5"></path></svg><input aria-label="Search tools" autocomplete="off" id="toolSearch" placeholder="Search 12+ tools: age, QR, JSON, BMI..." type="search"/><span class="kbd">/</span></label>
+<label class="sfield"><svg aria-hidden="true" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-width="2.2" viewbox="0 0 24 24" width="20"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-3.5-3.5"></path></svg><input aria-label="Search tools" autocomplete="off" id="toolSearch" placeholder="Search 13+ tools: age, QR, JSON, BMI..." type="search"/><span class="kbd">/</span></label>
 <div aria-label="Search results" class="results" id="results" role="listbox"></div>
 </div></div></div>
 <main>
@@ -61,7 +61,7 @@
 <div class="section-head"><div class="kicker">Explore FixerTools</div><h2>Popular free online tools</h2><p>Choose a tool and get started. More useful tools are being added.</p></div>
 <div class="tools-top">
 <div aria-label="Filter tools" class="filters" role="group">
-<button class="filter active" data-filter="All">All tools</button><button class="filter" data-filter="Calculators">Calculators</button><button class="filter" data-filter="Text Tools">Text Tools</button><button class="filter" data-filter="Converters">Converters</button><button class="filter" data-filter="Developer Tools">Developer Tools</button><button class="filter" data-filter="Image Tools">Image Tools</button>
+<button class="filter active" data-filter="All">All tools</button><button class="filter" data-filter="Calculators">Calculators</button><button class="filter" data-filter="Text Tools">Text Tools</button><button class="filter" data-filter="Converters">Converters</button><button class="filter" data-filter="Developer Tools">Developer Tools</button><button class="filter" data-filter="Image Tools">Image Tools</button><button class="filter" data-filter="Other Tools">Other Tools</button>
 </div>
 </div>
 <!-- Static fallback cards: shown if JavaScript or /tools-data.js is unavailable.
@@ -80,6 +80,7 @@
 <a class="tool-card" data-category="Converters" href="/volume-converter"><span class="tool-icon">🧪</span><h3>Volume Converter</h3><p>Convert between common volume measurement units.</p><span class="tool-link">Use tool &rarr;</span></a>
 <a class="tool-card" data-category="Image Tools" href="/image-compressor"><span class="tool-icon">🗜️</span><h3>Image Compressor</h3><p>Reduce image file size for easier sharing and upload.</p><span class="tool-link">Use tool &rarr;</span></a>
 <a class="tool-card" data-category="Image Tools" href="/youtube-thumbnail-downloader"><span class="tool-icon">🖼️</span><h3>YouTube Thumbnail Downloader</h3><p>Download YouTube thumbnails in HD quality for free.</p><span class="tool-link">Use tool &rarr;</span></a>
+<a class="tool-card" data-category="Other Tools" href="/pdf-compressor"><span class="tool-icon">📄</span><h3>PDF Compressor</h3><p>Compress PDF files to reduce size without losing quality.</p><span class="tool-link">Use tool &rarr;</span></a>
 </div>
 <div class="empty" id="emptyState">No tools found. Try another search.</div>
 </div>
@@ -132,14 +133,14 @@
       if(seenId.has(x.id)||seenUrl.has(x.url))return;
       seenId.add(x.id);seenUrl.add(x.url);
       const t={id:x.id,href:x.url,name:String(x.name),desc:String(x.description||''),icon:String(x.icon||'\u{1F527}'),
-        cat:names.includes(x.category)?x.category:OTHER,keywords:Array.isArray(x.keywords)?x.keywords.map(String):[],featured:x.featured===true};
+        cat:names.includes(x.category)?x.category:OTHER,keywords:Array.isArray(x.keywords)?x.keywords.map(String):[]};
       t.el=makeCard(t);list.push(t);
     });
     return list.length?{list,names}:null;
   }
   function fromPage(){
     return [...grid.querySelectorAll('.tool-card')].map(c=>({el:c,href:c.getAttribute('href'),name:c.querySelector('h3').textContent,
-      desc:c.querySelector('p').textContent,icon:c.querySelector('.tool-icon').textContent,cat:c.dataset.category,keywords:[],featured:false}));
+      desc:c.querySelector('p').textContent,icon:c.querySelector('.tool-icon').textContent,cat:c.dataset.category,keywords:[]}));
   }
 
   /* ---- search + render ---- */
