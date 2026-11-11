@@ -19,23 +19,23 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
 <style>
-/* Everything is scoped to .fx-pdf, matching the FixerTools blue theme */
-.fx-pdf{--blue:#2563eb;--blue-d:#1d4ed8;--violet:#6d4ae8;--ink:#0f172a;--muted:#64748b;--line:#e2e8f0;--soft:#f8fafc;--g:linear-gradient(135deg,#2563eb,#6d4ae8);margin:0;background:#fff;color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;line-height:1.65}
+.fx-pdf{--blue:#2563eb;--blue-d:#1d4ed8;--ink:#0f172a;--muted:#64748b;--line:#e2e8f0;--soft:#f8fafc;--g:linear-gradient(135deg,#2563eb,#6d4ae8);margin:0;background:#fff;color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;line-height:1.65}
 .fx-pdf *{box-sizing:border-box}
 .fx-pdf a{color:var(--blue);text-decoration:none}.fx-pdf a:hover{color:var(--blue-d)}
 .fx-pdf .wrap{width:min(1100px,92%);margin-inline:auto}
 .fx-pdf header.site{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.95);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
 .fx-pdf .bar{display:flex;align-items:center;justify-content:space-between;min-height:76px;gap:16px}
-.fx-pdf .logo{display:inline-flex;align-items:center;gap:14px;font-size:1.7rem;font-weight:800;letter-spacing:-1px;color:var(--ink)}
-.fx-pdf .logo b{color:var(--blue)}
-.fx-pdf .logo i{display:grid;place-items:center;width:62px;height:62px;border-radius:18px;background:var(--blue);box-shadow:0 8px 20px rgba(37,99,235,.3)}
-.fx-pdf .logo svg{width:26px;height:26px}
-.fx-pdf .menu-btn{display:grid;place-items:center;width:64px;height:54px;border:1px solid var(--line);border-radius:14px;background:#fff;cursor:pointer;color:var(--ink)}
-.fx-pdf .menu-btn svg{width:26px;height:26px}
+.fx-pdf .brand{display:inline-flex;align-items:center;gap:10px;font-size:1.15rem;font-weight:700;letter-spacing:-.4px;color:var(--ink)}
+.fx-pdf .brand:hover{color:var(--ink)}
+.fx-pdf .brand span{display:inline-flex;align-items:baseline}
+.fx-pdf .brand span b{color:var(--blue);font-weight:800;margin-left:0}
+.fx-pdf .brand-mark{display:inline-grid;place-items:center;width:34px;height:34px;border-radius:10px;background:var(--blue);color:#fff;font-size:1.05rem;font-weight:800;box-shadow:0 4px 10px rgba(37,99,235,.28)}
+.fx-pdf .menu-btn{display:grid;place-items:center;width:44px;height:40px;border:1px solid var(--line);border-radius:10px;background:#fff;cursor:pointer;color:var(--ink)}
+.fx-pdf .menu-btn svg{width:20px;height:20px}
 .fx-pdf nav.main{display:none;padding:8px 0 14px;border-top:1px solid var(--line)}
 .fx-pdf nav.main.open{display:block}
 .fx-pdf nav.main a{display:block;padding:10px 4px;font-weight:600;color:var(--ink)}
-.fx-pdf .fx-crumbs{font-size:1.05rem;margin:28px 0 0;color:var(--muted)}
+.fx-pdf .fx-crumbs{font-size:1rem;margin:28px 0 0;color:var(--muted)}
 .fx-pdf .fx-crumbs span{margin:0 8px;color:#94a3b8}
 .fx-pdf .fx-crumbs b{color:var(--ink);font-weight:500}
 .fx-pdf .fx-badge{display:inline-flex;align-items:center;gap:10px;margin-top:22px;padding:10px 18px;border:1px solid #bfdbfe;border-radius:999px;background:#eff6ff;color:var(--blue);font-weight:600}
@@ -76,10 +76,18 @@
 .fx-pdf [hidden]{display:none!important}
 .fx-pdf .fx-content{max-width:820px;padding:0 0 50px}
 .fx-pdf .fx-content h2{margin-top:38px;font-size:1.55rem;letter-spacing:-.5px}
+.fx-pdf .fx-content ul{padding-left:22px}
+.fx-pdf .fx-content ul li{margin:6px 0}
 .fx-pdf details{border:1px solid var(--line);border-radius:14px;padding:14px 18px;margin:10px 0}
 .fx-pdf summary{cursor:pointer;font-weight:700}
 .fx-pdf .fx-foot{padding:26px 0;border-top:1px solid var(--line);color:var(--muted);font-size:.9rem}
-@media(max-width:700px){.fx-pdf fieldset{grid-template-columns:1fr}.fx-pdf .fx-stats{grid-template-columns:1fr 1fr}.fx-pdf .logo{font-size:1.5rem}.fx-pdf .logo i{width:56px;height:56px}}
+.fx-pdf .fx-foot a{margin:0 6px}
+@media(max-width:700px){
+  .fx-pdf fieldset{grid-template-columns:1fr}
+  .fx-pdf .fx-stats{grid-template-columns:1fr 1fr}
+  .fx-pdf .brand{font-size:1.05rem}
+  .fx-pdf .brand-mark{width:32px;height:32px;border-radius:9px}
+}
 @media(prefers-reduced-motion:reduce){.fx-pdf *{transition:none!important}}
 </style>
 <script type="application/ld+json">
@@ -92,10 +100,20 @@
 <body class="fx-pdf">
 <header class="site"><div class="wrap">
   <div class="bar">
-    <a class="logo" href="/" aria-label="FixerTools home"><i aria-hidden="true"><svg viewBox="0 0 24 24" fill="#fff"><path d="M13 2 4 14h6l-1 8 9-12h-6z"/></svg></i><span>Fixer<b>Tools</b></span></a>
+    <a class="brand" href="/" aria-label="FixerTools home">
+      <span class="brand-mark" aria-hidden="true">⌁</span>
+      <span>Fixer<b>Tools</b></span>
+    </a>
     <button type="button" class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="mainNav"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
   </div>
-  <nav class="main" id="mainNav" aria-label="Main"><a href="/">All tools</a></nav>
+  <nav class="main" id="mainNav" aria-label="Main">
+    <a href="/">All tools</a>
+    <a href="/image-compressor">Image Compressor</a>
+    <a href="/youtube-thumbnail-downloader">YouTube Thumbnail Downloader</a>
+    <a href="/qr-code-generator">QR Code Generator</a>
+    <a href="/word-counter">Word Counter</a>
+    <a href="/password-generator">Password Generator</a>
+  </nav>
 </div></header>
 
 <main class="wrap">
@@ -152,7 +170,6 @@
   <p id="err" class="fx-msg fx-err" role="alert" hidden></p>
   </div>
 </section>
-
 <article class="fx-content">
   <h2>How to Compress a PDF File Online</h2>
   <ol>
@@ -179,10 +196,17 @@
   <h2>Is It Safe to Compress Private PDF Documents?</h2>
   <p>Your PDF is read and compressed by JavaScript running in your browser. The document is not uploaded to our servers or to any third-party API, and it is not stored. Download links are released when you remove the file, start over or leave the page. The compression library itself is loaded as a script when you press Compress; that request contains no document data. You can verify the no-upload behavior in your browser's network tab. Even so, for highly sensitive files, use a device and browser you trust.</p>
 
-  <h2>Related Free PDF Tools</h2>
-  <p>Browse more utilities from the <a href="/">FixerTools homepage</a>.</p>
-  <!-- Add links here ONLY once the pages exist, e.g.:
-  <ul><li><a href="/merge-pdf">Merge PDF</a></li><li><a href="/pdf-to-jpg">PDF to JPG</a></li><li><a href="/jpg-to-pdf">JPG to PDF</a></li><li><a href="/pdf-to-word">PDF to Word</a></li></ul> -->
+  <h2>Related Free Tools on FixerTools</h2>
+  <p>PDF Compressor is part of a growing set of free utilities. These tools pair well with it:</p>
+  <ul>
+    <li><a href="/image-compressor">Image Compressor</a> – shrink JPG and PNG images before adding them to a PDF.</li>
+    <li><a href="/youtube-thumbnail-downloader">YouTube Thumbnail Downloader</a> – save HD thumbnails for reports, slides or documents.</li>
+    <li><a href="/qr-code-generator">QR Code Generator</a> – create a QR code that links to your PDF online.</li>
+    <li><a href="/json-formatter">JSON Formatter</a> – clean up data files that often accompany document workflows.</li>
+    <li><a href="/word-counter">Word Counter</a> – check word and character counts before exporting text to PDF.</li>
+    <li><a href="/password-generator">Password Generator</a> – create a strong password to protect sensitive PDFs.</li>
+  </ul>
+  <p>See the full list on the <a href="/">FixerTools homepage</a>.</p>
 
   <h2>PDF Compressor FAQ</h2>
   <details><summary>How can I compress a PDF file online for free?</summary><p>Upload your PDF to the tool above, choose a level, and select Compress PDF. When it finishes, download the smaller file. No registration is needed.</p></details>
@@ -197,8 +221,16 @@
   <details><summary>What is the difference between light and maximum compression?</summary><p>Light keeps higher image quality and resolution for smaller savings. Maximum lowers both further and removes extra metadata for the smallest file, at a visible quality cost.</p></details>
 </article>
 </main>
-
-<footer class="fx-foot"><div class="wrap">© FixerTools · <a href="/">Home</a></div></footer>
+<footer class="fx-foot"><div class="wrap">
+  © FixerTools ·
+  <a href="/">Home</a> ·
+  <a href="/image-compressor">Image Compressor</a> ·
+  <a href="/youtube-thumbnail-downloader">YouTube Thumbnail Downloader</a> ·
+  <a href="/qr-code-generator">QR Code Generator</a> ·
+  <a href="/json-formatter">JSON Formatter</a> ·
+  <a href="/word-counter">Word Counter</a> ·
+  <a href="/password-generator">Password Generator</a>
+</div></footer>
 
 <script>
 (function(){
@@ -206,12 +238,10 @@
 var $=function(i){return document.getElementById(i)};
 var PRESETS={light:{q:.85,max:2600,strip:false},rec:{q:.72,max:1800,strip:false},max:{q:.5,max:1200,strip:true}};
 var file=null,url=null,libPromise=null;
-
 function fmt(b){if(b<1024)return b+' B';if(b<1048576)return (b/1024).toFixed(1)+' KB';return (b/1048576).toFixed(2)+' MB'}
 function showErr(m){var e=$('err');e.textContent=m;e.hidden=!m}
 function release(){if(url){URL.revokeObjectURL(url);url=null}}
 function reset(){release();file=null;$('file').value='';showErr('');$('stepPick').hidden=false;$('stepOpts').hidden=true;$('stepDone').hidden=true;$('prog').hidden=true;$('status').textContent=''}
-
 function pick(f){
   showErr('');
   if(!f){showErr('No file selected. Please choose a PDF.');return}
@@ -221,7 +251,6 @@ function pick(f){
   file=f;$('fname').textContent=f.name;$('fsize').textContent=fmt(f.size);
   $('stepPick').hidden=true;$('stepOpts').hidden=false;$('stepDone').hidden=true;$('go').disabled=false;
 }
-
 function loadScript(src){return new Promise(function(res,rej){var s=document.createElement('script');s.src=src;s.onload=res;s.onerror=function(){s.remove();rej(new Error('load'))};document.head.appendChild(s)})}
 function loadLib(){
   if(window.PDFLib)return Promise.resolve();
@@ -230,7 +259,6 @@ function loadLib(){
   }).catch(function(){libPromise=null;throw new Error('The compression library could not be loaded. Check your connection and try again.')});
   return libPromise;
 }
-
 function recompress(bytes,q,maxDim){
   return createImageBitmap(new Blob([bytes],{type:'image/jpeg'}),{imageOrientation:'none'}).catch(function(){
     return createImageBitmap(new Blob([bytes],{type:'image/jpeg'}));
@@ -243,7 +271,6 @@ function recompress(bytes,q,maxDim){
     return new Promise(function(res){c.toBlob(function(b){c.width=c.height=0;res(b?b.arrayBuffer().then(function(a){return {data:new Uint8Array(a),w:w,h:h}}):null)},'image/jpeg',q)});
   });
 }
-
 async function compress(){
   var L=PDFLib,N=L.PDFName,preset=PRESETS[document.querySelector('input[name=lvl]:checked').value];
   var prog=$('prog'),st=$('status');
@@ -278,7 +305,7 @@ async function compress(){
         var nd=ctx.obj(m);var sm=od.get(N.of('SMask'));if(sm)nd.set(N.of('SMask'),sm);
         ctx.assign(jobs[i][0],L.PDFRawStream.of(nd,r.data));replaced++;
       }
-    }catch(e){/* keep original image on any failure */}
+    }catch(e){}
     if(i%3===2)await new Promise(function(r){setTimeout(r,0)});
   }
   st.textContent='Saving optimized PDF…';prog.value=90;
@@ -291,7 +318,6 @@ async function compress(){
   prog.value=100;
   return {out:out,replaced:replaced,images:jobs.length};
 }
-
 $('go').addEventListener('click',async function(){
   if(!file)return;showErr('');this.disabled=true;
   try{
@@ -311,19 +337,6 @@ $('go').addEventListener('click',async function(){
   }catch(e){showErr(e.message||'Something went wrong. Your original file is unchanged.')}
   finally{this.disabled=false;$('prog').hidden=true;$('status').textContent=''}
 });
-
 var drop=$('drop');
 drop.addEventListener('click',function(){$('file').click()});
-drop.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();$('file').click()}});
-$('file').addEventListener('change',function(){pick(this.files[0])});
-['dragenter','dragover'].forEach(function(t){drop.addEventListener(t,function(e){e.preventDefault();drop.classList.add('over')})});
-['dragleave','drop'].forEach(function(t){drop.addEventListener(t,function(e){e.preventDefault();drop.classList.remove('over')})});
-drop.addEventListener('drop',function(e){pick(e.dataTransfer.files[0])});
-$('remove').addEventListener('click',reset);
-$('again').addEventListener('click',reset);
-window.addEventListener('pagehide',release);
-$('menuBtn').addEventListener('click',function(){var o=$('mainNav').classList.toggle('open');this.setAttribute('aria-expanded',o)});
-})();
-</script>
-</body>
-</html>
+drop.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();$('file').
