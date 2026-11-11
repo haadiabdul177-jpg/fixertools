@@ -21,7 +21,6 @@
  *   icon          the glyph/emoji shown on the card.
  *   relatedTools  ids of tools to recommend first. Leave [] to let tools.js
  *                 pick tools from the same category automatically.
- *   featured      true = shown in the "Featured tools" row on the homepage.
  *   status        "active" = live. Anything else ("draft", "hidden", ...) is
  *                 ignored everywhere. Never mark a tool "active" before its
  *                 page is uploaded.
@@ -49,7 +48,6 @@ window.FIXERTOOLS = {
       keywords: ["age", "birthday", "date of birth", "dob", "zodiac", "birthstone", "years months days"],
       icon: "🎂",
       relatedTools: ["bmi-calculator", "percentage-calculator", "loan-emi-calculator"],
-      featured: true,
       status: "active"
     },
     {
@@ -61,7 +59,6 @@ window.FIXERTOOLS = {
       keywords: ["percent", "percentage", "increase", "decrease", "discount", "ratio", "change"],
       icon: "％",
       relatedTools: ["gst-calculator", "loan-emi-calculator", "bmi-calculator", "age-calculator", "word-counter"],
-      featured: false,
       status: "active"
     },
     {
@@ -73,7 +70,6 @@ window.FIXERTOOLS = {
       keywords: ["bmi", "body mass index", "weight", "height", "health", "metric", "imperial"],
       icon: "⚖️",
       relatedTools: ["age-calculator", "percentage-calculator", "loan-emi-calculator"],
-      featured: false,
       status: "active"
     },
     {
@@ -85,7 +81,6 @@ window.FIXERTOOLS = {
       keywords: ["loan", "emi", "mortgage", "interest", "monthly payment", "repayment", "finance"],
       icon: "🏦",
       relatedTools: ["gst-calculator", "percentage-calculator", "bmi-calculator", "age-calculator", "qr-code-generator"],
-      featured: false,
       status: "active"
     },
     {
@@ -97,7 +92,6 @@ window.FIXERTOOLS = {
       keywords: ["gst", "vat", "sales tax", "tax", "price", "invoice", "inclusive", "exclusive"],
       icon: "🧾",
       relatedTools: ["percentage-calculator", "loan-emi-calculator", "bmi-calculator", "age-calculator", "qr-code-generator"],
-      featured: false,
       status: "active"
     },
 
@@ -111,7 +105,6 @@ window.FIXERTOOLS = {
       keywords: ["word", "count", "characters", "sentences", "paragraphs", "reading time", "speaking time"],
       icon: "🔢",
       relatedTools: ["case-converter", "password-generator", "json-formatter", "percentage-calculator", "qr-code-generator"],
-      featured: false,
       status: "active"
     },
     {
@@ -123,7 +116,6 @@ window.FIXERTOOLS = {
       keywords: ["case", "uppercase", "lowercase", "title case", "sentence case", "camelcase", "snake_case", "kebab"],
       icon: "Aa",
       relatedTools: ["word-counter", "password-generator", "json-formatter", "percentage-calculator", "qr-code-generator"],
-      featured: false,
       status: "active"
     },
 
@@ -137,7 +129,6 @@ window.FIXERTOOLS = {
       keywords: ["volume", "liters", "litres", "gallons", "cups", "milliliters", "quarts", "fluid ounces", "unit"],
       icon: "🧪",
       relatedTools: ["image-compressor", "percentage-calculator", "loan-emi-calculator", "gst-calculator", "bmi-calculator", "word-counter", "qr-code-generator"],
-      featured: false,
       status: "active"
     },
 
@@ -151,7 +142,6 @@ window.FIXERTOOLS = {
       keywords: ["password", "random", "secure", "generator", "security", "passphrase", "strong"],
       icon: "🔐",
       relatedTools: ["qr-code-generator", "case-converter", "word-counter", "json-formatter", "percentage-calculator"],
-      featured: true,
       status: "active"
     },
     {
@@ -163,7 +153,6 @@ window.FIXERTOOLS = {
       keywords: ["qr", "qr code", "barcode", "link", "wifi", "generator", "scan"],
       icon: "▦",
       relatedTools: ["password-generator", "json-formatter", "word-counter", "age-calculator", "image-compressor"],
-      featured: true,
       status: "active"
     },
     {
@@ -175,7 +164,6 @@ window.FIXERTOOLS = {
       keywords: ["json", "format", "beautify", "minify", "validate", "validator", "pretty print", "sort keys"],
       icon: "{ }",
       relatedTools: ["qr-code-generator", "case-converter", "password-generator", "word-counter", "image-compressor"],
-      featured: false,
       status: "active"
     },
 
@@ -189,7 +177,6 @@ window.FIXERTOOLS = {
       keywords: ["image", "photo", "compress", "reduce size", "jpeg", "jpg", "webp", "png", "resize"],
       icon: "🗜️",
       relatedTools: ["youtube-thumbnail-downloader", "volume-converter", "qr-code-generator", "json-formatter", "password-generator", "word-counter", "case-converter", "age-calculator"],
-      featured: true,
       status: "active"
     },
     {
@@ -201,7 +188,6 @@ window.FIXERTOOLS = {
       keywords: ["youtube", "thumbnail", "download", "video", "image", "hd", "maxres", "youtube thumbnail", "yt thumbnail"],
       icon: "🖼️",
       relatedTools: ["image-compressor", "qr-code-generator", "password-generator", "json-formatter", "word-counter"],
-      featured: true,
       status: "active"
     }
   ]
