@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<link rel="icon" href="/favicon.ico" sizes="any"/>
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"/>
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"/>
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"/>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Compress PDF Online Free – Reduce PDF File Size | FixerTools</title>
@@ -15,7 +19,7 @@
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Compress PDF Online Free – Reduce PDF File Size | FixerTools">
 <meta name="twitter:description" content="Compress PDF files online for free with FixerTools. Reduce PDF file size for email, uploads and sharing. Fast, secure, easy to use, with no registration required.">
-<link rel="icon" href="/favicon.ico">
+
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
 <style>
@@ -224,12 +228,15 @@
 <footer class="fx-foot"><div class="wrap">
   © FixerTools ·
   <a href="/">Home</a> ·
+  <a href="/about">About</a> ·
+  <a href="/contact">Contact</a> ·
+  <a href="/privacy-policy">Privacy Policy</a> ·
+  <a href="/terms-and-conditions">Terms</a> ·
+  <a href="/disclaimer">Disclaimer</a> ·
+  <a href="/cookie-policy">Cookie Policy</a> ·
   <a href="/image-compressor">Image Compressor</a> ·
-  <a href="/youtube-thumbnail-downloader">YouTube Thumbnail Downloader</a> ·
-  <a href="/qr-code-generator">QR Code Generator</a> ·
-  <a href="/json-formatter">JSON Formatter</a> ·
-  <a href="/word-counter">Word Counter</a> ·
-  <a href="/password-generator">Password Generator</a>
+  <a href="/youtube-thumbnail-downloader">YouTube Thumbnail</a> ·
+  <a href="/pdf-compressor">PDF Compressor</a>
 </div></footer>
 
 <script>
@@ -339,4 +346,22 @@ $('go').addEventListener('click',async function(){
 });
 var drop=$('drop');
 drop.addEventListener('click',function(){$('file').click()});
-drop.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();$('file').
+drop.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();$('file').click()}});
+$('file').addEventListener('change',function(){pick(this.files&&this.files[0])});
+['dragenter','dragover'].forEach(function(ev){
+  drop.addEventListener(ev,function(e){e.preventDefault();e.stopPropagation();drop.classList.add('over')});
+});
+['dragleave','drop'].forEach(function(ev){
+  drop.addEventListener(ev,function(e){
+    e.preventDefault();e.stopPropagation();drop.classList.remove('over');
+    if(ev==='drop' && e.dataTransfer && e.dataTransfer.files && e.dataTransfer.files[0]) pick(e.dataTransfer.files[0]);
+  });
+});
+var againBtn = $('again');
+if(againBtn) againBtn.addEventListener('click', reset);
+var removeBtn = $('remove');
+if(removeBtn) removeBtn.addEventListener('click', reset);
+})();
+</script>
+</body>
+</html>
