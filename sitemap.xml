@@ -1,22 +1,127 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://fixertools.online/</loc><lastmod>2026-11-04</lastmod><priority>1.0</priority></url>
-  <url><loc>https://fixertools.online/privacy-policy</loc><lastmod>2026-11-04</lastmod><priority>0.7</priority></url>
-  <url><loc>https://fixertools.online/terms-and-conditions</loc><lastmod>2026-11-04</lastmod><priority>0.7</priority></url>
-  <url><loc>https://fixertools.online/disclaimer</loc><lastmod>2026-11-04</lastmod><priority>0.7</priority></url>
-  <url><loc>https://fixertools.online/cookie-policy</loc><lastmod>2026-11-04</lastmod><priority>0.7</priority></url>
-  <url><loc>https://fixertools.online/about</loc><lastmod>2026-11-04</lastmod><priority>0.7</priority></url>
-  <url><loc>https://fixertools.online/contact</loc><lastmod>2026-11-04</lastmod><priority>0.7</priority></url>
-  <url><loc>https://fixertools.online/age-calculator</loc><lastmod>2026-11-04</lastmod><priority>0.7</priority></url>
-  <url><loc>https://fixertools.online/percentage-calculator</loc><lastmod>2026-11-04</lastmod><priority>0.7</priority></url>
-  <url><loc>https://fixertools.online/bmi-calculator</loc><lastmod>2026-11-04</lastmod><priority>0.7</priority></url>
-  <url><loc>https://fixertools.online/loan-emi-calculator</loc><lastmod>2026-11-04</lastmod><priority>0.7</priority></url>
-  <url><loc>https://fixertools.online/gst-calculator</loc><lastmod>2026-11-04</lastmod><priority>0.7</priority></url>
-  <url><loc>https://fixertools.online/word-counter</loc><lastmod>2026-11-04</lastmod><priority>0.7</priority></url>
-  <url><loc>https://fixertools.online/case-converter</loc><lastmod>2026-11-04</lastmod><priority>0.7</priority></url>
-  <url><loc>https://fixertools.online/password-generator</loc><lastmod>2026-11-04</lastmod><priority>0.7</priority></url>
-  <url><loc>https://fixertools.online/json-formatter</loc><lastmod>2026-11-04</lastmod><priority>0.7</priority></url>
-  <url><loc>https://fixertools.online/image-compressor</loc><lastmod>2026-11-04</lastmod><priority>0.7</priority></url>
-  <url><loc>https://fixertools.online/qr-code-generator</loc><lastmod>2026-11-06</lastmod><priority>0.7</priority></url>
-  <url><loc>https://fixertools.online/volume-converter</loc><lastmod>2026-11-06</lastmod><priority>0.7</priority></url>
+
+  <!-- Homepage -->
+  <url>
+    <loc>https://fixertools.online/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- Main pages -->
+  <url>
+    <loc>https://fixertools.online/about</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://fixertools.online/contact</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <!-- Legal pages -->
+  <url>
+    <loc>https://fixertools.online/privacy-policy</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://fixertools.online/terms-and-conditions</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://fixertools.online/disclaimer</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://fixertools.online/cookie-policy</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+  <!-- Calculators -->
+  <url>
+    <loc>https://fixertools.online/age-calculator</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://fixertools.online/percentage-calculator</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://fixertools.online/bmi-calculator</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://fixertools.online/loan-emi-calculator</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://fixertools.online/gst-calculator</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Text Tools -->
+  <url>
+    <loc>https://fixertools.online/word-counter</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://fixertools.online/case-converter</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Converters -->
+  <url>
+    <loc>https://fixertools.online/volume-converter</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Developer Tools -->
+  <url>
+    <loc>https://fixertools.online/password-generator</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://fixertools.online/qr-code-generator</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://fixertools.online/json-formatter</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Image Tools -->
+  <url>
+    <loc>https://fixertools.online/image-compressor</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://fixertools.online/youtube-thumbnail-downloader</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Other Tools -->
+  <url>
+    <loc>https://fixertools.online/pdf-compressor</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
 </urlset>
