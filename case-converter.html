@@ -1,125 +1,50 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
 <title>Case Converter: Title, Upper, Lower, camelCase | FixerTools</title>
-<meta name="description" content="Free online case converter. Change text to uppercase, lowercase, title case, sentence case, camelCase, snake_case and more in one click. Private.">
-<link rel="canonical" href="https://fixertools.online/case-converter">
-<meta name="theme-color" content="#080d1b">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Case Converter: Title, Upper, Lower, camelCase | FixerTools">
-<meta property="og:description" content="Free online case converter. Change text to uppercase, lowercase, title case, sentence case, camelCase, snake_case and more in one click. Private.">
-<meta property="og:url" content="https://fixertools.online/case-converter">
-<meta name="twitter:card" content="summary">
-<style>
-:root{--bg:#080d1b;--field:#0b1324;--line:rgba(148,163,184,.16);--text:#f4f7ff;--muted:#9ba9c2;--teal:#4de4ce;--f:#e879f9;--f2:#f0abfc;--v:#a78bfa;--max:1160px}
-*{box-sizing:border-box}html{scroll-behavior:smooth}
-body{margin:0;overflow-x:hidden;color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;line-height:1.6;background:
-radial-gradient(ellipse at 88% 0%,rgba(232,121,249,.2),transparent 42%),
-repeating-linear-gradient(0deg,transparent 0 63px,rgba(232,121,249,.06) 63px 64px),var(--bg)}
-a{color:inherit;text-decoration:none}button,textarea{font:inherit}
-.wrap{width:min(var(--max),calc(100% - 40px));margin:auto}
-:focus-visible{outline:2px solid var(--f2);outline-offset:2px}
+<meta content="Free online case converter. Change text to uppercase, lowercase, title case, sentence case, camelCase, snake_case and more in one click. Private." name="description"/>
+<link href="https://fixertools.online/case-converter" rel="canonical"/>
+<meta content="#f6f8fb" name="theme-color"/>
+<meta content="website" property="og:type"/>
+<meta content="Case Converter: Title, Upper, Lower, camelCase | FixerTools" property="og:title"/>
+<meta content="Free online case converter. Change text to uppercase, lowercase, title case, sentence case, camelCase, snake_case and more in one click. Private." property="og:description"/>
+<meta content="https://fixertools.online/case-converter" property="og:url"/>
+<meta content="summary" name="twitter:card"/>
 
-/* header — identical to homepage */
-.topbar{height:78px;border-bottom:1px solid var(--line);display:flex;align-items:center;position:relative;z-index:5;background:rgba(8,13,27,.82);backdrop-filter:blur(14px)}
-.nav{display:flex;align-items:center;justify-content:space-between;gap:24px}
-.brand{display:flex;align-items:center;gap:10px;font-size:22px;font-weight:850;letter-spacing:-.8px}
-.brand-mark{width:36px;height:36px;border-radius:11px;background:linear-gradient(135deg,var(--teal),#48a8e9);display:grid;place-items:center;color:#07131d;font-size:21px;box-shadow:0 6px 22px #4de4ce35}
-.brand span span{color:var(--teal)}
-.navlinks{display:flex;align-items:center;gap:30px;color:#c3cce0;font-size:14px}.navlinks a:hover{color:var(--teal)}
-.nav-cta{background:linear-gradient(100deg,var(--teal),#7ad9f5);color:#07131d;font-weight:800;border-radius:10px;padding:11px 17px;display:inline-flex;gap:8px;box-shadow:0 8px 26px #4de4ce20}
-.menu-btn{display:none;background:none;border:1px solid var(--line);color:#fff;border-radius:9px;padding:8px 11px;cursor:pointer}
-
-/* page */
-.narrow{width:min(860px,calc(100% - 40px));margin:auto}
-.hero{position:relative;overflow:hidden}
-.hero::after{content:"Aa";position:absolute;right:-6px;top:6px;font-size:190px;font-weight:900;letter-spacing:-8px;color:rgba(232,121,249,.08);line-height:1;pointer-events:none}
-.hero>*{position:relative;z-index:1}
-.crumbs{padding:26px 0 0;font-size:14px;color:var(--muted)}.crumbs a:hover{color:var(--f2)}.crumbs b{font-weight:500;color:#dbe3f5}.crumbs i{margin:0 8px;font-style:normal;opacity:.6}
-.badge{display:inline-flex;align-items:center;gap:9px;margin-top:22px;border:1px solid #e879f955;background:#e879f912;color:var(--f2);border-radius:30px;padding:7px 13px;font-size:12px;font-weight:750;letter-spacing:.6px}
-.badge i{width:7px;height:7px;border-radius:2px;background:var(--f);box-shadow:0 0 12px var(--f)}
-h1{font-size:clamp(38px,6vw,60px);line-height:1.06;letter-spacing:-2.3px;margin:18px 0 14px;font-weight:850}
-.grad{display:block;background:linear-gradient(95deg,var(--f2),var(--f) 55%,var(--v));-webkit-background-clip:text;background-clip:text;color:transparent}
-.lead{color:var(--muted);font-size:17px;margin:0 0 28px;max-width:560px}
-
-.pad{border:1px solid var(--line);border-radius:18px;overflow:hidden;background:#0c1426;margin-bottom:12px}
-.pad:focus-within{border-color:var(--f);box-shadow:0 0 0 3px #e879f922}
-.pad-top{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:11px 16px;border-bottom:1px solid var(--line);background:#101a30;font-size:13px;color:var(--muted)}
-.pad-top label{font-weight:700;color:#cfd8ec}
-textarea{display:block;width:100%;min-height:200px;resize:vertical;border:0;outline:0;color:#f3eaff;font-size:17px;line-height:1.7;padding:16px 18px;background:transparent}
-::placeholder{color:#4d5b76}
-.btns{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:26px}
-.btn{border:1px solid #64748b55;background:#ffffff08;color:#e8eefb;border-radius:11px;padding:12px 20px;font-weight:800;font-size:15px;cursor:pointer}
-.btn:hover:not(:disabled){border-color:var(--f);color:var(--f2)}.btn:disabled{opacity:.4;cursor:not-allowed}
-.btn.main{border:0;background:linear-gradient(100deg,var(--f),var(--v));color:#25093a;box-shadow:0 8px 26px #e879f930}.btn.main:hover{color:#25093a}
-
-.tiles-h{font-size:14px;color:var(--muted);margin:0 0 12px}
-.tiles{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:56px}
-.tile{display:flex;flex-direction:column;align-items:flex-start;gap:6px;text-align:left;cursor:pointer;color:#fff;background:linear-gradient(145deg,#131d35,#0e1729);border:1px solid var(--line);border-radius:16px;padding:16px;min-width:0}
-.tile b{font-size:22px;letter-spacing:-.4px;line-height:1.2;color:var(--f2);max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
-.tile span{font-size:13px;color:#b8c3d9;font-weight:600}
-.tile:hover{border-color:#e879f988;transform:translateY(-2px)}
-.tile.on{border-color:var(--f);background:linear-gradient(145deg,#3a1b4d,#1a1230)}
-.tile.on span{color:#fff}
-
-.section{padding:0 0 52px}.section h2{font-size:clamp(25px,3.2vw,32px);letter-spacing:-1px;margin:0 0 18px}
-details{border:1px solid var(--line);border-radius:13px;background:#ffffff05;margin-bottom:10px;padding:0 18px}
-summary{cursor:pointer;padding:16px 0;font-weight:700;list-style:none;display:flex;justify-content:space-between;gap:12px}
-summary::after{content:"+";color:var(--f2);font-size:20px;line-height:1}details[open] summary::after{content:"–"}
-details p{margin:0 0 16px;color:var(--muted);font-size:14px}
-.related{display:flex;gap:10px;flex-wrap:wrap}.related a{border:1px solid var(--line);background:#ffffff05;border-radius:30px;padding:9px 16px;font-size:14px;color:#c3cce0}.related a:hover{border-color:var(--f);color:var(--f2)}
-
-footer{border-top:1px solid var(--line);padding:35px 0 25px;background:#070b16}
-.foot-top{display:flex;justify-content:space-between;gap:30px;flex-wrap:wrap}.foot-about{max-width:340px}.foot-about p{color:var(--muted);font-size:13px}
-.foot-links{display:flex;gap:20px;flex-wrap:wrap;color:#aebbd0;font-size:13px}.foot-links a:hover{color:var(--teal)}
-.copyright{border-top:1px solid var(--line);margin-top:25px;padding-top:18px;color:#78869e;font-size:12px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
-
-@media(max-width:800px){.tiles{grid-template-columns:repeat(3,1fr)}}
-@media(max-width:650px){
-.wrap,.narrow{width:calc(100% - 28px)}.topbar{height:68px}.menu-btn{display:block}.nav-cta{display:none}
-.navlinks{display:none;position:absolute;top:67px;left:0;right:0;background:#0c1425;border-bottom:1px solid var(--line);padding:18px 22px;flex-direction:column;align-items:flex-start;gap:17px}.navlinks.open{display:flex}
-h1{font-size:40px;letter-spacing:-1.8px}.lead{font-size:15px}.hero::after{font-size:130px;top:30px}
-.tiles{grid-template-columns:1fr 1fr;gap:10px}.tile{padding:14px}.tile b{font-size:19px}
-.btn{flex:1;padding:12px 8px}.foot-top{flex-direction:column}
-}
-@media(prefers-reduced-motion:reduce){.tile:hover{transform:none}html{scroll-behavior:auto}}
-</style>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"WebApplication","name":"Case Converter","url":"https://fixertools.online/case-converter","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}
 </script>
-</head>
-<body>
+<link href="/style.css" rel="stylesheet"/></head>
+<body data-page="case-converter">
 <header class="topbar">
 <div class="wrap nav">
-<a class="brand" href="/" aria-label="FixerTools home"><span class="brand-mark">⌁</span><span>Fixer<span>Tools</span></span></a>
-<nav class="navlinks" id="navlinks" aria-label="Main navigation">
+<a aria-label="FixerTools home" class="brand" href="/"><span class="brand-mark">⌁</span><span>Fixer<span>Tools</span></span></a>
+<nav aria-label="Main navigation" class="navlinks" id="navlinks">
 <a href="/#tools">All Tools</a><a href="/#categories">Categories</a><a href="/#why-us">Why FixerTools</a><a href="/about">About</a><a href="/contact">Contact</a>
 </nav>
-<a class="nav-cta" href="/#tools">Explore Tools <span>→</span></a>
-<button class="menu-btn" id="menuBtn" aria-label="Open navigation" aria-expanded="false">☰</button>
+<a class="nav-cta" href="/#tools">Explore Tools <span>&rarr;</span></a>
+<button aria-expanded="false" aria-label="Open navigation" class="menu-btn" id="menuBtn">☰</button>
 </div>
 </header>
-
 <main class="narrow">
 <div class="hero">
-<div class="crumbs"><a href="/">Home</a><i>›</i><a href="/#tools">Text</a><i>›</i><b>Case Converter</b></div>
+<div class="crumbs"><a href="/">Home</a><i>&rsaquo;</i><a href="/#tools">Text</a><i>&rsaquo;</i><b>Case Converter</b></div>
 <span class="badge"><i></i>Free case converter</span>
 <h1>Case Converter <span class="grad">Pick a style. Tap once.</span></h1>
 <p class="lead">Paste your text, then tap a case. Your text changes right in the box, and you can undo any change.</p>
 </div>
-
 <div class="pad">
-<div class="pad-top"><label for="text">Your text</label><span id="count">0 characters · 0 words</span></div>
-<textarea id="text" placeholder="Type or paste your text here…" spellcheck="false"></textarea>
+<div class="pad-top"><label for="text">Your text</label><span id="count">0 characters &middot; 0 words</span></div>
+<textarea id="text" placeholder="Type or paste your text here&hellip;" spellcheck="false"></textarea>
 </div>
 <div class="btns">
 <button class="btn main" id="copy">Copy text</button>
-<button class="btn" id="undo" disabled>Undo</button>
+<button class="btn" disabled="" id="undo">Undo</button>
 <button class="btn" id="clear">Clear</button>
 </div>
-
 <p class="tiles-h">Choose a case</p>
 <div class="tiles" id="tiles">
 <button class="tile" data-c="upper"><b>ABC DEF</b><span>UPPERCASE</span></button>
@@ -135,31 +60,27 @@ h1{font-size:40px;letter-spacing:-1.8px}.lead{font-size:15px}.hero::after{font-s
 <button class="tile" data-c="kebab"><b>abc-def</b><span>kebab-case</span></button>
 <button class="tile" data-c="constant"><b>ABC_DEF</b><span>CONSTANT_CASE</span></button>
 </div>
-
 <section class="section">
 <h2>Questions</h2>
-<details><summary>What is the difference between Title Case and Capitalize Each Word?</summary><p>Capitalize Each Word makes the first letter of every word a capital. Title Case follows headline style and keeps short words such as “of”, “the” and “and” in lowercase unless they start or end the line.</p></details>
+<details><summary>What is the difference between Title Case and Capitalize Each Word?</summary><p>Capitalize Each Word makes the first letter of every word a capital. Title Case follows headline style and keeps short words such as &ldquo;of&rdquo;, &ldquo;the&rdquo; and &ldquo;and&rdquo; in lowercase unless they start or end the line.</p></details>
 <details><summary>Which case should I use for code?</summary><p>It depends on the language. camelCase is common for JavaScript variables, PascalCase for class names, snake_case for Python and databases, kebab-case for URLs and CSS classes, and CONSTANT_CASE for fixed values.</p></details>
 <details><summary>Does it keep my line breaks?</summary><p>Yes. Each line is converted on its own, so lists and paragraphs keep their layout.</p></details>
 <details><summary>Is my text stored anywhere?</summary><p>No. The conversion happens in your browser and your text never leaves your device.</p></details>
 </section>
-
 <section class="section">
 <h2>More free tools</h2>
 <div class="related"><a href="/word-counter">Word Counter</a><a href="/password-generator">Password Generator</a><a href="/json-formatter">JSON Formatter</a><a href="/percentage-calculator">Percentage Calculator</a><a href="/qr-code-generator">QR Code Generator</a></div>
 </section>
 </main>
-
 <footer>
 <div class="wrap">
 <div class="foot-top">
 <div class="foot-about"><a class="brand" href="/"><span class="brand-mark">⌁</span><span>Fixer<span>Tools</span></span></a><p>Every little tool, one fast place. Free online tools designed to make everyday digital tasks simpler.</p></div>
-<nav class="foot-links" aria-label="Footer links"><a href="/about">About</a><a href="/privacy-policy">Privacy Policy</a><a href="/terms-and-conditions">Terms</a><a href="/disclaimer">Disclaimer</a><a href="/cookie-policy">Cookie Policy</a><a href="/contact">Contact</a></nav>
+<nav aria-label="Footer links" class="foot-links"><a href="/about">About</a><a href="/privacy-policy">Privacy Policy</a><a href="/terms-and-conditions">Terms</a><a href="/disclaimer">Disclaimer</a><a href="/cookie-policy">Cookie Policy</a><a href="/contact">Contact</a></nav>
 </div>
-<div class="copyright"><span>© <span id="year"></span> FixerTools. All rights reserved.</span><span>Free tools. Simple solutions.</span></div>
+<div class="copyright"><span>&copy; <span id="year"></span> FixerTools. All rights reserved.</span><span>Free tools. Simple solutions.</span></div>
 </div>
 </footer>
-
 <script>
 const $=s=>document.querySelector(s);
 const menuBtn=$('#menuBtn'),nav=$('#navlinks');

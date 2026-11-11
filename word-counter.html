@@ -1,119 +1,40 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Word Counter – Characters &amp; Reading Time | FixerTools</title>
-<meta name="description" content="Free online word counter. Count words, characters, sentences and paragraphs, and see reading time, speaking time and your most used words.">
-<link rel="canonical" href="https://fixertools.online/word-counter">
-<meta name="theme-color" content="#080d1b">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Word Counter – Characters &amp; Reading Time | FixerTools">
-<meta property="og:description" content="Free online word counter. Count words, characters, sentences and paragraphs, and see reading time, speaking time and your most used words.">
-<meta property="og:url" content="https://fixertools.online/word-counter">
-<meta name="twitter:card" content="summary">
-<style>
-:root{--bg:#080d1b;--field:#0b1324;--line:rgba(148,163,184,.16);--text:#f4f7ff;--muted:#9ba9c2;--teal:#4de4ce;--sky:#5da8ff;--sky2:#9bd0ff;--pink:#ff6b8a;--max:1160px}
-*{box-sizing:border-box}html{scroll-behavior:smooth}
-body{margin:0;overflow-x:hidden;color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;line-height:1.6;background:
-radial-gradient(ellipse at 88% 0%,rgba(93,168,255,.2),transparent 42%),
-radial-gradient(ellipse at 0% 40%,rgba(255,107,138,.07),transparent 40%),var(--bg)}
-a{color:inherit;text-decoration:none}button,textarea{font:inherit}
-.wrap{width:min(var(--max),calc(100% - 40px));margin:auto}
-:focus-visible{outline:2px solid var(--sky2);outline-offset:2px}
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Word Counter &ndash; Characters &amp; Reading Time | FixerTools</title>
+<meta content="Free online word counter. Count words, characters, sentences and paragraphs, and see reading time, speaking time and your most used words." name="description"/>
+<link href="https://fixertools.online/word-counter" rel="canonical"/>
+<meta content="#f6f8fb" name="theme-color"/>
+<meta content="website" property="og:type"/>
+<meta content="Word Counter &ndash; Characters &amp; Reading Time | FixerTools" property="og:title"/>
+<meta content="Free online word counter. Count words, characters, sentences and paragraphs, and see reading time, speaking time and your most used words." property="og:description"/>
+<meta content="https://fixertools.online/word-counter" property="og:url"/>
+<meta content="summary" name="twitter:card"/>
 
-/* header — identical to homepage */
-.topbar{height:78px;border-bottom:1px solid var(--line);display:flex;align-items:center;position:relative;z-index:5;background:rgba(8,13,27,.82);backdrop-filter:blur(14px)}
-.nav{display:flex;align-items:center;justify-content:space-between;gap:24px}
-.brand{display:flex;align-items:center;gap:10px;font-size:22px;font-weight:850;letter-spacing:-.8px}
-.brand-mark{width:36px;height:36px;border-radius:11px;background:linear-gradient(135deg,var(--teal),#48a8e9);display:grid;place-items:center;color:#07131d;font-size:21px;box-shadow:0 6px 22px #4de4ce35}
-.brand span span{color:var(--teal)}
-.navlinks{display:flex;align-items:center;gap:30px;color:#c3cce0;font-size:14px}.navlinks a:hover{color:var(--teal)}
-.nav-cta{background:linear-gradient(100deg,var(--teal),#7ad9f5);color:#07131d;font-weight:800;border-radius:10px;padding:11px 17px;display:inline-flex;gap:8px;box-shadow:0 8px 26px #4de4ce20}
-.menu-btn{display:none;background:none;border:1px solid var(--line);color:#fff;border-radius:9px;padding:8px 11px;cursor:pointer}
-
-/* page */
-.narrow{width:min(860px,calc(100% - 40px));margin:auto}
-.crumbs{padding:26px 0 0;font-size:14px;color:var(--muted)}.crumbs a:hover{color:var(--sky2)}.crumbs b{font-weight:500;color:#dbe3f5}.crumbs i{margin:0 8px;font-style:normal;opacity:.6}
-.badge{display:inline-flex;align-items:center;gap:9px;margin-top:22px;border:1px solid #5da8ff55;background:#5da8ff12;color:var(--sky2);border-radius:30px;padding:7px 13px;font-size:12px;font-weight:750;letter-spacing:.6px}
-.badge i{width:7px;height:7px;border-radius:2px;background:var(--sky);box-shadow:0 0 12px var(--sky)}
-h1{font-size:clamp(38px,6vw,60px);line-height:1.06;letter-spacing:-2.3px;margin:18px 0 14px;font-weight:850}
-.grad{display:block;background:linear-gradient(95deg,var(--sky2),var(--sky) 60%,#8b83ff);-webkit-background-clip:text;background-clip:text;color:transparent}
-.lead{color:var(--muted);font-size:17px;margin:0 0 28px}
-
-.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:12px}
-.stat{background:linear-gradient(145deg,#131d35,#0e1729);border:1px solid var(--line);border-radius:16px;padding:16px 18px}
-.stat small{display:block;color:var(--muted);font-size:13px;font-weight:600}
-.stat b{display:block;font-size:clamp(26px,5vw,36px);letter-spacing:-1px;line-height:1.2;word-break:break-all}
-.stat.main{border-color:#5da8ff55;background:linear-gradient(145deg,#16284a,#0e1729)}.stat.main b{color:var(--sky2)}
-.stats.small{grid-template-columns:repeat(3,1fr);margin-bottom:20px}
-.stats.small .stat{padding:13px 16px}.stats.small b{font-size:clamp(18px,3.6vw,22px);letter-spacing:-.4px}
-
-.pad{border:1px solid var(--line);border-radius:18px;overflow:hidden;background:#0c1426;margin-bottom:12px}
-.pad:focus-within{border-color:var(--sky);box-shadow:0 0 0 3px #5da8ff22}
-.pad-top{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:11px 16px;border-bottom:1px solid var(--line);background:#101a30;font-size:13px;color:var(--muted)}
-.pad-top span{display:flex;gap:6px}.pad-top i{width:9px;height:9px;border-radius:50%;background:#52627c}
-textarea{display:block;width:100%;min-height:340px;resize:vertical;border:0;outline:0;color:#eaf1ff;font-size:17px;line-height:32px;padding:10px 20px 10px 60px;background-color:transparent;background-image:linear-gradient(90deg,transparent 46px,rgba(255,107,138,.55) 46px 48px,transparent 48px),repeating-linear-gradient(transparent 0 31px,rgba(93,168,255,.16) 31px 32px);background-attachment:local}
-::placeholder{color:#4d5b76}
-.btns{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:30px}
-.btn{border:1px solid #64748b55;background:#ffffff08;color:#e8eefb;border-radius:11px;padding:12px 20px;font-weight:800;font-size:15px;cursor:pointer}
-.btn:hover{border-color:var(--sky);color:var(--sky2)}
-.btn.main{border:0;background:linear-gradient(100deg,var(--sky),var(--sky2));color:#071a33;box-shadow:0 8px 26px #5da8ff30}
-.btn.main:hover{color:#071a33}
-
-.kw{background:linear-gradient(145deg,#131d35,#0e1729);border:1px solid var(--line);border-radius:18px;padding:22px;margin-bottom:56px}
-.kw h2{font-size:19px;margin:0 0 4px}.kw p.sub{margin:0 0 16px;color:var(--muted);font-size:14px}
-.kw ul{list-style:none;margin:0;padding:0}.kw li{display:grid;grid-template-columns:minmax(70px,130px) 1fr auto;gap:12px;align-items:center;margin-bottom:10px;font-size:14px}
-.kw li span:first-child{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-weight:700}
-.kw .bar{height:10px;border-radius:6px;background:#1b2740;overflow:hidden}.kw .bar i{display:block;height:100%;background:linear-gradient(90deg,var(--sky),var(--sky2));border-radius:6px}
-.kw li b{color:var(--sky2);min-width:46px;text-align:right}
-.kw .none{color:var(--muted);font-size:14px;margin:0}
-
-.section{padding:0 0 52px}.section h2{font-size:clamp(25px,3.2vw,32px);letter-spacing:-1px;margin:0 0 18px}
-details{border:1px solid var(--line);border-radius:13px;background:#ffffff05;margin-bottom:10px;padding:0 18px}
-summary{cursor:pointer;padding:16px 0;font-weight:700;list-style:none;display:flex;justify-content:space-between;gap:12px}
-summary::after{content:"+";color:var(--sky2);font-size:20px;line-height:1}details[open] summary::after{content:"–"}
-details p{margin:0 0 16px;color:var(--muted);font-size:14px}
-.related{display:flex;gap:10px;flex-wrap:wrap}.related a{border:1px solid var(--line);background:#ffffff05;border-radius:30px;padding:9px 16px;font-size:14px;color:#c3cce0}.related a:hover{border-color:var(--sky);color:var(--sky2)}
-
-footer{border-top:1px solid var(--line);padding:35px 0 25px;background:#070b16}
-.foot-top{display:flex;justify-content:space-between;gap:30px;flex-wrap:wrap}.foot-about{max-width:340px}.foot-about p{color:var(--muted);font-size:13px}
-.foot-links{display:flex;gap:20px;flex-wrap:wrap;color:#aebbd0;font-size:13px}.foot-links a:hover{color:var(--teal)}
-.copyright{border-top:1px solid var(--line);margin-top:25px;padding-top:18px;color:#78869e;font-size:12px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
-
-@media(max-width:650px){
-.wrap,.narrow{width:calc(100% - 28px)}.topbar{height:68px}.menu-btn{display:block}.nav-cta{display:none}
-.navlinks{display:none;position:absolute;top:67px;left:0;right:0;background:#0c1425;border-bottom:1px solid var(--line);padding:18px 22px;flex-direction:column;align-items:flex-start;gap:17px}.navlinks.open{display:flex}
-h1{font-size:40px;letter-spacing:-1.8px}.lead{font-size:15px}
-.stats{grid-template-columns:1fr 1fr}.stats.small{grid-template-columns:1fr 1fr 1fr}.stat{padding:14px}.stats.small .stat{padding:12px}
-textarea{min-height:280px;padding:10px 14px 10px 50px;background-image:linear-gradient(90deg,transparent 36px,rgba(255,107,138,.55) 36px 38px,transparent 38px),repeating-linear-gradient(transparent 0 31px,rgba(93,168,255,.16) 31px 32px)}
-.btn{flex:1;padding:12px 10px}.kw{padding:18px}.kw li{grid-template-columns:minmax(60px,90px) 1fr auto}.foot-top{flex-direction:column}
-}
-@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
-</style>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"WebApplication","name":"Word Counter","url":"https://fixertools.online/word-counter","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}
 </script>
-</head>
-<body>
+<link href="/style.css" rel="stylesheet"/></head>
+<body data-page="word-counter">
 <header class="topbar">
 <div class="wrap nav">
-<a class="brand" href="/" aria-label="FixerTools home"><span class="brand-mark">⌁</span><span>Fixer<span>Tools</span></span></a>
-<nav class="navlinks" id="navlinks" aria-label="Main navigation">
+<a aria-label="FixerTools home" class="brand" href="/"><span class="brand-mark">⌁</span><span>Fixer<span>Tools</span></span></a>
+<nav aria-label="Main navigation" class="navlinks" id="navlinks">
 <a href="/#tools">All Tools</a><a href="/#categories">Categories</a><a href="/#why-us">Why FixerTools</a><a href="/about">About</a><a href="/contact">Contact</a>
 </nav>
-<a class="nav-cta" href="/#tools">Explore Tools <span>→</span></a>
-<button class="menu-btn" id="menuBtn" aria-label="Open navigation" aria-expanded="false">☰</button>
+<a class="nav-cta" href="/#tools">Explore Tools <span>&rarr;</span></a>
+<button aria-expanded="false" aria-label="Open navigation" class="menu-btn" id="menuBtn">☰</button>
 </div>
 </header>
-
 <main class="narrow">
-<div class="crumbs"><a href="/">Home</a><i>›</i><a href="/#tools">Text</a><i>›</i><b>Word Counter</b></div>
+<div class="crumbs"><a href="/">Home</a><i>&rsaquo;</i><a href="/#tools">Text</a><i>&rsaquo;</i><b>Word Counter</b></div>
 <span class="badge"><i></i>Free word counter</span>
 <h1>Word Counter <span class="grad">Count as you write.</span></h1>
 <p class="lead">Type or paste your text. Words, characters, sentences and reading time update with every keystroke.</p>
-
-<div class="stats" aria-live="polite">
+<div aria-live="polite" class="stats">
 <div class="stat main"><small>Words</small><b id="words">0</b></div>
 <div class="stat main"><small>Characters</small><b id="chars">0</b></div>
 <div class="stat"><small>Sentences</small><b id="sent">0</b></div>
@@ -124,48 +45,42 @@ textarea{min-height:280px;padding:10px 14px 10px 50px;background-image:linear-gr
 <div class="stat"><small>Reading time</small><b id="read">0 sec</b></div>
 <div class="stat"><small>Speaking time</small><b id="speak">0 sec</b></div>
 </div>
-
 <div class="pad">
 <div class="pad-top"><span><i></i><i></i><i></i></span><label for="text">Your text</label></div>
-<textarea id="text" placeholder="Start typing or paste your text here…" spellcheck="true"></textarea>
+<textarea id="text" placeholder="Start typing or paste your text here&hellip;" spellcheck="true"></textarea>
 </div>
 <div class="btns">
 <button class="btn main" id="paste">Paste</button>
 <button class="btn" id="copy">Copy text</button>
 <button class="btn" id="clear">Clear</button>
 </div>
-
-<section class="kw" aria-label="Most used words">
+<section aria-label="Most used words" class="kw">
 <h2>Most used words</h2>
 <p class="sub">Common filler words are left out.</p>
 <ul id="kwList"></ul>
 <p class="none" id="kwNone">Type at least a few words to see your top keywords.</p>
 </section>
-
 <section class="section">
 <h2>Questions</h2>
-<details><summary>How are words counted?</summary><p>A word is any run of letters or numbers. Hyphenated words such as “well-known” and contractions such as “don’t” count as one word.</p></details>
+<details><summary>How are words counted?</summary><p>A word is any run of letters or numbers. Hyphenated words such as &ldquo;well-known&rdquo; and contractions such as &ldquo;don&rsquo;t&rdquo; count as one word.</p></details>
 <details><summary>How is reading time worked out?</summary><p>Reading time assumes about 200 words per minute and speaking time assumes about 130 words per minute. Real speed varies from person to person.</p></details>
 <details><summary>Is my text saved or sent anywhere?</summary><p>No. Everything is counted in your browser, so your text never leaves your device.</p></details>
 <details><summary>Does it work for other languages?</summary><p>Yes for languages that put spaces between words. Languages written without spaces, such as Chinese or Japanese, will show a lower word count, but the character count stays correct.</p></details>
 </section>
-
 <section class="section">
 <h2>More free tools</h2>
 <div class="related"><a href="/case-converter">Case Converter</a><a href="/password-generator">Password Generator</a><a href="/json-formatter">JSON Formatter</a><a href="/percentage-calculator">Percentage Calculator</a><a href="/qr-code-generator">QR Code Generator</a></div>
 </section>
 </main>
-
 <footer>
 <div class="wrap">
 <div class="foot-top">
 <div class="foot-about"><a class="brand" href="/"><span class="brand-mark">⌁</span><span>Fixer<span>Tools</span></span></a><p>Every little tool, one fast place. Free online tools designed to make everyday digital tasks simpler.</p></div>
-<nav class="foot-links" aria-label="Footer links"><a href="/about">About</a><a href="/privacy-policy">Privacy Policy</a><a href="/terms-and-conditions">Terms</a><a href="/disclaimer">Disclaimer</a><a href="/cookie-policy">Cookie Policy</a><a href="/contact">Contact</a></nav>
+<nav aria-label="Footer links" class="foot-links"><a href="/about">About</a><a href="/privacy-policy">Privacy Policy</a><a href="/terms-and-conditions">Terms</a><a href="/disclaimer">Disclaimer</a><a href="/cookie-policy">Cookie Policy</a><a href="/contact">Contact</a></nav>
 </div>
-<div class="copyright"><span>© <span id="year"></span> FixerTools. All rights reserved.</span><span>Free tools. Simple solutions.</span></div>
+<div class="copyright"><span>&copy; <span id="year"></span> FixerTools. All rights reserved.</span><span>Free tools. Simple solutions.</span></div>
 </div>
 </footer>
-
 <script>
 const $=s=>document.querySelector(s);
 const menuBtn=$('#menuBtn'),nav=$('#navlinks');

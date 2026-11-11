@@ -1,147 +1,63 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>JSON Formatter &amp; Validator – Beautify, Minify | FixerTools</title>
-<meta name="description" content="Free JSON formatter and validator. Beautify, minify and sort JSON, and find errors by line and column. Runs in your browser; nothing is uploaded.">
-<link rel="canonical" href="https://fixertools.online/json-formatter">
-<meta name="theme-color" content="#080d1b">
-<meta property="og:type" content="website">
-<meta property="og:title" content="JSON Formatter &amp; Validator – Beautify, Minify | FixerTools">
-<meta property="og:description" content="Free JSON formatter and validator. Beautify, minify and sort JSON, and find errors by line and column. Runs in your browser; nothing is uploaded.">
-<meta property="og:url" content="https://fixertools.online/json-formatter">
-<meta name="twitter:card" content="summary">
-<style>
-:root{--bg:#080d1b;--field:#0b1324;--line:rgba(148,163,184,.16);--text:#f4f7ff;--muted:#9ba9c2;--teal:#4de4ce;--cy:#22d3ee;--cy2:#8be9f8;--ok:#3ddc97;--err:#ff6b7a;--max:1160px}
-*{box-sizing:border-box}html{scroll-behavior:smooth}
-body{margin:0;overflow-x:hidden;color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;line-height:1.6;background:
-radial-gradient(ellipse at 88% 0%,rgba(34,211,238,.17),transparent 42%),
-radial-gradient(ellipse at 0% 45%,rgba(167,139,250,.07),transparent 40%),var(--bg)}
-a{color:inherit;text-decoration:none}button,textarea,select{font:inherit}
-.wrap{width:min(var(--max),calc(100% - 40px));margin:auto}
-:focus-visible{outline:2px solid var(--cy2);outline-offset:2px}
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>JSON Formatter &amp; Validator &ndash; Beautify, Minify | FixerTools</title>
+<meta content="Free JSON formatter and validator. Beautify, minify and sort JSON, and find errors by line and column. Runs in your browser; nothing is uploaded." name="description"/>
+<link href="https://fixertools.online/json-formatter" rel="canonical"/>
+<meta content="#f6f8fb" name="theme-color"/>
+<meta content="website" property="og:type"/>
+<meta content="JSON Formatter &amp; Validator &ndash; Beautify, Minify | FixerTools" property="og:title"/>
+<meta content="Free JSON formatter and validator. Beautify, minify and sort JSON, and find errors by line and column. Runs in your browser; nothing is uploaded." property="og:description"/>
+<meta content="https://fixertools.online/json-formatter" property="og:url"/>
+<meta content="summary" name="twitter:card"/>
 
-/* header — identical to homepage */
-.topbar{height:78px;border-bottom:1px solid var(--line);display:flex;align-items:center;position:relative;z-index:5;background:rgba(8,13,27,.82);backdrop-filter:blur(14px)}
-.nav{display:flex;align-items:center;justify-content:space-between;gap:24px}
-.brand{display:flex;align-items:center;gap:10px;font-size:22px;font-weight:850;letter-spacing:-.8px}
-.brand-mark{width:36px;height:36px;border-radius:11px;background:linear-gradient(135deg,var(--teal),#48a8e9);display:grid;place-items:center;color:#07131d;font-size:21px;box-shadow:0 6px 22px #4de4ce35}
-.brand span span{color:var(--teal)}
-.navlinks{display:flex;align-items:center;gap:30px;color:#c3cce0;font-size:14px}.navlinks a:hover{color:var(--teal)}
-.nav-cta{background:linear-gradient(100deg,var(--teal),#7ad9f5);color:#07131d;font-weight:800;border-radius:10px;padding:11px 17px;display:inline-flex;gap:8px;box-shadow:0 8px 26px #4de4ce20}
-.menu-btn{display:none;background:none;border:1px solid var(--line);color:#fff;border-radius:9px;padding:8px 11px;cursor:pointer}
-
-/* page */
-.narrow{width:min(980px,calc(100% - 40px));margin:auto}
-.hero{position:relative;overflow:hidden}
-.hero::after{content:"{ }";position:absolute;right:-4px;top:4px;font-family:ui-monospace,Menlo,Consolas,monospace;font-size:170px;font-weight:800;color:rgba(34,211,238,.07);line-height:1;pointer-events:none}
-.hero>*{position:relative;z-index:1}
-.crumbs{padding:26px 0 0;font-size:14px;color:var(--muted)}.crumbs a:hover{color:var(--cy2)}.crumbs b{font-weight:500;color:#dbe3f5}.crumbs i{margin:0 8px;font-style:normal;opacity:.6}
-.badge{display:inline-flex;align-items:center;gap:9px;margin-top:22px;border:1px solid #22d3ee55;background:#22d3ee12;color:var(--cy2);border-radius:30px;padding:7px 13px;font-size:12px;font-weight:750;letter-spacing:.6px}
-.badge i{width:7px;height:7px;border-radius:2px;background:var(--cy);box-shadow:0 0 12px var(--cy)}
-h1{font-size:clamp(38px,6vw,60px);line-height:1.06;letter-spacing:-2.3px;margin:18px 0 14px;font-weight:850}
-.grad{display:block;background:linear-gradient(95deg,var(--cy2),var(--cy) 55%,#a78bfa);-webkit-background-clip:text;background-clip:text;color:transparent}
-.lead{color:var(--muted);font-size:17px;margin:0 0 28px;max-width:600px}
-
-.ed{border:1px solid var(--line);border-radius:16px;overflow:hidden;background:#0a1122;margin-bottom:14px}
-.ed.bad{border-color:#ff6b7a88}
-.ed-top{display:flex;align-items:center;gap:12px;padding:0 14px;border-bottom:1px solid var(--line);background:#0f1830;min-height:44px}
-.dots{display:flex;gap:6px}.dots i{width:9px;height:9px;border-radius:50%;background:#52627c}
-.tab{font-size:13px;font-weight:700;color:var(--cy2);padding:11px 0;border-bottom:2px solid var(--cy);margin-bottom:-1px}
-.ed-top .sp{flex:1}.ed-top small{color:var(--muted);font-size:12px}
-.code{font-family:ui-monospace,"SF Mono",Menlo,Consolas,monospace;font-size:14px;line-height:1.6;tab-size:2}
-textarea.code{display:block;width:100%;height:260px;resize:vertical;border:0;outline:0;background:transparent;color:#d8e6ff;padding:14px 16px;white-space:pre;overflow:auto}
-textarea.code::placeholder{color:#4d5b76}
-pre.code{margin:0;padding:14px 16px;max-height:480px;min-height:120px;overflow:auto;white-space:pre;color:#d8e6ff}
-pre.code .k{color:#7dd3fc}pre.code .s{color:#a7f3a0}pre.code .n{color:#fbbf77}pre.code .b{color:#f0abfc}
-pre.code .ph{color:#4d5b76;font-style:italic}
-
-.bar{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-bottom:14px}
-.btn{border:1px solid #64748b55;background:#ffffff08;color:#e8eefb;border-radius:11px;padding:11px 18px;font-weight:800;font-size:15px;cursor:pointer}
-.btn:hover:not(:disabled){border-color:var(--cy);color:var(--cy2)}.btn:disabled{opacity:.4;cursor:not-allowed}
-.btn.main{border:0;background:linear-gradient(100deg,var(--cy),#7dd3fc);color:#04222b;box-shadow:0 8px 26px #22d3ee30}.btn.main:hover:not(:disabled){color:#04222b}
-.btn.on{border-color:var(--cy);color:var(--cy2);background:#22d3ee14}
-select{background:var(--field);border:1px solid var(--line);border-radius:11px;color:#fff;padding:11px 12px;font-size:14px;outline:none}
-.chk{display:flex;align-items:center;gap:8px;font-size:14px;font-weight:600;color:#cfd8ec;cursor:pointer}.chk input{width:18px;height:18px;accent-color:var(--cy);margin:0}
-.status{display:flex;gap:10px;align-items:flex-start;border-radius:12px;padding:12px 14px;font-size:14px;margin-bottom:14px;border:1px solid var(--line);background:#ffffff06;color:var(--muted)}
-.status b{flex:none;width:22px;height:22px;border-radius:50%;display:grid;place-items:center;font-size:13px;color:#06231a;background:#52627c}
-.status.ok{border-color:#3ddc9755;background:#3ddc9710;color:#b9f5d6}.status.ok b{background:var(--ok)}
-.status.err{border-color:#ff6b7a66;background:#ff6b7a10;color:#ffc9cf}.status.err b{background:var(--err);color:#2a0409}
-.status span{min-width:0;word-break:break-word}
-.row2{display:flex;gap:10px;flex-wrap:wrap;margin:0 0 56px}
-
-.section{padding:0 0 52px}.section h2{font-size:clamp(25px,3.2vw,32px);letter-spacing:-1px;margin:0 0 18px}
-details{border:1px solid var(--line);border-radius:13px;background:#ffffff05;margin-bottom:10px;padding:0 18px}
-summary{cursor:pointer;padding:16px 0;font-weight:700;list-style:none;display:flex;justify-content:space-between;gap:12px}
-summary::after{content:"+";color:var(--cy2);font-size:20px;line-height:1}details[open] summary::after{content:"–"}
-details p{margin:0 0 16px;color:var(--muted);font-size:14px}
-.related{display:flex;gap:10px;flex-wrap:wrap}.related a{border:1px solid var(--line);background:#ffffff05;border-radius:30px;padding:9px 16px;font-size:14px;color:#c3cce0}.related a:hover{border-color:var(--cy);color:var(--cy2)}
-
-footer{border-top:1px solid var(--line);padding:35px 0 25px;background:#070b16}
-.foot-top{display:flex;justify-content:space-between;gap:30px;flex-wrap:wrap}.foot-about{max-width:340px}.foot-about p{color:var(--muted);font-size:13px}
-.foot-links{display:flex;gap:20px;flex-wrap:wrap;color:#aebbd0;font-size:13px}.foot-links a:hover{color:var(--teal)}
-.copyright{border-top:1px solid var(--line);margin-top:25px;padding-top:18px;color:#78869e;font-size:12px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
-
-@media(max-width:650px){
-.wrap,.narrow{width:calc(100% - 28px)}.topbar{height:68px}.menu-btn{display:block}.nav-cta{display:none}
-.navlinks{display:none;position:absolute;top:67px;left:0;right:0;background:#0c1425;border-bottom:1px solid var(--line);padding:18px 22px;flex-direction:column;align-items:flex-start;gap:17px}.navlinks.open{display:flex}
-h1{font-size:40px;letter-spacing:-1.8px}.lead{font-size:15px}.hero::after{font-size:110px;top:30px}
-.code{font-size:13px}textarea.code{height:220px}.btn{padding:11px 14px;font-size:14px}.bar .btn.main{flex:1}.row2 .btn{flex:1}.foot-top{flex-direction:column}
-}
-@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
-</style>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"WebApplication","name":"JSON Formatter","url":"https://fixertools.online/json-formatter","applicationCategory":"DeveloperApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}
 </script>
-</head>
-<body>
+<link href="/style.css" rel="stylesheet"/></head>
+<body data-page="json-formatter">
 <header class="topbar">
 <div class="wrap nav">
-<a class="brand" href="/" aria-label="FixerTools home"><span class="brand-mark">⌁</span><span>Fixer<span>Tools</span></span></a>
-<nav class="navlinks" id="navlinks" aria-label="Main navigation">
+<a aria-label="FixerTools home" class="brand" href="/"><span class="brand-mark">⌁</span><span>Fixer<span>Tools</span></span></a>
+<nav aria-label="Main navigation" class="navlinks" id="navlinks">
 <a href="/#tools">All Tools</a><a href="/#categories">Categories</a><a href="/#why-us">Why FixerTools</a><a href="/about">About</a><a href="/contact">Contact</a>
 </nav>
-<a class="nav-cta" href="/#tools">Explore Tools <span>→</span></a>
-<button class="menu-btn" id="menuBtn" aria-label="Open navigation" aria-expanded="false">☰</button>
+<a class="nav-cta" href="/#tools">Explore Tools <span>&rarr;</span></a>
+<button aria-expanded="false" aria-label="Open navigation" class="menu-btn" id="menuBtn">☰</button>
 </div>
 </header>
-
 <main class="narrow">
 <div class="hero">
-<div class="crumbs"><a href="/">Home</a><i>›</i><a href="/#tools">Developer</a><i>›</i><b>JSON Formatter</b></div>
+<div class="crumbs"><a href="/">Home</a><i>&rsaquo;</i><a href="/#tools">Developer</a><i>&rsaquo;</i><b>JSON Formatter</b></div>
 <span class="badge"><i></i>Free JSON formatter</span>
 <h1>JSON Formatter <span class="grad">Messy in. Clean out.</span></h1>
 <p class="lead">Paste your JSON to beautify, minify and check it. If something is wrong, you will see exactly where.</p>
 </div>
-
 <div class="ed" id="edIn">
 <div class="ed-top"><div class="dots"><i></i><i></i><i></i></div><span class="tab">input.json</span><span class="sp"></span><small id="inSize">0 B</small></div>
-<textarea class="code" id="inp" spellcheck="false" autocomplete="off" autocapitalize="off" placeholder='Paste JSON here, for example {"name":"Ali","age":25}'></textarea>
+<textarea autocapitalize="off" autocomplete="off" class="code" id="inp" placeholder='Paste JSON here, for example {"name":"Ali","age":25}' spellcheck="false"></textarea>
 </div>
-
 <div class="bar">
 <button class="btn main" id="bFormat">Format</button>
 <button class="btn" id="bMin">Minify</button>
-<select id="indent" aria-label="Indentation"><option value="2">2 spaces</option><option value="4">4 spaces</option><option value="tab">Tab</option></select>
-<label class="chk"><input type="checkbox" id="sort"> Sort keys</label>
+<select aria-label="Indentation" id="indent"><option value="2">2 spaces</option><option value="4">4 spaces</option><option value="tab">Tab</option></select>
+<label class="chk"><input id="sort" type="checkbox"/> Sort keys</label>
 </div>
-
-<div class="status" id="status" role="status"><b>·</b><span>Paste JSON above to check it.</span></div>
-
+<div class="status" id="status" role="status"><b>&middot;</b><span>Paste JSON above to check it.</span></div>
 <div class="ed">
 <div class="ed-top"><div class="dots"><i></i><i></i><i></i></div><span class="tab" id="outTab">output.json</span><span class="sp"></span><small id="outSize">0 B</small></div>
-<pre class="code" id="out" tabindex="0" aria-label="Formatted JSON"><span class="ph">Your result appears here.</span></pre>
+<pre aria-label="Formatted JSON" class="code" id="out" tabindex="0"><span class="ph">Your result appears here.</span></pre>
 </div>
-
-<div class="row2" style="margin-top:14px">
-<button class="btn main" id="copy" disabled>Copy result</button>
-<button class="btn" id="dl" disabled>Download .json</button>
+<div class="row2 inline-style-1">
+<button class="btn main" disabled="" id="copy">Copy result</button>
+<button class="btn" disabled="" id="dl">Download .json</button>
 <button class="btn" id="sample">Try a sample</button>
 <button class="btn" id="paste">Paste</button>
 <button class="btn" id="clear">Clear</button>
 </div>
-
 <section class="section">
 <h2>Questions</h2>
 <details><summary>What does a JSON formatter do?</summary><p>It adds line breaks and indentation so JSON is easy to read. It also checks that the JSON is valid and points to the place where something is wrong.</p></details>
@@ -150,23 +66,20 @@ h1{font-size:40px;letter-spacing:-1.8px}.lead{font-size:15px}.hero::after{font-s
 <details><summary>Is my data uploaded?</summary><p>No. Everything runs in your browser, so your JSON never leaves your device. You can safely paste private data.</p></details>
 <details><summary>Why did a very large number change?</summary><p>Browsers read JSON numbers as standard floating point values, so whole numbers beyond 9,007,199,254,740,991 can lose precision. If you need exact large IDs, store them as strings.</p></details>
 </section>
-
 <section class="section">
 <h2>More free tools</h2>
 <div class="related"><a href="/qr-code-generator">QR Code Generator</a><a href="/case-converter">Case Converter</a><a href="/password-generator">Password Generator</a><a href="/word-counter">Word Counter</a><a href="/image-compressor">Image Compressor</a></div>
 </section>
 </main>
-
 <footer>
 <div class="wrap">
 <div class="foot-top">
 <div class="foot-about"><a class="brand" href="/"><span class="brand-mark">⌁</span><span>Fixer<span>Tools</span></span></a><p>Every little tool, one fast place. Free online tools designed to make everyday digital tasks simpler.</p></div>
-<nav class="foot-links" aria-label="Footer links"><a href="/about">About</a><a href="/privacy-policy">Privacy Policy</a><a href="/terms-and-conditions">Terms</a><a href="/disclaimer">Disclaimer</a><a href="/cookie-policy">Cookie Policy</a><a href="/contact">Contact</a></nav>
+<nav aria-label="Footer links" class="foot-links"><a href="/about">About</a><a href="/privacy-policy">Privacy Policy</a><a href="/terms-and-conditions">Terms</a><a href="/disclaimer">Disclaimer</a><a href="/cookie-policy">Cookie Policy</a><a href="/contact">Contact</a></nav>
 </div>
-<div class="copyright"><span>© <span id="year"></span> FixerTools. All rights reserved.</span><span>Free tools. Simple solutions.</span></div>
+<div class="copyright"><span>&copy; <span id="year"></span> FixerTools. All rights reserved.</span><span>Free tools. Simple solutions.</span></div>
 </div>
 </footer>
-
 <script>
 const $=s=>document.querySelector(s);
 const menuBtn=$('#menuBtn'),nav=$('#navlinks');

@@ -1,27 +1,24 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Age Calculator – Exact Age in Years &amp; Days | FixerTools</title>
-  <meta name="description" content="Free age calculator: enter your date of birth to get your exact age in years, months and days, plus your next birthday, zodiac sign and birthstone.">
-  <meta name="theme-color" content="#050b1a">
-  <link rel="canonical" href="https://fixertools.online/age-calculator">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Age Calculator &ndash; Exact Age in Years &amp; Days | FixerTools</title>
+<meta content="Free age calculator: enter your date of birth to get your exact age in years, months and days, plus your next birthday, zodiac sign and birthstone." name="description"/>
+<meta content="#f6f8fb" name="theme-color"/>
+<link href="https://fixertools.online/age-calculator" rel="canonical"/>
+<meta content="website" property="og:type"/>
+<meta content="FixerTools" property="og:site_name"/>
+<meta content="Age Calculator &ndash; Exact Age in Years &amp; Days | FixerTools" property="og:title"/>
+<meta content="Free age calculator: enter your date of birth to get your exact age in years, months and days, plus your next birthday, zodiac sign and birthstone." property="og:description"/>
+<meta content="https://fixertools.online/age-calculator" property="og:url"/>
+<link href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2322e6d0'/%3E%3Ctext x='32' y='45' font-size='38' text-anchor='middle' fill='%23050b1a' font-family='Arial' font-weight='700'%3EF%3C/text%3E%3C/svg%3E" rel="icon"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 
-  <meta property="og:type" content="website">
-  <meta property="og:site_name" content="FixerTools">
-  <meta property="og:title" content="Age Calculator – Exact Age in Years &amp; Days | FixerTools">
-  <meta property="og:description" content="Free age calculator: enter your date of birth to get your exact age in years, months and days, plus your next birthday, zodiac sign and birthstone.">
-  <meta property="og:url" content="https://fixertools.online/age-calculator">
-
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2322e6d0'/%3E%3Ctext x='32' y='45' font-size='38' text-anchor='middle' fill='%23050b1a' font-family='Arial' font-weight='700'%3EF%3C/text%3E%3C/svg%3E">
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
-  <script type="application/ld+json">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet"/>
+<script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@graph": [
@@ -63,678 +60,197 @@
   }
   </script>
 
-  <style>
-    :root {
-      --bg: #050b1a;
-      --card: #0c1630;
-      --border: #1b2a4a;
-      --cyan: #22e6d0;
-      --blue: #3b82f6;
-      --purple: #8b5cf6;
-      --pink: #ff5fa2;
-      --gold: #ffc83d;
-      --text: #ffffff;
-      --muted: #9aa6bf;
-      --radius: 16px;
-    }
-
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    [hidden] { display: none !important; }
-
-    html {
-      scroll-behavior: smooth;
-      scroll-padding-top: 84px;
-      -webkit-text-size-adjust: 100%;
-    }
-    body {
-      font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.6;
-      overflow-x: clip;
-    }
-    a { color: inherit; text-decoration: none; }
-    ul { list-style: none; }
-    button, input { font-family: inherit; }
-    a:focus-visible, button:focus-visible, input:focus-visible, summary:focus-visible {
-      outline: 2px solid var(--cyan);
-      outline-offset: 3px;
-    }
-    .container { width: 100%; max-width: 1240px; margin: 0 auto; padding: 0 20px; }
-
-    /* ---------- Header (same as homepage) ---------- */
-    .site-header {
-      position: sticky;
-      top: 0;
-      z-index: 50;
-      background: rgba(5, 11, 26, 0.9);
-      -webkit-backdrop-filter: blur(12px);
-      backdrop-filter: blur(12px);
-      border-bottom: 1px solid var(--border);
-    }
-    .nav { display: flex; align-items: center; justify-content: space-between; height: 72px; }
-    .logo { display: flex; align-items: center; gap: 12px; }
-    .logo-mark {
-      width: 44px;
-      height: 44px;
-      border-radius: 12px;
-      display: grid;
-      place-items: center;
-      font-size: 19px;
-      color: #04121f;
-      background: linear-gradient(135deg, var(--cyan), #5fb0ff);
-      box-shadow: 0 6px 20px rgba(34, 230, 208, 0.25);
-    }
-    .logo-name { font-size: 26px; font-weight: 700; letter-spacing: -0.02em; line-height: 1; }
-    .logo-name span { color: var(--cyan); }
-
-    .menu-btn {
-      width: 46px;
-      height: 46px;
-      border-radius: 12px;
-      border: 1px solid var(--border);
-      background: rgba(255, 255, 255, 0.04);
-      color: var(--text);
-      font-size: 20px;
-      cursor: pointer;
-    }
-    .nav-links {
-      display: none;
-      position: absolute;
-      top: 100%;
-      left: 0;
-      right: 0;
-      flex-direction: column;
-      gap: 4px;
-      padding: 14px 20px 20px;
-      background: var(--bg);
-      border-bottom: 1px solid var(--border);
-    }
-    .nav-links.open { display: flex; }
-    .nav-links a {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      padding: 13px 14px;
-      border-radius: 12px;
-      font-size: 15px;
-      font-weight: 500;
-      color: #dbe3f5;
-    }
-    .nav-links a i { width: 18px; text-align: center; color: var(--cyan); }
-    .nav-links a:hover { background: rgba(255, 255, 255, 0.05); }
-
-    /* ---------- Bunting (this page's party detail) ---------- */
-    .bunting {
-      height: 36px;
-      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 240 36'%3E%3Cline x1='0' y1='1' x2='240' y2='1' stroke='%2334456b' stroke-width='2'/%3E%3Cpolygon points='6,2 54,2 30,34' fill='%23ff5fa2'/%3E%3Cpolygon points='66,2 114,2 90,34' fill='%23ffc83d'/%3E%3Cpolygon points='126,2 174,2 150,34' fill='%2322e6d0'/%3E%3Cpolygon points='186,2 234,2 210,34' fill='%238b5cf6'/%3E%3C/svg%3E");
-      background-size: 240px 36px;
-      background-repeat: repeat-x;
-      opacity: 0.95;
-    }
-
-    /* ---------- Hero ---------- */
-    .hero {
-      position: relative;
-      overflow: hidden;
-      padding: 28px 0 40px;
-      background:
-        radial-gradient(520px 380px at 90% 0%, rgba(255, 95, 162, 0.16), transparent 70%),
-        radial-gradient(480px 360px at 0% 30%, rgba(139, 92, 246, 0.14), transparent 70%);
-    }
-    .hero-grid { display: grid; gap: 30px; align-items: start; }
-
-    .crumbs {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      gap: 8px;
-      font-size: 0.85rem;
-      color: var(--muted);
-      margin-bottom: 18px;
-    }
-    .crumbs a:hover { color: var(--cyan); }
-    .crumbs i { font-size: 10px; }
-    .crumbs span { color: #dbe3f5; }
-
-    .badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      padding: 8px 16px;
-      border-radius: 999px;
-      border: 1px solid rgba(255, 95, 162, 0.4);
-      background: rgba(255, 95, 162, 0.09);
-      color: #ff8fc0;
-      font-size: 12.5px;
-      font-weight: 700;
-      letter-spacing: 0.04em;
-    }
-    .badge .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--pink); }
-
-    .hero h1 {
-      font-size: clamp(2.5rem, 10vw, 4.4rem);
-      line-height: 1.05;
-      font-weight: 800;
-      letter-spacing: -0.02em;
-      margin: 20px 0 16px;
-    }
-    .hero h1 .grad {
-      display: block;
-      background: linear-gradient(90deg, var(--gold) 0%, var(--pink) 55%, #b58cff 100%);
-      -webkit-background-clip: text;
-      background-clip: text;
-      -webkit-text-fill-color: transparent;
-      color: transparent;
-    }
-    .lead { color: var(--muted); font-size: 1.05rem; max-width: 520px; }
-
-    /* Balloons (desktop only) */
-    .balloons { display: none; position: relative; height: 190px; margin-top: 26px; }
-    .balloon {
-      position: absolute;
-      width: 70px;
-      height: 88px;
-      border-radius: 50% 50% 48% 48% / 46% 46% 54% 54%;
-      background:
-        radial-gradient(circle at 30% 26%, rgba(255, 255, 255, 0.55), transparent 36%),
-        var(--b);
-      animation: bob 6s ease-in-out infinite alternate;
-    }
-    .balloon::before {
-      content: "";
-      position: absolute;
-      left: 50%;
-      bottom: -7px;
-      width: 12px;
-      height: 10px;
-      transform: translateX(-50%);
-      background: var(--b);
-      clip-path: polygon(50% 0, 100% 100%, 0 100%);
-    }
-    .balloon::after {
-      content: "";
-      position: absolute;
-      left: 50%;
-      top: 100%;
-      width: 2px;
-      height: 80px;
-      margin-top: 3px;
-      background: linear-gradient(#5a6b93, transparent);
-    }
-    .balloon.b1 { --b: #ff5fa2; left: 4%; top: 0; }
-    .balloon.b2 { --b: #ffc83d; left: 26%; top: 36px; animation-delay: -2s; }
-    .balloon.b3 { --b: #8b5cf6; left: 48%; top: 6px; animation-delay: -4s; }
-    @keyframes bob { from { transform: translateY(0) rotate(-3deg); } to { transform: translateY(-12px) rotate(3deg); } }
-
-    /* ---------- Calculator card ---------- */
-    .calc-card {
-      background: linear-gradient(160deg, #111e3f, #0a1326);
-      border: 1px solid var(--border);
-      border-radius: 22px;
-      padding: 22px 18px;
-      box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4);
-    }
-    .calc-card h2 { font-size: 1.25rem; font-weight: 700; letter-spacing: -0.01em; }
-    .calc-card > p { color: var(--muted); font-size: 0.9rem; margin: 2px 0 18px; }
-
-    .field { margin-bottom: 16px; }
-    .field label { display: block; font-size: 0.9rem; font-weight: 600; margin-bottom: 8px; color: #dbe3f5; }
-    .input {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      height: 54px;
-      padding: 0 14px;
-      border-radius: 14px;
-      border: 1px solid var(--border);
-      background: rgba(255, 255, 255, 0.035);
-    }
-    .input:focus-within { border-color: var(--pink); box-shadow: 0 0 0 3px rgba(255, 95, 162, 0.15); }
-    .input i { color: var(--pink); font-size: 16px; width: 18px; text-align: center; }
-    .input input {
-      flex: 1;
-      min-width: 0;
-      height: 100%;
-      background: transparent;
-      border: 0;
-      outline: 0;
-      color: var(--text);
-      font-size: 16px;
-      color-scheme: dark;
-    }
-    .link-btn {
-      background: none;
-      border: 0;
-      margin-top: 8px;
-      color: var(--cyan);
-      font-size: 0.85rem;
-      font-weight: 600;
-      cursor: pointer;
-      padding: 4px 0;
-    }
-    .error {
-      min-height: 0;
-      margin: -2px 0 12px;
-      color: #ff8a8a;
-      font-size: 0.9rem;
-    }
-
-    .btns { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 4px; }
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-      padding: 15px 26px;
-      border-radius: 14px;
-      font-size: 1rem;
-      font-weight: 700;
-      border: 1px solid transparent;
-      cursor: pointer;
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-    }
-    .btn:hover { transform: translateY(-2px); }
-    .btn-primary {
-      flex: 1;
-      color: #1a0714;
-      background: linear-gradient(90deg, var(--gold), var(--pink));
-      box-shadow: 0 10px 28px rgba(255, 95, 162, 0.25);
-    }
-    .btn-ghost {
-      color: var(--text);
-      border-color: var(--border);
-      background: rgba(255, 255, 255, 0.04);
-    }
-
-    /* ---------- Results ---------- */
-    .results { padding: 8px 0 8px; }
-    .age-card {
-      position: relative;
-      overflow: hidden;
-      padding: 24px 18px 22px;
-      border-radius: 22px;
-      border: 1px solid rgba(255, 95, 162, 0.35);
-      background:
-        radial-gradient(420px 260px at 100% 0%, rgba(255, 200, 61, 0.18), transparent 70%),
-        linear-gradient(135deg, #2b1459 0%, #4a1b66 50%, #6b1f5f 100%);
-      text-align: center;
-    }
-    .age-head { display: flex; align-items: center; justify-content: center; gap: 12px; margin-bottom: 18px; }
-    .age-head .cake {
-      width: 44px;
-      height: 44px;
-      border-radius: 50%;
-      display: grid;
-      place-items: center;
-      background: linear-gradient(135deg, var(--gold), var(--pink));
-      color: #1a0714;
-      font-size: 19px;
-    }
-    .age-head h2 { font-size: 1.2rem; font-weight: 700; letter-spacing: -0.01em; }
-
-    .age-numbers { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
-    .num {
-      padding: 16px 6px 14px;
-      border-radius: 16px;
-      background: rgba(255, 255, 255, 0.09);
-      border: 1px solid rgba(255, 255, 255, 0.14);
-    }
-    .num strong {
-      display: block;
-      font-size: clamp(2.2rem, 11vw, 3.6rem);
-      font-weight: 800;
-      line-height: 1;
-      letter-spacing: -0.02em;
-    }
-    .num span { display: block; margin-top: 8px; font-size: 0.85rem; font-weight: 600; color: #ffd6e8; }
-    .age-sub { margin-top: 16px; color: #f1d9ee; font-size: 0.95rem; }
-
-    .stats { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin-top: 14px; }
-    .stat {
-      padding: 16px;
-      border-radius: var(--radius);
-      border: 1px solid var(--border);
-      background: var(--card);
-      min-width: 0;
-    }
-    .stat span { display: block; font-size: 0.82rem; color: var(--muted); }
-    .stat strong { display: block; font-size: 1.3rem; font-weight: 700; letter-spacing: -0.01em; margin-top: 2px; overflow-wrap: anywhere; }
-    .note { margin-top: 10px; font-size: 0.8rem; color: var(--muted); }
-
-    .extras { display: grid; gap: 12px; margin-top: 14px; }
-    .box {
-      padding: 20px 18px;
-      border-radius: var(--radius);
-      border: 1px solid var(--border);
-      background: var(--card);
-    }
-    .box h3 {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      font-size: 1rem;
-      font-weight: 700;
-      margin-bottom: 12px;
-    }
-    .box h3 i { color: var(--gold); }
-    .big { font-size: 2rem; font-weight: 800; letter-spacing: -0.02em; line-height: 1.1; }
-    .big small { font-size: 1rem; font-weight: 600; color: var(--muted); letter-spacing: 0; }
-    .box p { color: var(--muted); font-size: 0.92rem; margin-top: 6px; }
-    .bar { height: 10px; border-radius: 99px; background: #14203f; margin-top: 16px; overflow: hidden; }
-    .bar i { display: block; height: 100%; width: 0; border-radius: 99px; background: linear-gradient(90deg, var(--gold), var(--pink)); }
-    .bar-label { display: flex; justify-content: space-between; font-size: 0.78rem; color: var(--muted); margin-top: 8px; }
-    .mini-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
-
-    /* ---------- Info sections ---------- */
-    .section { padding: 52px 0 0; }
-    .section h2 { font-size: clamp(1.5rem, 5vw, 2rem); font-weight: 700; letter-spacing: -0.02em; line-height: 1.2; margin-bottom: 14px; }
-    .prose { color: var(--muted); max-width: 760px; }
-    .prose p + p { margin-top: 12px; }
-    .prose strong { color: #dbe3f5; }
-
-    .faq { display: grid; gap: 10px; max-width: 800px; }
-    .faq details { border: 1px solid var(--border); border-radius: 14px; background: var(--card); }
-    .faq summary {
-      list-style: none;
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 12px;
-      padding: 16px 18px;
-      font-weight: 600;
-    }
-    .faq summary::-webkit-details-marker { display: none; }
-    .faq summary i { color: var(--cyan); transition: transform 0.2s ease; flex-shrink: 0; }
-    .faq details[open] summary i { transform: rotate(180deg); }
-    .faq details p { padding: 0 18px 16px; color: var(--muted); font-size: 0.95rem; }
-
-    .related { display: grid; gap: 12px; }
-    .rel {
-      display: flex;
-      align-items: center;
-      gap: 14px;
-      padding: 16px;
-      border-radius: var(--radius);
-      border: 1px solid var(--border);
-      background: var(--card);
-      transition: border-color 0.2s ease, transform 0.2s ease;
-    }
-    .rel:hover { border-color: var(--cyan); transform: translateY(-2px); }
-    .rel .ico {
-      width: 44px;
-      height: 44px;
-      border-radius: 12px;
-      display: grid;
-      place-items: center;
-      font-size: 19px;
-      color: #fff;
-      background: linear-gradient(135deg, #2f7bff, #22b8f0);
-      flex-shrink: 0;
-    }
-    .rel strong { display: block; line-height: 1.3; }
-    .rel span { display: block; font-size: 0.85rem; color: var(--muted); line-height: 1.4; }
-    .rel > i { margin-left: auto; color: var(--muted); font-size: 13px; }
-
-    /* ---------- Footer ---------- */
-    .site-footer { margin-top: 60px; border-top: 1px solid var(--border); padding: 32px 0 36px; }
-    .foot { display: flex; flex-direction: column; gap: 22px; }
-    .foot-links { display: flex; flex-wrap: wrap; gap: 10px 22px; font-size: 0.92rem; color: #cbd5ea; }
-    .foot-links a:hover { color: var(--cyan); }
-    .copy { color: var(--muted); font-size: 0.85rem; }
-
-    /* ---------- Confetti canvas ---------- */
-    #confetti { position: fixed; inset: 0; width: 100%; height: 100%; pointer-events: none; z-index: 80; }
-
-    /* ---------- Larger screens ---------- */
-    @media (min-width: 640px) {
-      .stats { grid-template-columns: repeat(3, 1fr); }
-      .related { grid-template-columns: repeat(3, 1fr); }
-      .calc-card { padding: 28px 26px; }
-    }
-    @media (min-width: 1000px) {
-      .container { padding: 0 32px; }
-      .menu-btn { display: none; }
-      .nav-links {
-        display: flex;
-        position: static;
-        flex-direction: row;
-        align-items: center;
-        gap: 2px;
-        padding: 0;
-        background: transparent;
-        border: 0;
-      }
-      .nav-links a { padding: 10px 14px; border-radius: 999px; font-size: 14px; gap: 8px; }
-      .nav-links a i { width: auto; }
-
-      .hero { padding: 40px 0 64px; }
-      .hero-grid { grid-template-columns: 1.05fr 0.95fr; gap: 56px; }
-      .balloons { display: block; }
-
-      .extras { grid-template-columns: 1.3fr 1fr; align-items: stretch; }
-      .age-card { padding: 32px 28px 28px; }
-      .foot { flex-direction: row; align-items: center; justify-content: space-between; }
-    }
-
-    @media (prefers-reduced-motion: reduce) {
-      html { scroll-behavior: auto; }
-      * { transition: none !important; animation: none !important; }
-    }
-  </style>
-</head>
-<body>
-
-  <canvas id="confetti" aria-hidden="true"></canvas>
-
-  <!-- ================= HEADER ================= -->
-  <header class="site-header">
-    <div class="container nav">
-      <a href="/" class="logo" aria-label="FixerTools home">
-        <span class="logo-mark"><i class="fa-solid fa-bolt"></i></span>
-        <span class="logo-name">Fixer<span>Tools</span></span>
-      </a>
-
-      <button class="menu-btn" id="menuBtn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">
-        <i class="fa-solid fa-bars"></i>
-      </button>
-
-      <nav>
-        <ul class="nav-links" id="navLinks">
-          <li><a href="/"><i class="fa-solid fa-house"></i> Home</a></li>
-          <li><a href="/#tools"><i class="fa-solid fa-table-cells-large"></i> All tools</a></li>
-          <li><a href="/about"><i class="fa-solid fa-user"></i> About</a></li>
-          <li><a href="/contact"><i class="fa-solid fa-envelope"></i> Contact</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-
-  <div class="bunting" aria-hidden="true"></div>
-
-  <main>
-    <!-- ================= HERO + CALCULATOR ================= -->
-    <section class="hero">
-      <div class="container hero-grid">
-        <div>
-          <nav class="crumbs" aria-label="Breadcrumb">
-            <a href="/">Home</a><i class="fa-solid fa-chevron-right"></i>
-            <a href="/#tools">Calculators</a><i class="fa-solid fa-chevron-right"></i>
-            <span>Age Calculator</span>
-          </nav>
-          <span class="badge"><span class="dot"></span> FREE AGE CALCULATOR</span>
-          <h1>Age Calculator <span class="grad">Know your exact age.</span></h1>
-          <p class="lead">Enter your date of birth to see your age in years, months and days, plus your next birthday, zodiac sign and birthstone.</p>
-
-          <div class="balloons" aria-hidden="true">
-            <span class="balloon b1"></span>
-            <span class="balloon b2"></span>
-            <span class="balloon b3"></span>
-          </div>
-        </div>
-
-        <div class="calc-card">
-          <h2>Calculate your age</h2>
-          <p>Pick your birth date. Your result appears below.</p>
-
-          <form id="ageForm" novalidate>
-            <div class="field">
-              <label for="dob">Date of birth</label>
-              <div class="input">
-                <i class="fa-solid fa-cake-candles"></i>
-                <input type="date" id="dob" min="1900-01-01" required>
-              </div>
-            </div>
-
-            <div class="field">
-              <label for="toDate">Age at the date of</label>
-              <div class="input">
-                <i class="fa-regular fa-calendar"></i>
-                <input type="date" id="toDate" min="1900-01-01">
-              </div>
-              <button type="button" class="link-btn" id="todayBtn">Use today's date</button>
-            </div>
-
-            <p class="error" id="err" role="alert"></p>
-
-            <div class="btns">
-              <button type="submit" class="btn btn-primary"><i class="fa-solid fa-wand-magic-sparkles"></i> Calculate age</button>
-              <button type="reset" class="btn btn-ghost">Reset</button>
-            </div>
-          </form>
-        </div>
-      </div>
-    </section>
-
-    <!-- ================= RESULTS ================= -->
-    <section class="results" id="results" hidden aria-live="polite">
-      <div class="container">
-        <div class="age-card">
-          <div class="age-head">
-            <span class="cake"><i class="fa-solid fa-cake-candles"></i></span>
-            <h2 id="ageTitle">Your age today</h2>
-          </div>
-          <div class="age-numbers">
-            <div class="num"><strong id="rYears">0</strong><span>Years</span></div>
-            <div class="num"><strong id="rMonths">0</strong><span>Months</span></div>
-            <div class="num"><strong id="rDays">0</strong><span>Days</span></div>
-          </div>
-          <p class="age-sub" id="ageSub"></p>
-        </div>
-
-        <div class="stats">
-          <div class="stat"><span>Total months</span><strong id="sMonths">0</strong></div>
-          <div class="stat"><span>Total weeks</span><strong id="sWeeks">0</strong></div>
-          <div class="stat"><span>Total days</span><strong id="sDays">0</strong></div>
-          <div class="stat"><span>Total hours</span><strong id="sHours">0</strong></div>
-          <div class="stat"><span>Total minutes</span><strong id="sMinutes">0</strong></div>
-          <div class="stat"><span>Born on a</span><strong id="sWeekday">-</strong></div>
-        </div>
-        <p class="note">Hours and minutes are counted from whole days.</p>
-
-        <div class="extras">
-          <div class="box">
-            <h3><i class="fa-solid fa-gift"></i> <span id="nbTitle">Next birthday</span></h3>
-            <div class="big" id="nbBig">0 <small>days to go</small></div>
-            <p id="nbText"></p>
-            <div class="bar" aria-hidden="true"><i id="nbBar"></i></div>
-            <div class="bar-label"><span>Last birthday</span><span id="nbPct">0%</span><span>Next birthday</span></div>
-          </div>
-
-          <div class="mini-grid">
-            <div class="box">
-              <h3><i class="fa-solid fa-star"></i> Zodiac sign</h3>
-              <div class="big" id="zSign">-</div>
-            </div>
-            <div class="box">
-              <h3><i class="fa-regular fa-gem"></i> Birthstone</h3>
-              <div class="big" id="zStone">-</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ================= INFO ================= -->
-    <section class="section">
-      <div class="container">
-        <h2>How the age calculator works</h2>
-        <div class="prose">
-          <p>The calculator counts the <strong>full years</strong> between your date of birth and the date you choose, then the <strong>full months</strong> left over, and finally the remaining <strong>days</strong>. By default it uses today's date, so the result is your age right now.</p>
-          <p>You can also change the second date to find an age on any day in the past or future, such as a school admission cut-off or a document deadline.</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="container">
-        <h2>Frequently asked questions</h2>
-        <div class="faq">
-          <details>
-            <summary>How is my age calculated? <i class="fa-solid fa-chevron-down"></i></summary>
-            <p>The calculator counts the full years since your date of birth, then the remaining full months, and finally the leftover days up to the date you choose.</p>
-          </details>
-          <details>
-            <summary>Can I find my age on another date? <i class="fa-solid fa-chevron-down"></i></summary>
-            <p>Yes. Change the "Age at the date of" field to any past or future date and the result updates for that day.</p>
-          </details>
-          <details>
-            <summary>What if I was born on 29 February? <i class="fa-solid fa-chevron-down"></i></summary>
-            <p>In years that are not leap years, the calculator treats 28 February as your birthday.</p>
-          </details>
-          <details>
-            <summary>Are my dates saved or uploaded? <i class="fa-solid fa-chevron-down"></i></summary>
-            <p>No. The dates you enter stay in your browser and are not uploaded or stored.</p>
-          </details>
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="container">
-        <h2>More calculators</h2>
-        <div class="related">
-          <a class="rel" href="/bmi-calculator">
-            <span class="ico"><i class="fa-solid fa-weight-scale"></i></span>
-            <div><strong>BMI Calculator</strong><span>Check your body mass index.</span></div>
-            <i class="fa-solid fa-chevron-right"></i>
-          </a>
-          <a class="rel" href="/percentage-calculator">
-            <span class="ico"><i class="fa-solid fa-percent"></i></span>
-            <div><strong>Percentage Calculator</strong><span>Solve percentage problems fast.</span></div>
-            <i class="fa-solid fa-chevron-right"></i>
-          </a>
-          <a class="rel" href="/loan-emi-calculator">
-            <span class="ico"><i class="fa-solid fa-money-bill-wave"></i></span>
-            <div><strong>Loan EMI Calculator</strong><span>Estimate monthly instalments.</span></div>
-            <i class="fa-solid fa-chevron-right"></i>
-          </a>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <!-- ================= FOOTER ================= -->
-  <footer class="site-footer">
-    <div class="container foot">
-      <a href="/" class="logo" aria-label="FixerTools home">
-        <span class="logo-mark"><i class="fa-solid fa-bolt"></i></span>
-        <span class="logo-name">Fixer<span>Tools</span></span>
-      </a>
-      <nav class="foot-links" aria-label="Footer">
-        <a href="/about">About</a>
-        <a href="/privacy-policy">Privacy Policy</a>
-        <a href="/terms-and-conditions">Terms of Service</a>
-        <a href="/disclaimer">Disclaimer</a>
-        <a href="/cookie-policy">Cookies</a>
-        <a href="/contact">Contact</a>
-      </nav>
-      <p class="copy">&copy; <span id="year">2026</span> FixerTools. All rights reserved.</p>
-    </div>
-  </footer>
-
-  <script>
+<link href="/style.css" rel="stylesheet"/></head>
+<body data-page="age-calculator">
+<canvas aria-hidden="true" id="confetti"></canvas>
+<!-- ================= HEADER ================= -->
+<header class="site-header">
+<div class="container nav">
+<a aria-label="FixerTools home" class="logo" href="/">
+<span class="logo-mark"><i class="fa-solid fa-bolt"></i></span>
+<span class="logo-name">Fixer<span>Tools</span></span>
+</a>
+<button aria-controls="navLinks" aria-expanded="false" aria-label="Open menu" class="menu-btn" id="menuBtn" type="button">
+<i class="fa-solid fa-bars"></i>
+</button>
+<nav>
+<ul class="nav-links" id="navLinks">
+<li><a href="/"><i class="fa-solid fa-house"></i> Home</a></li>
+<li><a href="/#tools"><i class="fa-solid fa-table-cells-large"></i> All tools</a></li>
+<li><a href="/about"><i class="fa-solid fa-user"></i> About</a></li>
+<li><a href="/contact"><i class="fa-solid fa-envelope"></i> Contact</a></li>
+</ul>
+</nav>
+</div>
+</header>
+<div aria-hidden="true" class="bunting"></div>
+<main>
+<!-- ================= HERO + CALCULATOR ================= -->
+<section class="hero">
+<div class="container hero-grid">
+<div>
+<nav aria-label="Breadcrumb" class="crumbs">
+<a href="/">Home</a><i class="fa-solid fa-chevron-right"></i>
+<a href="/#tools">Calculators</a><i class="fa-solid fa-chevron-right"></i>
+<span>Age Calculator</span>
+</nav>
+<span class="badge"><span class="dot"></span> FREE AGE CALCULATOR</span>
+<h1>Age Calculator <span class="grad">Know your exact age.</span></h1>
+<p class="lead">Enter your date of birth to see your age in years, months and days, plus your next birthday, zodiac sign and birthstone.</p>
+<div aria-hidden="true" class="balloons">
+<span class="balloon b1"></span>
+<span class="balloon b2"></span>
+<span class="balloon b3"></span>
+</div>
+</div>
+<div class="calc-card">
+<h2>Calculate your age</h2>
+<p>Pick your birth date. Your result appears below.</p>
+<form id="ageForm" novalidate="">
+<div class="field">
+<label for="dob">Date of birth</label>
+<div class="input">
+<i class="fa-solid fa-cake-candles"></i>
+<input id="dob" min="1900-01-01" required="" type="date"/>
+</div>
+</div>
+<div class="field">
+<label for="toDate">Age at the date of</label>
+<div class="input">
+<i class="fa-regular fa-calendar"></i>
+<input id="toDate" min="1900-01-01" type="date"/>
+</div>
+<button class="link-btn" id="todayBtn" type="button">Use today's date</button>
+</div>
+<p class="error" id="err" role="alert"></p>
+<div class="btns">
+<button class="btn btn-primary" type="submit"><i class="fa-solid fa-wand-magic-sparkles"></i> Calculate age</button>
+<button class="btn btn-ghost" type="reset">Reset</button>
+</div>
+</form>
+</div>
+</div>
+</section>
+<!-- ================= RESULTS ================= -->
+<section aria-live="polite" class="results" hidden="" id="results">
+<div class="container">
+<div class="age-card">
+<div class="age-head">
+<span class="cake"><i class="fa-solid fa-cake-candles"></i></span>
+<h2 id="ageTitle">Your age today</h2>
+</div>
+<div class="age-numbers">
+<div class="num"><strong id="rYears">0</strong><span>Years</span></div>
+<div class="num"><strong id="rMonths">0</strong><span>Months</span></div>
+<div class="num"><strong id="rDays">0</strong><span>Days</span></div>
+</div>
+<p class="age-sub" id="ageSub"></p>
+</div>
+<div class="stats">
+<div class="stat"><span>Total months</span><strong id="sMonths">0</strong></div>
+<div class="stat"><span>Total weeks</span><strong id="sWeeks">0</strong></div>
+<div class="stat"><span>Total days</span><strong id="sDays">0</strong></div>
+<div class="stat"><span>Total hours</span><strong id="sHours">0</strong></div>
+<div class="stat"><span>Total minutes</span><strong id="sMinutes">0</strong></div>
+<div class="stat"><span>Born on a</span><strong id="sWeekday">-</strong></div>
+</div>
+<p class="note">Hours and minutes are counted from whole days.</p>
+<div class="extras">
+<div class="box">
+<h3><i class="fa-solid fa-gift"></i> <span id="nbTitle">Next birthday</span></h3>
+<div class="big" id="nbBig">0 <small>days to go</small></div>
+<p id="nbText"></p>
+<div aria-hidden="true" class="bar"><i id="nbBar"></i></div>
+<div class="bar-label"><span>Last birthday</span><span id="nbPct">0%</span><span>Next birthday</span></div>
+</div>
+<div class="mini-grid">
+<div class="box">
+<h3><i class="fa-solid fa-star"></i> Zodiac sign</h3>
+<div class="big" id="zSign">-</div>
+</div>
+<div class="box">
+<h3><i class="fa-regular fa-gem"></i> Birthstone</h3>
+<div class="big" id="zStone">-</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ================= INFO ================= -->
+<section class="section">
+<div class="container">
+<h2>How the age calculator works</h2>
+<div class="prose">
+<p>The calculator counts the <strong>full years</strong> between your date of birth and the date you choose, then the <strong>full months</strong> left over, and finally the remaining <strong>days</strong>. By default it uses today's date, so the result is your age right now.</p>
+<p>You can also change the second date to find an age on any day in the past or future, such as a school admission cut-off or a document deadline.</p>
+</div>
+</div>
+</section>
+<section class="section">
+<div class="container">
+<h2>Frequently asked questions</h2>
+<div class="faq">
+<details>
+<summary>How is my age calculated? <i class="fa-solid fa-chevron-down"></i></summary>
+<p>The calculator counts the full years since your date of birth, then the remaining full months, and finally the leftover days up to the date you choose.</p>
+</details>
+<details>
+<summary>Can I find my age on another date? <i class="fa-solid fa-chevron-down"></i></summary>
+<p>Yes. Change the "Age at the date of" field to any past or future date and the result updates for that day.</p>
+</details>
+<details>
+<summary>What if I was born on 29 February? <i class="fa-solid fa-chevron-down"></i></summary>
+<p>In years that are not leap years, the calculator treats 28 February as your birthday.</p>
+</details>
+<details>
+<summary>Are my dates saved or uploaded? <i class="fa-solid fa-chevron-down"></i></summary>
+<p>No. The dates you enter stay in your browser and are not uploaded or stored.</p>
+</details>
+</div>
+</div>
+</section>
+<section class="section">
+<div class="container">
+<h2>More calculators</h2>
+<div class="related">
+<a class="rel" href="/bmi-calculator">
+<span class="ico"><i class="fa-solid fa-weight-scale"></i></span>
+<div><strong>BMI Calculator</strong><span>Check your body mass index.</span></div>
+<i class="fa-solid fa-chevron-right"></i>
+</a>
+<a class="rel" href="/percentage-calculator">
+<span class="ico"><i class="fa-solid fa-percent"></i></span>
+<div><strong>Percentage Calculator</strong><span>Solve percentage problems fast.</span></div>
+<i class="fa-solid fa-chevron-right"></i>
+</a>
+<a class="rel" href="/loan-emi-calculator">
+<span class="ico"><i class="fa-solid fa-money-bill-wave"></i></span>
+<div><strong>Loan EMI Calculator</strong><span>Estimate monthly instalments.</span></div>
+<i class="fa-solid fa-chevron-right"></i>
+</a>
+</div>
+</div>
+</section>
+</main>
+<!-- ================= FOOTER ================= -->
+<footer class="site-footer">
+<div class="container foot">
+<a aria-label="FixerTools home" class="logo" href="/">
+<span class="logo-mark"><i class="fa-solid fa-bolt"></i></span>
+<span class="logo-name">Fixer<span>Tools</span></span>
+</a>
+<nav aria-label="Footer" class="foot-links">
+<a href="/about">About</a>
+<a href="/privacy-policy">Privacy Policy</a>
+<a href="/terms-and-conditions">Terms of Service</a>
+<a href="/disclaimer">Disclaimer</a>
+<a href="/cookie-policy">Cookies</a>
+<a href="/contact">Contact</a>
+</nav>
+<p class="copy">&copy; <span id="year">2026</span> FixerTools. All rights reserved.</p>
+</div>
+</footer>
+<script>
     (function () {
       var $ = function (id) { return document.getElementById(id); };
       var rm = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
