@@ -188,7 +188,19 @@ window.FIXERTOOLS = {
       description: "Reduce image file size for easier sharing and upload.",
       keywords: ["image", "photo", "compress", "reduce size", "jpeg", "jpg", "webp", "png", "resize"],
       icon: "🗜️",
-      relatedTools: ["volume-converter", "qr-code-generator", "json-formatter", "password-generator", "word-counter", "case-converter", "age-calculator"],
+      relatedTools: ["youtube-thumbnail-downloader", "volume-converter", "qr-code-generator", "json-formatter", "password-generator", "word-counter", "case-converter", "age-calculator"],
+      featured: true,
+      status: "active"
+    },
+    {
+      id: "youtube-thumbnail-downloader",
+      name: "YouTube Thumbnail Downloader",
+      url: "/youtube-thumbnail-downloader",
+      category: "Image Tools",
+      description: "Download YouTube thumbnails in HD quality for free.",
+      keywords: ["youtube", "thumbnail", "download", "video", "image", "hd", "maxres", "youtube thumbnail", "yt thumbnail"],
+      icon: "🖼️",
+      relatedTools: ["image-compressor", "qr-code-generator", "password-generator", "json-formatter", "word-counter"],
       featured: true,
       status: "active"
     }
