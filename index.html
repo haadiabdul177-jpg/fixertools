@@ -17,6 +17,7 @@
 <script type="application/ld+json">
   {"@context":"https://schema.org","@type":"WebSite","name":"FixerTools","url":"https://fixertools.online/","description":"Free online calculators, converters, text and image tools."}
   </script>
+<script src="/tools-data.js" defer></script>
 <link href="/style.css" rel="stylesheet"/></head>
 <body data-page="index">
 <header class="topbar">
@@ -41,7 +42,7 @@
 <p>Get everyday tasks done without the hassle. Use free online calculators, converters, text and image tools &mdash; quick, simple and right in your browser.</p>
 <div class="hero-actions"><a class="primary" href="#tools">Explore all tools <span>&rarr;</span></a><a class="secondary" href="#categories">Browse categories</a></div>
 </div>
-<div aria-label="Quick launch tools" class="visual"><div class="glow"></div><div class="dock"><div class="dock-head"><span class="badge">⚡</span><div><h2 class="dock-title">Quick Access Tools</h2><p class="dock-sub">Click any icon below to launch the category immediately.</p></div></div><div class="dock-grid"><a class="dock-item" data-jump="Calculators" href="#tools" title="Open Calculators"><i>🧮</i><b>Calculators</b><small data-count="Calculators"></small></a><a class="dock-item" data-jump="Text" href="#tools" title="Open Text Tools"><i>✍️</i><b>Text Tools</b><small data-count="Text"></small></a><a class="dock-item" data-jump="Converters" href="#tools" title="Open Converters"><i>🔄</i><b>Converters</b><small data-count="Converters"></small></a><a class="dock-item" data-jump="Developer" href="#tools" title="Open Developer"><i>⌨️</i><b>Developer</b><small data-count="Developer"></small></a><a class="dock-item" data-jump="Images" href="#tools" title="Open Image Tools"><i>🖼️</i><b>Image Tools</b><small data-count="Images"></small></a><a class="dock-item" data-jump="All" href="#tools" title="Open All Tools"><i>🧰</i><b>All Tools</b><small data-count="All"></small></a></div></div></div>
+<div aria-label="Quick launch tools" class="visual"><div class="glow"></div><div class="dock"><div class="dock-head"><span class="badge">⚡</span><div><h2 class="dock-title">Quick Access Tools</h2><p class="dock-sub">Click any icon below to launch the category immediately.</p></div></div><div class="dock-grid"><a class="dock-item" data-jump="Calculators" href="#tools" title="Open Calculators"><i>🧮</i><b>Calculators</b><small data-count="Calculators"></small></a><a class="dock-item" data-jump="Text Tools" href="#tools" title="Open Text Tools"><i>✍️</i><b>Text Tools</b><small data-count="Text Tools"></small></a><a class="dock-item" data-jump="Converters" href="#tools" title="Open Converters"><i>🔄</i><b>Converters</b><small data-count="Converters"></small></a><a class="dock-item" data-jump="Developer Tools" href="#tools" title="Open Developer"><i>⌨️</i><b>Developer</b><small data-count="Developer Tools"></small></a><a class="dock-item" data-jump="Image Tools" href="#tools" title="Open Image Tools"><i>🖼️</i><b>Image Tools</b><small data-count="Image Tools"></small></a><a class="dock-item" data-jump="All" href="#tools" title="Open All Tools"><i>🧰</i><b>All Tools</b><small data-count="All"></small></a></div></div></div>
 </div>
 <div class="trust"><div class="wrap trust-row"><span><b class="check">&checkmark;</b> 100% Free to use</span><span><b class="check">&checkmark;</b> No sign-up required</span><span><b class="check">&checkmark;</b> Fast and easy</span><span><b class="check">&checkmark;</b> Mobile friendly</span></div></div>
 <section class="section" id="categories">
@@ -49,10 +50,10 @@
 <div class="section-head"><div class="kicker">Find what you need</div><h2>Tools for every little task</h2><p>From quick calculations to everyday conversions, get things done with simple tools.</p></div>
 <div class="features">
 <a class="feature" data-jump="Calculators" href="#tools"><span class="feature-icon">🧮</span><b>Calculators</b><p>Quick answers for numbers, dates, finance and daily calculations.</p></a>
-<a class="feature" data-jump="Text" href="#tools"><span class="feature-icon">✍️</span><b>Text tools</b><p>Count, format, clean and transform text in seconds.</p></a>
+<a class="feature" data-jump="Text Tools" href="#tools"><span class="feature-icon">✍️</span><b>Text tools</b><p>Count, format, clean and transform text in seconds.</p></a>
 <a class="feature" data-jump="Converters" href="#tools"><span class="feature-icon">🔄</span><b>Converters</b><p>Convert common units and data formats with ease.</p></a>
-<a class="feature" data-jump="Developer" href="#tools"><span class="feature-icon">⌨️</span><b>Developer tools</b><p>Helpful utilities for formatting and encoding data.</p></a>
-<a class="feature" data-jump="Images" href="#tools"><span class="feature-icon">🖼️</span><b>Image tools</b><p>Resize and compress images for everyday use.</p></a>
+<a class="feature" data-jump="Developer Tools" href="#tools"><span class="feature-icon">⌨️</span><b>Developer tools</b><p>Helpful utilities for formatting and encoding data.</p></a>
+<a class="feature" data-jump="Image Tools" href="#tools"><span class="feature-icon">🖼️</span><b>Image tools</b><p>Resize and compress images for everyday use.</p></a>
 <a class="feature" href="#tools"><span class="feature-icon">⚡</span><b>Simple experience</b><p>Useful tools with a clean interface and no unnecessary steps.</p></a>
 </div>
 </div>
@@ -62,22 +63,29 @@
 <div class="section-head"><div class="kicker">Explore FixerTools</div><h2>Popular free online tools</h2><p>Choose a tool and get started. More useful tools are being added.</p></div>
 <div class="tools-top">
 <div aria-label="Filter tools" class="filters" role="group">
-<button class="filter active" data-filter="All">All tools</button><button class="filter" data-filter="Calculators">Calculators</button><button class="filter" data-filter="Text">Text</button><button class="filter" data-filter="Converters">Converters</button><button class="filter" data-filter="Developer">Developer</button><button class="filter" data-filter="Images">Images</button>
+<button class="filter active" data-filter="All">All tools</button><button class="filter" data-filter="Calculators">Calculators</button><button class="filter" data-filter="Text Tools">Text Tools</button><button class="filter" data-filter="Converters">Converters</button><button class="filter" data-filter="Developer Tools">Developer Tools</button><button class="filter" data-filter="Image Tools">Image Tools</button>
 </div>
 </div>
+<div class="ft-featured" hidden="" id="featuredTools">
+<h3 class="ft-subhead">Featured tools</h3>
+<div class="tool-grid" id="featuredGrid"></div>
+</div>
+<h3 class="ft-subhead" hidden="" id="allToolsTitle">All tools</h3>
+<!-- Static fallback cards: shown if JavaScript or /tools-data.js is unavailable.
+     When the script runs, it replaces them with cards generated from /tools-data.js. -->
 <div class="tool-grid" id="toolGrid">
 <a class="tool-card" data-category="Calculators" href="/age-calculator"><span class="tool-icon">🎂</span><h3>Age Calculator</h3><p>Calculate your exact age in years, months and days.</p><span class="tool-link">Use tool &rarr;</span></a>
 <a class="tool-card" data-category="Calculators" href="/percentage-calculator"><span class="tool-icon">％</span><h3>Percentage Calculator</h3><p>Calculate percentages and percentage changes.</p><span class="tool-link">Use tool &rarr;</span></a>
 <a class="tool-card" data-category="Calculators" href="/bmi-calculator"><span class="tool-icon">⚖️</span><h3>BMI Calculator</h3><p>Calculate body mass index using height and weight.</p><span class="tool-link">Use tool &rarr;</span></a>
 <a class="tool-card" data-category="Calculators" href="/loan-emi-calculator"><span class="tool-icon">🏦</span><h3>Loan EMI Calculator</h3><p>Estimate monthly loan payments and interest.</p><span class="tool-link">Use tool &rarr;</span></a>
 <a class="tool-card" data-category="Calculators" href="/gst-calculator"><span class="tool-icon">🧾</span><h3>GST Calculator</h3><p>Calculate tax amounts and totals quickly.</p><span class="tool-link">Use tool &rarr;</span></a>
-<a class="tool-card" data-category="Text" href="/word-counter"><span class="tool-icon">🔢</span><h3>Word Counter</h3><p>Count words, characters and spaces in your text.</p><span class="tool-link">Use tool &rarr;</span></a>
-<a class="tool-card" data-category="Text" href="/case-converter"><span class="tool-icon">Aa</span><h3>Case Converter</h3><p>Switch text between upper, lower and title case.</p><span class="tool-link">Use tool &rarr;</span></a>
-<a class="tool-card" data-category="Text" href="/password-generator"><span class="tool-icon">🔐</span><h3>Password Generator</h3><p>Create a strong random password for your accounts.</p><span class="tool-link">Use tool &rarr;</span></a>
-<a class="tool-card" data-category="Developer" href="/qr-code-generator"><span class="tool-icon">▦</span><h3>QR Code Generator</h3><p>Create a QR code from text or a website link.</p><span class="tool-link">Use tool &rarr;</span></a>
-<a class="tool-card" data-category="Developer" href="/json-formatter"><span class="tool-icon">{ }</span><h3>JSON Formatter</h3><p>Format and tidy JSON data for easier reading.</p><span class="tool-link">Use tool &rarr;</span></a>
+<a class="tool-card" data-category="Text Tools" href="/word-counter"><span class="tool-icon">🔢</span><h3>Word Counter</h3><p>Count words, characters and spaces in your text.</p><span class="tool-link">Use tool &rarr;</span></a>
+<a class="tool-card" data-category="Text Tools" href="/case-converter"><span class="tool-icon">Aa</span><h3>Case Converter</h3><p>Switch text between upper, lower and title case.</p><span class="tool-link">Use tool &rarr;</span></a>
+<a class="tool-card" data-category="Developer Tools" href="/password-generator"><span class="tool-icon">🔐</span><h3>Password Generator</h3><p>Create a strong random password for your accounts.</p><span class="tool-link">Use tool &rarr;</span></a>
+<a class="tool-card" data-category="Developer Tools" href="/qr-code-generator"><span class="tool-icon">▦</span><h3>QR Code Generator</h3><p>Create a QR code from text or a website link.</p><span class="tool-link">Use tool &rarr;</span></a>
+<a class="tool-card" data-category="Developer Tools" href="/json-formatter"><span class="tool-icon">{ }</span><h3>JSON Formatter</h3><p>Format and tidy JSON data for easier reading.</p><span class="tool-link">Use tool &rarr;</span></a>
 <a class="tool-card" data-category="Converters" href="/volume-converter"><span class="tool-icon">🧪</span><h3>Volume Converter</h3><p>Convert between common volume measurement units.</p><span class="tool-link">Use tool &rarr;</span></a>
-<a class="tool-card" data-category="Images" href="/image-compressor"><span class="tool-icon">🗜️</span><h3>Image Compressor</h3><p>Reduce image file size for easier sharing and upload.</p><span class="tool-link">Use tool &rarr;</span></a>
+<a class="tool-card" data-category="Image Tools" href="/image-compressor"><span class="tool-icon">🗜️</span><h3>Image Compressor</h3><p>Reduce image file size for easier sharing and upload.</p><span class="tool-link">Use tool &rarr;</span></a>
 </div>
 <div class="empty" id="emptyState">No tools found. Try another search.</div>
 </div>
@@ -106,22 +114,84 @@
 </div>
 </aside>
 <script>
+(function(){
   const $=id=>document.getElementById(id);
-  const cards=[...document.querySelectorAll('.tool-card')],filterButtons=[...document.querySelectorAll('.filter')];
-  const TOOLS=cards.map(c=>({el:c,href:c.getAttribute('href'),name:c.querySelector('h3').textContent,desc:c.querySelector('p').textContent,icon:c.querySelector('.tool-icon').textContent,cat:c.dataset.category}));
-  const topIn=$('toolSearch'),results=$('results');
-  let q='',activeFilter='All',idx=-1;
-  const match=t=>{const h=(t.name+' '+t.desc+' '+t.cat).toLowerCase();const words=h.split(/[^a-z0-9]+/);return q.toLowerCase().split(/\s+/).filter(Boolean).every(w=>words.some(x=>x.startsWith(w)));};
+  const topIn=$('toolSearch'),results=$('results'),grid=$('toolGrid'),featBox=$('featuredTools'),featGrid=$('featuredGrid'),allTitle=$('allToolsTitle');
+  let TOOLS=[],q='',activeFilter='All',idx=-1;
+
+  /* ---- tool list: built from /tools-data.js; falls back to the static cards in this page ---- */
+  const OTHER='Other Tools';
+  function makeCard(t){
+    const a=document.createElement('a');a.className='tool-card';a.dataset.category=t.cat;a.href=t.href;
+    const i=document.createElement('span');i.className='tool-icon';i.textContent=t.icon;
+    const h=document.createElement('h3');h.textContent=t.name;
+    const p=document.createElement('p');p.textContent=t.desc;
+    const l=document.createElement('span');l.className='tool-link';l.textContent='Use tool →';
+    a.append(i,h,p,l);return a;
+  }
+  function fromData(d){
+    if(!d||!Array.isArray(d.tools)||!Array.isArray(d.categories))return null;
+    const names=d.categories.map(c=>c&&c.name).filter(Boolean);
+    const seenId=new Set(),seenUrl=new Set(),list=[];
+    d.tools.forEach(x=>{
+      if(!x||x.status!=='active'||!x.id||!x.name||typeof x.url!=='string'||x.url.charAt(0)!=='/')return;
+      if(seenId.has(x.id)||seenUrl.has(x.url))return;
+      seenId.add(x.id);seenUrl.add(x.url);
+      const t={id:x.id,href:x.url,name:String(x.name),desc:String(x.description||''),icon:String(x.icon||'\u{1F527}'),
+        cat:names.includes(x.category)?x.category:OTHER,keywords:Array.isArray(x.keywords)?x.keywords.map(String):[],featured:x.featured===true};
+      t.el=makeCard(t);list.push(t);
+    });
+    return list.length?{list,names}:null;
+  }
+  function fromPage(){
+    return [...grid.querySelectorAll('.tool-card')].map(c=>({el:c,href:c.getAttribute('href'),name:c.querySelector('h3').textContent,
+      desc:c.querySelector('p').textContent,icon:c.querySelector('.tool-icon').textContent,cat:c.dataset.category,keywords:[],featured:false}));
+  }
+
+  /* ---- search + render ---- */
+  const tokens=t=>t.tok||(t.tok=(t.name+' '+t.desc+' '+t.cat+' '+t.keywords.join(' ')).toLowerCase().split(/[^a-z0-9]+/));
+  const match=t=>q.toLowerCase().split(/\s+/).filter(Boolean).every(w=>tokens(t).some(x=>x.startsWith(w)));
   function row(t){const a=document.createElement('a');a.className='ritem';a.href=t.href;a.setAttribute('role','option');
     const i=document.createElement('span');i.className='ri';i.textContent=t.icon;
     const m=document.createElement('span'),b=document.createElement('b'),s=document.createElement('small');b.textContent=t.name;s.textContent=t.desc;m.append(b,s);
     const c=document.createElement('span');c.className='rcat';c.textContent=t.cat;a.append(i,m,c);return a;}
   function fill(box,list){box.replaceChildren();if(!list.length){const d=document.createElement('div');d.className='rempty';d.textContent='No tools found. Try another word.';box.append(d);return;}list.forEach(t=>box.append(row(t)));}
-  function render(){const list=TOOLS.filter(match);idx=-1;fill(results,list);
-    let shown=0;TOOLS.forEach(t=>{const ok=(activeFilter==='All'||t.cat===activeFilter)&&match(t);t.el.style.display=ok?'flex':'none';if(ok)shown++;});
-    $('emptyState').style.display=shown?'none':'block';}
+  const filterButtons=()=>[...document.querySelectorAll('.filter')];
+  function render(){
+    const found=TOOLS.filter(match);idx=-1;fill(results,found);
+    /* Featured row only on the default view, so no tool card is ever shown twice. */
+    const showFeat=activeFilter==='All'&&!q&&TOOLS.some(t=>t.featured);
+    const feat=showFeat?TOOLS.filter(t=>t.featured):[];
+    const rest=TOOLS.filter(t=>(activeFilter==='All'||t.cat===activeFilter)&&match(t)&&!(showFeat&&t.featured));
+    featGrid.replaceChildren(...feat.map(t=>t.el));
+    grid.replaceChildren(...rest.map(t=>t.el));
+    featBox.hidden=!feat.length;allTitle.hidden=!(feat.length&&rest.length);
+    $('emptyState').style.display=(feat.length+rest.length)?'none':'block';}
+  function setFilter(f){
+    if(!filterButtons().some(b=>b.dataset.filter===f))f='All';
+    activeFilter=f;filterButtons().forEach(b=>{const on=b.dataset.filter===f;b.classList.toggle('active',on);b.setAttribute('aria-pressed',String(on));});render();}
   function setQ(v){q=v.trim();render();}
   const showRes=on=>results.classList.toggle('show',on);
+
+  function start(){
+    const built=fromData(window.FIXERTOOLS);
+    if(built){
+      TOOLS=built.list;
+      /* filter buttons: "All tools" + every category that has at least one active tool */
+      const wrap=document.querySelector('.filters');wrap.replaceChildren();
+      [['All','All tools']].concat(built.names.filter(n=>TOOLS.some(t=>t.cat===n)).map(n=>[n,n])).forEach(([k,label])=>{
+        const b=document.createElement('button');b.type='button';b.className='filter';b.dataset.filter=k;b.textContent=label;
+        b.addEventListener('click',()=>setFilter(k));wrap.append(b);});
+      topIn.placeholder='Search '+TOOLS.length+' tools: age, QR, JSON, BMI...';
+    }else{
+      TOOLS=fromPage();   /* data file missing: keep the page working from its own static cards */
+      filterButtons().forEach(b=>b.addEventListener('click',()=>setFilter(b.dataset.filter)));
+    }
+    document.querySelectorAll('[data-jump]').forEach(link=>link.addEventListener('click',()=>setFilter(link.dataset.jump)));
+    document.querySelectorAll('[data-count]').forEach(el=>{const k=el.dataset.count,n=k==='All'?TOOLS.length:TOOLS.filter(t=>t.cat===k).length;el.textContent=n+(n===1?' tool':' tools');});
+    setFilter('All');
+  }
+
   topIn.addEventListener('input',()=>{setQ(topIn.value);showRes(!!q);});
   topIn.addEventListener('focus',()=>showRes(!!q));
   document.addEventListener('click',e=>{if(!e.target.closest('.sbox'))showRes(false);});
@@ -130,16 +200,17 @@
     else if(e.key==='Enter'){const t=items[idx]||items[0];if(t&&t.href)location.href=t.getAttribute('href');}
     else if(e.key==='Escape'){showRes(false);topIn.blur();}});
   document.addEventListener('keydown',e=>{if(e.key==='/'&&!/INPUT|TEXTAREA/.test(document.activeElement.tagName)){e.preventDefault();topIn.focus();}});
-  filterButtons.forEach(btn=>btn.addEventListener('click',()=>{activeFilter=btn.dataset.filter;filterButtons.forEach(b=>b.classList.toggle('active',b===btn));render();}));
-  document.querySelectorAll('[data-jump]').forEach(link=>link.addEventListener('click',()=>{activeFilter=link.dataset.jump;filterButtons.forEach(b=>b.classList.toggle('active',b.dataset.filter===activeFilter));render();}));
+
   const menuBtn=$('menuBtn'),sidebar=$('sidebar');
   function openSide(on){document.body.classList.toggle('side-open',on);sidebar.setAttribute('aria-hidden',String(!on));menuBtn.setAttribute('aria-expanded',String(on));if(!on)menuBtn.focus();}
   menuBtn.addEventListener('click',()=>openSide(true));$('sideClose').addEventListener('click',()=>openSide(false));$('overlay').addEventListener('click',()=>openSide(false));
   sidebar.addEventListener('click',e=>{if(e.target.closest('a'))openSide(false);});
   document.addEventListener('keydown',e=>{if(e.key==='Escape'&&document.body.classList.contains('side-open'))openSide(false);});
-  document.querySelectorAll('[data-count]').forEach(el=>{const k=el.dataset.count,n=k==='All'?TOOLS.length:TOOLS.filter(t=>t.cat===k).length;el.textContent=n+(n===1?' tool':' tools');});
-  render();
   $('year').textContent=new Date().getFullYear();
+
+  /* /tools-data.js is loaded with "defer", so it has run by the time DOMContentLoaded fires. */
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',start);else start();
+})();
 </script>
 </body>
 </html>
