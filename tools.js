@@ -238,23 +238,32 @@
   /* ---------- start ---------- */
 
   function init() {
-    var box = document.getElementById("related-tools");
-    if (!box || box.getAttribute("data-ft-rendered") === "true") return;
-
     var tools = usableTools(window.FIXERTOOLS);
-    if (!tools.length) return;
 
-    var current = findCurrent(tools);
+    /* ---------- Related-links rendering (conditional) ---------- */
+    var box = document.getElementById("related-tools");
+    if (box && box.getAttribute("data-ft-rendered") !== "true" && tools.length) {
+      var current = findCurrent(tools);
 
-    var limit = parseInt(box.getAttribute("data-limit"), 10);
-    if (!(limit >= 1)) limit = DEFAULT_LIMIT;
-    if (limit > MAX_LIMIT) limit = MAX_LIMIT;
+      /* If static related links already exist in the HTML, skip JS injection
+         of related links only. Breadcrumb JSON-LD is still added below. */
+      if (!box.querySelector("a[href]")) {
+        var limit = parseInt(box.getAttribute("data-limit"), 10);
+        if (!(limit >= 1)) limit = DEFAULT_LIMIT;
+        if (limit > MAX_LIMIT) limit = MAX_LIMIT;
 
-    var list = pickRelated(current, tools, limit);
-    if (!list.length) return;
+        var list = pickRelated(current, tools, limit);
+        if (list.length) {
+          render(box, list);
+        }
+      }
+    }
 
-    render(box, list);
-    addBreadcrumbData(current);
+    /* ---------- BreadcrumbList structured data (runs independently) ---------- */
+    if (tools.length) {
+      var current = findCurrent(tools);
+      addBreadcrumbData(current);
+    }
   }
 
   if (document.readyState === "loading") {
