@@ -165,7 +165,7 @@ window.FIXERTOOLS = {
       description: "Reduce image file size for easier sharing and upload.",
       keywords: ["image", "photo", "compress", "reduce size", "jpeg", "jpg", "webp", "png", "resize"],
       icon: "🗜️",
-      relatedTools: ["youtube-thumbnail-downloader", "volume-converter", "qr-code-generator", "json-formatter", "password-generator", "word-counter", "case-converter", "age-calculator"],
+      relatedTools: ["youtube-thumbnail-downloader", "volume-converter", "qr-code-generator", "json-formatter", "password-generator", "word-counter", "case-converter", "age-calculator", "pdf-compressor"],
       status: "active"
     },
     {
@@ -177,6 +177,17 @@ window.FIXERTOOLS = {
       keywords: ["youtube", "thumbnail", "download", "video", "image", "hd", "maxres", "youtube thumbnail", "yt thumbnail"],
       icon: "🖼️",
       relatedTools: ["image-compressor", "qr-code-generator", "password-generator", "json-formatter", "word-counter"],
+      status: "active"
+    },
+    {
+      id: "pdf-compressor",
+      name: "PDF Compressor",
+      url: "/pdf-compressor",
+      category: "Other Tools",
+      description: "Compress PDF files in the browser without uploading them.",
+      keywords: ["pdf", "compress", "reduce size", "pdf compressor", "smaller pdf", "pdf file size", "compress pdf online", "pdf optimizer"],
+      icon: "📄",
+      relatedTools: ["image-compressor", "json-formatter", "qr-code-generator", "word-counter", "case-converter"],
       status: "active"
     }
   ]

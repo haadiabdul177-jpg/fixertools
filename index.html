@@ -45,7 +45,7 @@
 <p>Get everyday tasks done without the hassle. Use free online calculators, converters, text and image tools &mdash; quick, simple and right in your browser.</p>
 <div class="hero-actions"><a class="primary" href="#tools">Explore all tools <span>&rarr;</span></a><a class="secondary" href="#categories">Browse categories</a></div>
 </div>
-<div aria-label="Quick launch tools" class="visual"><div class="glow"></div><div class="dock"><div class="dock-head"><span class="badge">⚡</span><div><h2 class="dock-title">Quick Access Tools</h2><p class="dock-sub">Click any icon below to launch the category immediately.</p></div></div><div class="dock-grid"><a class="dock-item" data-jump="Calculators" href="#tools" title="Open Calculators"><i>🧮</i><b>Calculators</b><small data-count="Calculators"></small></a><a class="dock-item" data-jump="Text Tools" href="#tools" title="Open Text Tools"><i>✍️</i><b>Text Tools</b><small data-count="Text Tools"></small></a><a class="dock-item" data-jump="Converters" href="#tools" title="Open Converters"><i>🔄</i><b>Converters</b><small data-count="Converters"></small></a><a class="dock-item" data-jump="Developer Tools" href="#tools" title="Open Developer"><i>⌨️</i><b>Developer</b><small data-count="Developer Tools"></small></a><a class="dock-item" data-jump="Image Tools" href="#tools" title="Open Image Tools"><i>🖼️</i><b>Image Tools</b><small data-count="Image Tools"></small></a><a class="dock-item" data-jump="All" href="#tools" title="Open All Tools"><i>🧰</i><b>All Tools</b><small data-count="All"></small></a></div></div></div>
+<div aria-label="Quick launch tools" class="visual"><div class="glow"></div><div class="dock"><div class="dock-head"><span class="badge">⚡</span><div><h2 class="dock-title">Quick Access Tools</h2><p class="dock-sub">Click any icon below to launch the category immediately.</p></div></div><div class="dock-grid"><a class="dock-item" data-jump="Calculators" href="#tools" title="Open Calculators"><i>🧮</i><b>Calculators</b><small data-count="Calculators"></small></a><a class="dock-item" data-jump="Text Tools" href="#tools" title="Open Text Tools"><i>✍️</i><b>Text Tools</b><small data-count="Text Tools"></small></a><a class="dock-item" data-jump="Converters" href="#tools" title="Open Converters"><i>🔄</i><b>Converters</b><small data-count="Converters"></small></a><a class="dock-item" data-jump="Developer Tools" href="#tools" title="Open Developer"><i>⌨️</i><b>Developer</b><small data-count="Developer Tools"></small></a><a class="dock-item" data-jump="Image Tools" href="#tools" title="Open Image Tools"><i>🖼️</i><b>Image Tools</b><small data-count="Image Tools"></small></a><a class="dock-item" data-jump="Other Tools" href="#tools" title="Open Other Tools"><i>📄</i><b>Other Tools</b><small data-count="Other Tools"></small></a><a class="dock-item" data-jump="All" href="#tools" title="Open All Tools"><i>🧰</i><b>All Tools</b><small data-count="All"></small></a></div></div></div>
 </div>
 <div class="trust"><div class="wrap trust-row"><span><b class="check">&checkmark;</b> 100% Free to use</span><span><b class="check">&checkmark;</b> No sign-up required</span><span><b class="check">&checkmark;</b> Fast and easy</span><span><b class="check">&checkmark;</b> Mobile friendly</span></div></div>
 <section class="section" id="categories">
@@ -57,6 +57,7 @@
 <a class="feature" data-jump="Converters" href="#tools"><span class="feature-icon">🔄</span><b>Converters</b><p>Convert common units and data formats with ease.</p></a>
 <a class="feature" data-jump="Developer Tools" href="#tools"><span class="feature-icon">⌨️</span><b>Developer tools</b><p>Helpful utilities for formatting and encoding data.</p></a>
 <a class="feature" data-jump="Image Tools" href="#tools"><span class="feature-icon">🖼️</span><b>Image tools</b><p>Resize and compress images for everyday use.</p></a>
+<a class="feature" data-jump="Other Tools" href="#tools"><span class="feature-icon">📄</span><b>Other tools</b><p>More useful tools that do not fit another category.</p></a>
 <a class="feature" href="#tools"><span class="feature-icon">⚡</span><b>Simple experience</b><p>Useful tools with a clean interface and no unnecessary steps.</p></a>
 </div>
 </div>
@@ -178,7 +179,7 @@
       [['All','All tools']].concat(built.names.filter(n=>TOOLS.some(t=>t.cat===n)).map(n=>[n,n])).forEach(([k,label])=>{
         const b=document.createElement('button');b.type='button';b.className='filter';b.dataset.filter=k;b.textContent=label;
         b.addEventListener('click',()=>setFilter(k));wrap.append(b);});
-      topIn.placeholder='Search '+TOOLS.length+' tools: age, QR, JSON, BMI...';
+      topIn.placeholder='Search '+TOOLS.length+' tools: age, QR, JSON, BMI, PDF...';
     }else{
       TOOLS=fromPage();   /* data file missing: keep the page working from its own static cards */
       filterButtons().forEach(b=>b.addEventListener('click',()=>setFilter(b.dataset.filter)));
