@@ -117,4 +117,11 @@
     <priority>0.8</priority>
   </url>
 
+  <!-- Other Tools -->
+  <url>
+    <loc>https://fixertools.online/pdf-compressor</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
 </urlset>
