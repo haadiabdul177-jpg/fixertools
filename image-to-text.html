@@ -1,363 +1,473 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link rel="icon" href="./favicon.ico" sizes="any"/>
-  <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png"/>
-  <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png"/>
-  <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png"/>
-  <meta charset="utf-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Image to Text Converter – FixerTools</title>
-  <meta name="description" content="Free Image to Text Converter – Extract text from images online using OCR technology. Supports JPG, PNG, WebP and more. No sign-up required."/>
-  <meta name="keywords" content="image to text, extract text from image, OCR, image OCR online, photo to text, JPG to text, PNG to text, online OCR free"/>
-  <meta name="robots" content="index,follow"/>
-  <link href="https://fixertools.online/image-to-text" rel="canonical"/>
-  <meta content="website" property="og:type"/>
-  <meta content="Free Image to Text Converter – Extract Text from Images Online | FixerTools" property="og:title"/>
-  <meta content="Extract text from images online for free with our OCR tool. Supports JPG, PNG, WebP and other formats. No sign-up, completely private." property="og:description"/>
-  <meta content="https://fixertools.online/image-to-text" property="og:url"/>
-  <meta content="https://fixertools.online/logo.png" property="og:image"/>
-  <meta content="summary" name="twitter:card"/>
-  <meta content="https://fixertools.online/logo.png" name="twitter:image"/>
-  <meta content="FixerTools" property="og:site_name"/>
-  <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "WebPage",
-      "name": "Image to Text Converter – Extract Text from Images Online | FixerTools",
-      "url": "https://fixertools.online/image-to-text",
-      "description": "Free Image to Text Converter – Extract text from images online using OCR technology. Supports JPG, PNG, WebP and more. No sign-up required."
-    }
-  </script>
-  <script src="https://cdn.jsdelivr.net/npm/tesseract.js@5.0.2"></script>
-  <script src="./tools-data.js" defer></script>
-  <script src="./tools.js" defer></script>
-  <link rel="stylesheet" href="./style.css"/>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<title>Image to Text Converter – FixerTools</title>
+<meta name="description" content="Free Image to Text Converter – Extract text from images online using OCR technology. Supports JPG, PNG, WebP and more. No sign-up required."/>
+<meta name="keywords" content="image to text converter, extract text from image, image OCR online, photo to text converter, JPG to text, PNG to text, OCR online free, extract text from picture"/>
+<link href="https://fixertools.online/image-to-text" rel="canonical"/>
+<meta content="index, follow" name="robots"/>
+<meta content="https://fixertools.online/image-to-text" property="og:url"/>
+<meta content="website" property="og:type"/>
+<meta content="Free Image to Text Converter – Extract Text from Images Online | FixerTools" property="og:title"/>
+<meta content="Free Image to Text Converter – Extract text from images online using OCR technology. Supports JPG, PNG, WebP and more. No sign-up required." property="og:description"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="Free Image to Text Converter – Extract Text from Images Online | FixerTools" name="twitter:title"/>
+<meta content="Free Image to Text Converter – Extract text from images online using OCR technology. Supports JPG, PNG, WebP and more. No sign-up required." name="twitter:description"/>
+<script src="https://cdn.jsdelivr.net/npm/tesseract.js@5.0.2/dist/tesseract.min.js"></script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[
+{"@type":"WebApplication","name":"Image to Text Converter","url":"https://fixertools.online/image-to-text","applicationCategory":"UtilityApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"description":"Free Image to Text Converter – Extract text from images online using OCR technology. Supports JPG, PNG, WebP and more."},
+{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://fixertools.online/"},{"@type":"ListItem","position":2,"name":"Image to Text Converter","item":"https://fixertools.online/image-to-text"}]}
+]}
+</script>
+<script src="./tools-data.js"></script>
+<script src="./tools.js"></script>
+<link rel="stylesheet" href="./style.css"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+<style>
+body[data-page="image-to-text"]{background:var(--bg);color:var(--ink)}
+body[data-page="image-to-text"] .topbar{height:78px;border-bottom:1px solid var(--line);display:flex;align-items:center;position:sticky;top:0;z-index:100;background:var(--bg)}
+body[data-page="image-to-text"] .wrap{max-width:1160px;margin:auto;padding:0 20px}
+body[data-page="image-to-text"] .brand{display:flex;align-items:center;gap:10px;font-size:22px;font-weight:850;letter-spacing:-.8px;text-decoration:none;color:var(--ink)}
+body[data-page="image-to-text"] .brand-mark{width:36px;height:36px;border-radius:11px;background:linear-gradient(135deg,var(--teal),#48a8e9);display:flex;align-items:center;justify-content:center;font-size:18px;color:#fff}
+body[data-page="image-to-text"] .navlinks{display:flex;gap:20px;margin-left:auto}
+body[data-page="image-to-text"] .navlinks a{color:var(--muted);text-decoration:none;font-size:15px;font-weight:500}
+body[data-page="image-to-text"] .navlinks a:hover{color:var(--ink)}
+body[data-page="image-to-text"] .nav-cta{background:linear-gradient(100deg,var(--teal),#7ad9f5);color:#fff;border:none;border-radius:10px;padding:10px 18px;font-weight:600;font-size:14px;text-decoration:none;margin-left:16px}
+body[data-page="image-to-text"] .nav-cta:hover{filter:brightness(1.06)}
+body[data-page="image-to-text"] .menu-btn{display:none;background:none;border:1px solid var(--line);color:var(--ink);border-radius:8px;width:40px;height:40px;font-size:20px;cursor:pointer;margin-left:auto}
+body[data-page="image-to-text"] .narrow{width:min(780px,calc(100% - 40px));margin:auto}
+body[data-page="image-to-text"] .crumbs{padding:26px 0 0;font-size:14px;color:var(--muted)}
+body[data-page="image-to-text"] .crumbs a{color:var(--muted);text-decoration:none}
+body[data-page="image-to-text"] .crumbs a:hover{color:var(--ink)}
+body[data-page="image-to-text"] .hero{position:relative;overflow:hidden;margin:28px auto 48px;padding:clamp(38px,6vw,76px);border:1px solid #1c5365;border-radius:28px;background:linear-gradient(135deg,#0f1923 0%,#132238 100%)}
+body[data-page="image-to-text"] .hero h1{font-size:clamp(2rem,4.5vw,3.2rem);font-weight:800;line-height:1.1;letter-spacing:-1.5px;margin:0 0 16px}
+body[data-page="image-to-text"] .hero p{font-size:1.05rem;line-height:1.7;color:#c8d9e4;max-width:600px;margin:0}
+body[data-page="image-to-text"] .badge{display:inline-flex;align-items:center;gap:9px;margin-top:22px;border:1px solid #ffc23355;background:rgba(255,194,51,.08);color:#ffc233;border-radius:999px;padding:6px 16px;font-size:13px;font-weight:600}
+body[data-page="image-to-text"] .grad{display:block;background:linear-gradient(95deg,var(--teal),#7ad9f5 60%,#48a8e9);-webkit-background-clip:text;background-clip:text;color:transparent}
+body[data-page="image-to-text"] .pad{padding:32px 0}
+body[data-page="image-to-text"] .btns{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}
+body[data-page="image-to-text"] .btn{border:1px solid #64748b55;background:#ffffff08;color:#e8eefb;border-radius:12px;padding:14px 20px;font-weight:600;font-size:15px;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;gap:8px}
+body[data-page="image-to-text"] .btn:hover{background:#ffffff12}
+body[data-page="image-to-text"] .btn.main{background:linear-gradient(100deg,var(--teal),#7ad9f5);color:#fff;border:none}
+body[data-page="image-to-text"] .btn.main:hover{filter:brightness(1.06)}
+body[data-page="image-to-text"] .btn.secondary{background:transparent;border-color:#64748b55}
+body[data-page="image-to-text"] details{border:1px solid #2a3444;border-radius:12px;margin-bottom:10px;padding:16px 20px;background:rgba(255,255,255,.02)}
+body[data-page="image-to-text"] details[open]{background:rgba(255,255,255,.04)}
+body[data-page="image-to-text"] summary{cursor:pointer;font-weight:600;font-size:15px;color:#e8eefb;list-style:none}
+body[data-page="image-to-text"] summary::-webkit-details-marker{display:none}
+body[data-page="image-to-text"] summary::before{content:"\25B6";display:inline-block;margin-right:10px;font-size:12px;color:var(--teal);transition:transform .2s}
+body[data-page="image-to-text"] details[open] summary::before{transform:rotate(90deg)}
+body[data-page="image-to-text"] details p{color:#a8b7cc;font-size:14px;line-height:1.7;margin:12px 0 0}
+body[data-page="image-to-text"] .ft-related{margin-top:40px;padding-top:28px;border-top:1px solid #2a3444}
+body[data-page="image-to-text"] .ft-related h3{font-size:18px;font-weight:700;margin:0 0 18px}
+body[data-page="image-to-text"] .ft-related__grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:14px}
+body[data-page="image-to-text"] .ft-related__link{display:block;border:1px solid #2a3444;border-radius:12px;padding:16px;text-decoration:none;color:var(--ink)}
+body[data-page="image-to-text"] .ft-related__link:hover{border-color:var(--teal);background:rgba(255,255,255,.02)}
+body[data-page="image-to-text"] .ft-related__link h4{margin:0 0 4px;font-size:15px;font-weight:600}
+body[data-page="image-to-text"] .ft-related__link p{margin:0;font-size:13px;color:#a8b7cc;line-height:1.5}
+body[data-page="image-to-text"] footer{border-top:1px solid var(--line);padding:35px 0 25px;background:#070b16;margin-top:40px}
+body[data-page="image-to-text"] .foot-top{display:flex;justify-content:space-between;gap:30px;flex-wrap:wrap}
+body[data-page="image-to-text"] .foot-about{max-width:340px}
+body[data-page="image-to-text"] .foot-about p{color:#78869e;font-size:13px;line-height:1.6;margin:8px 0 0}
+body[data-page="image-to-text"] .foot-links{display:flex;gap:12px 20px;flex-wrap:wrap;color:#aebbd0;font-size:13px}
+body[data-page="image-to-text"] .foot-links a{color:#aebbd0;text-decoration:none}
+body[data-page="image-to-text"] .foot-links a:hover{color:#fff}
+body[data-page="image-to-text"] .copyright{border-top:1px solid #1e293b;margin-top:25px;padding-top:18px;color:#78869e;font-size:12px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+body[data-page="image-to-text"] .copyright a{color:#78869e;text-decoration:none}
+body[data-page="image-to-text"] .copyright a:hover{color:#fff}
+body[data-page="image-to-text"] .ocr-upload{border:2px dashed #2a3444;border-radius:16px;padding:48px 24px;text-align:center;cursor:pointer;transition:border-color .2s,background .2s;margin:20px 0}
+body[data-page="image-to-text"] .ocr-upload:hover,body[data-page="image-to-text"] .ocr-upload.dragover{border-color:var(--teal);background:rgba(12,110,133,.06)}
+body[data-page="image-to-text"] .ocr-upload i{font-size:48px;color:var(--teal);margin-bottom:12px}
+body[data-page="image-to-text"] .ocr-upload p{color:#a8b7cc;font-size:15px;margin:8px 0 0}
+body[data-page="image-to-text"] .ocr-upload .formats{font-size:12px;color:#6b7b94;margin-top:8px}
+body[data-page="image-to-text"] .ocr-preview{margin:20px 0;text-align:center}
+body[data-page="image-to-text"] .ocr-preview img{max-width:100%;max-height:300px;border-radius:12px;border:1px solid #2a3444}
+body[data-page="image-to-text"] .ocr-result{background:rgba(255,255,255,.03);border:1px solid #2a3444;border-radius:12px;padding:20px;margin:20px 0;min-height:120px;white-space:pre-wrap;font-family:monospace;font-size:14px;line-height:1.6;color:#e8eefb}
+body[data-page="image-to-text"] .ocr-result:empty::before{content:attr(data-placeholder);color:#6b7b94}
+body[data-page="image-to-text"] .ocr-progress{margin:20px 0;text-align:center}
+body[data-page="image-to-text"] .ocr-progress .bar{height:6px;background:#2a3444;border-radius:3px;overflow:hidden;margin:12px 0}
+body[data-page="image-to-text"] .ocr-progress .bar-fill{height:100%;background:linear-gradient(90deg,var(--teal),#7ad9f5);transition:width .3s}
+body[data-page="image-to-text"] .ocr-progress p{color:#a8b7cc;font-size:14px}
+body[data-page="image-to-text"] .ocr-lang{display:flex;align-items:center;gap:12px;margin:16px 0}
+body[data-page="image-to-text"] .ocr-lang label{color:#a8b7cc;font-size:14px;font-weight:500}
+body[data-page="image-to-text"] .ocr-lang select{background:#0f1923;border:1px solid #2a3444;color:#e8eefb;border-radius:8px;padding:8px 12px;font-size:14px}
+body[data-page="image-to-text"] .ocr-info{border:1px solid #2a3444;border-radius:12px;padding:20px;margin:20px 0;background:rgba(255,255,255,.02)}
+body[data-page="image-to-text"] .ocr-info h3{font-size:16px;font-weight:700;margin:0 0 12px}
+body[data-page="image-to-text"] .ocr-info p{color:#a8b7cc;font-size:14px;line-height:1.6;margin:0 0 12px}
+body[data-page="image-to-text"] .ocr-info ul{color:#a8b7cc;font-size:14px;line-height:1.8;margin:0;padding-left:20px}
+body[data-page="image-to-text"] .ocr-error{background:rgba(239,68,68,.1);border:1px solid rgba(239,68,68,.3);border-radius:12px;padding:16px;color:#fca5a5;font-size:14px;margin:16px 0}
+body[data-page="image-to-text"] .ocr-success{background:rgba(34,197,94,.1);border:1px solid rgba(34,197,94,.3);border-radius:12px;padding:16px;color:#86efac;font-size:14px;margin:16px 0}
+@media(max-width:650px){
+body[data-page="image-to-text"] .wrap{width:min(var(--max,1160px),calc(100% - 28px))}
+body[data-page="image-to-text"] .topbar{height:68px;padding:0 16px}
+body[data-page="image-to-text"] .navlinks{display:none}
+body[data-page="image-to-text"] .nav-cta{display:none}
+body[data-page="image-to-text"] .menu-btn{display:inline-flex}
+body[data-page="image-to-text"] .hero{margin:20px auto 32px;padding:28px 20px;border-radius:20px}
+body[data-page="image-to-text"] .hero h1{font-size:1.8rem;letter-spacing:-1px}
+body[data-page="image-to-text"] .hero p{font-size:.95rem}
+body[data-page="image-to-text"] .ocr-upload{padding:32px 16px}
+body[data-page="image-to-text"] .ocr-upload i{font-size:36px}
+body[data-page="image-to-text"] .btn{padding:12px 16px;font-size:14px}
+body[data-page="image-to-text"] .foot-top{flex-direction:column;gap:20px}
+body[data-page="image-to-text"] .copyright{flex-direction:column;align-items:center;text-align:center}
+}
+</style>
 </head>
 <body data-page="image-to-text">
-  <header class="topbar">
-    <div class="wrap nav">
-      <a aria-label="FixerTools home" class="brand" href="/"><span class="brand-mark">⌁</span><span>Fixer<span>Tools</span></span></a>
-      <nav aria-label="Main navigation" class="navlinks" id="navlinks">
-        <a href="#tools">All Tools</a><a href="#categories">Categories</a><a href="#why-us">Why FixerTools</a><a href="/about">About</a><a href="/contact">Contact</a>
-      </nav>
-      <a class="nav-cta" href="#tools">Explore Tools <span>&rarr;</span></a>
-      <button aria-expanded="false" aria-label="Open navigation" class="menu-btn" id="menuBtn">☰</button>
-    </div>
-  </header>
-  <main>
-    <div class="wrap hero">
-      <div>
-        <div class="eyebrow"><span class="dot"></span> Extract text from images</div>
-        <h1>Image to Text Converter</h1>
-        <p class="lead">Convert JPG, PNG, WebP and images to editable text in seconds with our free OCR tool. No sign-up, completely private, works right in your browser.</p>
-      </div>
-      <div class="hero-actions">
-        <a class="primary" href="#upload">Convert Image</a><a class="secondary" href="#tools">Browse all tools</a>
-      </div>
-    </div>
-    <section class="section" id="upload">
-      <div class="wrap">
-        <div class="panel">
-          <h2>Convert Image to Text</h2>
-          <div class="form-grid">
-            <div class="field">
-              <label for="imageUpload">Upload Image</label>
-              <input type="file" id="imageUpload" accept="image/*" capture="environment"/>
-              <small class="notice">JPG, PNG, WebP, BMP and TIFF supported. Max 10MB.</small>
-            </div>
-            <div class="field">
-              <label for="languageSelect">Language</label>
-              <select id="languageSelect">
-                <option value="eng">English</option>
-                <option value="spa">Spanish</option>
-                <option value="fra">French</option>
-                <option value="deu">German</option>
-                <option value="por">Portuguese</option>
-              </select>
-            </div>
-          </div>
-          <div class="notice" id="uploadNotice">Supported formats: JPG, PNG, WebP, BMP, TIFF. Max 10MB.</div>
-          <button class="secondary" id="clearBtn" style="margin-top:12px;">Clear</button>
-          <div class="actions" style="margin-top:20px;">
-            <button class="secondary" id="processBtn" disabled>Extract Text</button>
-          </div>
-        </div>
-        <div class="grid" style="gap:24px;margin-top:32px;">
-          <div class="panel" style="min-height:320px;">
-            <div class="panel-header">
-              <h3>Image Preview</div>
-              <div id="imagePreview" class="result" style="min-height:200px;display:flex;align-items:center;justify-content:center;color:var(--muted);">
-                Drop or upload an image to preview
-              </div>
-            </div>
-            <div class="panel-header" style="display:none;" id="ocrProcessing">
-              <div style="display:flex;align-items:center;gap:12px;">
-                <span class="notice">Processing with OCR...</span>
-                <span class="spinner" style="width:20px;height:20px;border:2px solid transparent;border-top-color:#45aaa0;border-radius:4px;animation:spin 0.8s linear infinite;"></span>
-              </div>
-            </div>
-          </div>
-          <div class="panel">
-            <div class="panel-header">
-              <h3>Extracted Text</div>
-              <div id="textResult" class="result" style="display:none;min-height:120px;"></div>
-              <div id="noText" style="display:none;color:var(--muted);min-height:120px;">No text detected in the image. Try another image or adjust the language setting.</div>
-            </div>
-            <div class="actions" style="margin-top:16px;">
-              <button class="secondary" id="copyBtn" style="display:none;margin-right:8px;">Copy</button>
-              <button class="secondary" id="downloadBtn" style="display:none;">Download TXT</button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="section" id="instructions">
-      <div class="wrap">
-        <div class="panel">
-          <h2>How to Extract Text from an Image</h2>
-          <ol style="line-height:1.8;">
-            <li>Upload an image file (JPG, PNG, WebP, BMP or TIFF) using the button or drag-and-drop.</li>
-            <li>Wait for the OCR processing to complete.</li>
-            <li>View the extracted text in the panel below.</li>
-            <li>Use <kbd>Copy</kbd> to copy the text to your clipboard, or <kbd>Download</kbd> as a TXT file.</li>
-            <li>Upload another image or <kbd>Clear</kbd> to start over.</li>
-          </ol>
-          <p class="sub" style="margin-top:12px;color:var(--muted);">For best results, use clear images with high contrast text. The tool processes entirely in your browser — your images are never uploaded to a server.</p>
-        </div>
-      </div>
-    </section>
-    <section class="section" id="content">
-      <div class="wrap">
-        <div class="panel">
-          <h2>Image to Text Converter</h2>
-          <h3>What is Image to Text Conversion?</h3>
-          <p>Image to Text Conversion (also known as OCR or Optical Character Recognition) is the process of extracting text from images such as photographs, screenshots, and scanned documents. Our tool uses modern OCR technology directly in your browser to recognize and extract text from uploaded images.</p>
-          <h3>Supported Image Formats</h3>
-          <p>Our tool supports JPG, JPEG, PNG, WebP, and BMP image formats. Files up to 10MB are processed successfully. For best results, use clear images with good contrast between text and background.</p>
-          <h3>Features and Benefits</h3>
-          <ul>
-            <li>Extract text from images instantly — no upload to server required</li>
-            <li>Support for multiple languages including English and more</li>
-            <li>Copy extracted text to clipboard with one click</li>
-            <li>Download extracted text as a TXT file</li>
-            <li>Drag-and-drop or browse to upload images</li>
-            <li>Completely free — no sign-up or registration required</li>
-            <li>Processes images instantly in your browser</li>
-            <li>Works on mobile phones, tablets, and desktop computers</li>
-          </ul>
-          <h3>Privacy and Security</h3>
-          <p>Your privacy is protected — all OCR processing happens entirely in your browser. Your images are never uploaded to our server or any external server. The text extraction happens locally on your device.</p>
-          <h3>Common Use Cases</h3>
-          <ul>
-            <li>Digitizing printed documents and receipts</li>
-            <li>Extracting text from screenshots</li>
-            <li>Converting photos of whiteboards or notes to editable text</li>
-            <li>Extracting quotes from books or magazines</li>
-            <li>Creating subtitles from images</li>
-            <li>Translating text from images using combined tools</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-    <section class="section" id="faqs">
-      <div class="wrap">
-        <div class="panel">
-          <h2>Frequently Asked Questions</h2>
-          <dl>
-            <dt>How can I extract text from an image online for free?</dt>
-            <dd>Simply upload your image to our Image to Text Converter — it's completely free with no sign-up required. The OCR processing happens in your browser, so your images remain private.</dd>
-            
-            <dt>Can I convert JPG to editable text?</dt>
-            <dd>Yes, JPG images are fully supported. Upload a JPG file and our OCR engine will extract the text, which you can then copy or download as a TXT file.</dd>
-            
-            <dt>Does this tool support PNG images?</dt>
-            <dd>Yes, PNG images are supported. PNG files often provide higher quality results due to their lossless compression.</dd>
-            
-            <dt>Can I extract text from screenshots?</dt>
-            <dd>Absolutely! Our tool works well with screenshots. For best results, ensure the text is clear and readable in the screenshot.</dd>
-            
-            <dt>Can I copy and download extracted text?</dt>
-            <dd>Yes, after OCR processing you can click the Copy button to copy the text to your clipboard, or click Download to save the extracted text as a TXT file.</dd>
-            
-            <dt>Is this Image to Text Converter free?</dt>
-            <dd>Yes, the tool is completely free to use with no sign-up, no registration, and no hidden fees.</dd>
-            
-            <dt>Does OCR work with blurry images?</dt>
-            <dd>OCR works best with clear, high-contrast images. Blurry images may result in lower accuracy. For best results, use well-lit, focused images with clear text.</dd>
-            
-            <dt>Are uploaded images stored on the server?</dt>
-            <dd>No, all OCR processing happens entirely in your browser. Your images are never uploaded to our server or any external server. Your privacy is protected.</dd>
-          </dl>
-        </div>
-      </div>
-    </section>
-  </main>
-  <footer class="footer">
-    <div class="wrap">
-      <div class="foot-about"><a class="brand" href="/"><span class="brand-mark">⌁</span><span>Fixer<span>Tools</span></span></a><p>Every little tool, one fast place. Free online tools designed to make everyday digital tasks simpler.</p></div>
-      <nav aria-label="Footer links" class="foot-links"><a href="/#tools">All Tools</a><a href="/about">About</a><a href="/privacy-policy">Privacy Policy</a><a href="/terms-and-conditions">Terms</a><a href="/disclaimer">Disclaimer</a><a href="/contact">Contact</a></nav>
-    </div>
-  </footer>
-  <script>
-    // OCR functionality using Tesseract.js
-    const { createWorker } = Tesseract;
 
-    const imageUpload = document.getElementById('imageUpload');
-    const imagePreview = document.getElementById('imagePreview');
-    const textResult = document.getElementById('textResult');
-    const noText = document.getElementById('noText');
-    const processBtn = document.getElementById('processBtn');
-    const copyBtn = document.getElementById('copyBtn');
-    const downloadBtn = document.getElementById('downloadBtn');
-    const clearBtn = document.getElementById('clearBtn');
-    const languageSelect = document.getElementById('languageSelect');
-    const uploadNotice = document.getElementById('uploadNotice');
-    const ocrProcessing = document.getElementById('ocrProcessing');
+<header class="topbar">
+<div class="wrap">
+<a aria-label="FixerTools home" class="brand" href="/"><span class="brand-mark">⌁</span><span>Fixer<span>Tools</span></span></a>
+<nav class="navlinks"><a href="/#tools">All Tools</a><a href="/#categories">Categories</a><a href="/about">About</a><a href="/contact">Contact</a></nav>
+<a class="nav-cta" href="/#tools">Explore Tools <span>→</span></a>
+<button aria-expanded="false" aria-label="Open navigation" class="menu-btn" id="menuBtn">☰</button>
+</div>
+</header>
 
-    let worker = null;
-    let loading = false;
+<main class="narrow">
+<div class="crumbs"><a href="/">Home</a> / <a href="/#tools">Image Tools</a> / Image to Text Converter</div>
 
-    // Initialize Tesseract worker
-    function initWorker() {
-      if (!worker) {
-        worker = createWorker({
-          langs: ['eng'],
-          corePath: 'https://cdn.jsdelivr.net/npm/tesseract.js@5.0.0-core.wasm',
-          errorLevel: Tesseract.Level.WARN,
-        });
-        worker.load().then(() => {
-          loading = false;
-          processBtn.disabled = false;
-        });
-      }
-    }
+<section class="hero">
+<h1>Image to Text <span class="grad">Converter</span></h1>
+<p>Upload any image and extract its text instantly using OCR technology. Works with JPG, PNG, WebP and more — completely free, no sign-up required.</p>
+<span class="badge"><i>📷</i> Image to Text OCR</span>
+</section>
 
-    // Handle image upload
-    imageUpload.addEventListener('change', async function(e) {
-      const file = e.target.files[0];
-      if (!file) return;
+<div class="pad">
+<div class="ocr-lang">
+<label for="ocrLang">Language:</label>
+<select id="ocrLang">
+<option value="eng" selected>English</option>
+<option value="hin">Hindi</option>
+<option value="spa">Spanish</option>
+<option value="fra">French</option>
+<option value="deu">German</option>
+<option value="ara">Arabic</option>
+<option value="urd">Urdu</option>
+<option value="chi_sim">Chinese (Simplified)</option>
+<option value="jpn">Japanese</option>
+<option value="kor">Korean</option>
+</select>
+</div>
 
-      // Validate file type
-      const allowedTypes = ['image/jpeg', 'image/png', 'image/webp', 'image/bmp', 'image/tiff'];
-      if (!allowedTypes.includes(file.type) && !file.name.match(/\.(jpg|jpeg|png|webp|bmp|tiff|jfif)$/i)) {
-        alert('Unsupported file type. Please upload JPG, PNG, WebP, BMP or TIFF.');
-        imageUpload.value = '';
-        return;
-      }
+<div class="ocr-upload" id="dropZone">
+<i class="fa-solid fa-cloud-arrow-up"></i>
+<p>Drag &amp; drop your image here, or click to browse</p>
+<p class="formats">Supports: JPG, JPEG, PNG, WebP, BMP, TIFF</p>
+<input accept="image/*" id="fileInput" type="file" hidden/>
+</div>
 
-      // Validate file size (10MB max)
-      if (file.size > 10 * 1024 * 1024) {
-        alert('File too large. Maximum size is 10MB.');
-        imageUpload.value = '';
-        return;
-      }
+<div class="ocr-preview" id="preview" style="display:none">
+<img alt="Uploaded image preview" id="previewImg"/>
+</div>
 
-      const fileReader = new FileReader();
-      fileReader.onload = async function(e) {
-        const dataURL = e.target.result;
-        // Display preview
-        imagePreview.innerHTML = `<img src="${dataURL}" alt="Uploaded image" style="max-width:100%;max-height:400px;object-fit:contain;"/>`;
-        imagePreview.style.display = 'block';
-        ocrProcessing.style.display = 'none';
-        textResult.style.display = 'none';
-        noText.style.display = 'none';
-        processBtn.disabled = true;
-        copyBtn.style.display = 'none';
-        downloadBtn.style.display = 'none';
+<div class="ocr-progress" id="progress" style="display:none">
+<div class="bar"><div class="bar-fill" id="progressFill" style="width:0%"></div></div>
+<p id="progressText">Initializing OCR...</p>
+</div>
 
-        // Run OCR
-        try {
-          initWorker();
-          loading = true;
-          processBtn.disabled = true;
-          processBtn.textContent = 'Processing...';
-          
-          const lang = languageSelect.value;
-          const result = await worker.recognize(dataURL, lang);
-          const extractedText = result.data.texts?.join(' ') || result.data.text || '';
-          
-          loading = false;
-          processBtn.disabled = false;
-          processBtn.textContent = 'Extract Text';
+<div id="messageBox"></div>
 
-          if (extractedText.trim()) {
-            textResult.style.display = 'block';
-            textResult.textContent = extractedText.trim();
-            noText.style.display = 'none';
-            copyBtn.style.display = 'inline-block';
-            downloadBtn.style.display = 'inline-block';
-          } else {
-            noText.style.display = 'block';
-            textResult.style.display = 'none';
-            copyBtn.style.display = 'none';
-            downloadBtn.style.display = 'none';
-          }
-        } catch (err) {
-          loading = false;
-          processBtn.disabled = false;
-          processBtn.textContent = 'Extract Text';
-          alert('OCR processing failed. Please try another image or adjust the language setting.');
-          console.error(err);
-        }
-      };
-      fileReader.readAsDataURL(file);
-    });
+<div class="ocr-result" id="result" data-placeholder="Extracted text will appear here..."></div>
 
-    // Copy to clipboard
-    copyBtn.addEventListener('click', async function() {
-      const text = textResult.textContent;
-      if (!text) return;
-      try {
-        await navigator.clipboard.writeText(text);
-        const originalText = copyBtn.textContent;
-        copyBtn.textContent = 'Copied!';
-        setTimeout(() => { copyBtn.textContent = originalText; }, 2000);
-      } catch (err) {
-        // Fallback for older browsers
-        const textarea = document.createElement('textarea');
-        textarea.value = text;
-        document.body.appendChild(textarea);
-        textarea.select();
-        document.execCommand('copy');
-        document.body.removeChild(textarea);
-        const originalText = copyBtn.textContent;
-        copyBtn.textContent = 'Copied!';
-        setTimeout(() => { copyBtn.textContent = originalText; }, 2000);
-      }
-    });
+<div class="btns" id="actions" style="display:none">
+<button class="btn main" id="copyBtn"><i class="fa-solid fa-copy"></i> Copy Text</button>
+<button class="btn secondary" id="downloadBtn"><i class="fa-solid fa-download"></i> Download TXT</button>
+<button class="btn secondary" id="clearBtn"><i class="fa-solid fa-rotate-right"></i> Clear</button>
+</div>
 
-    // Download as TXT
-    downloadBtn.addEventListener('click', function() {
-      const text = textResult.textContent;
-      if (!text) return;
-      const blob = new Blob([text], {type: 'text/plain'});
-      const url = URL.createObjectURL(blob);
-      const a = document.createElement('a');
-      a.href = url;
-      a.download = 'extracted-text.txt';
-      a.click();
-      URL.revokeObjectURL(url);
-    });
+<button class="btn main" id="extractBtn" style="display:none;margin-top:16px;width:100%;justify-content:center"><i class="fa-solid fa-magnifying-glass"></i> Extract Text</button>
+</div>
 
-    // Clear everything
-    clearBtn.addEventListener('click', function() {
-      imageUpload.value = '';
-      imagePreview.innerHTML = '<div style="color:var(--muted);">Drop or upload an image to preview</div>';
-      imagePreview.style.display = 'none';
-      ocrProcessing.style.display = 'none';
-      textResult.style.display = 'none';
-      noText.style.display = 'none';
-      processBtn.disabled = true;
-      processBtn.textContent = 'Extract Text';
-      copyBtn.style.display = 'none';
-      downloadBtn.style.display = 'none';
-    });
+<section class="ocr-info">
+<h3>How to Extract Text from an Image</h3>
+<ol>
+<li>Upload your image by dragging it to the upload area or clicking to browse</li>
+<li>Select the language of the text in your image</li>
+<li>Click "Extract Text" and wait for the OCR processing to complete</li>
+<li>Copy the extracted text or download it as a TXT file</li>
+</ol>
 
-    // Initial state
-    imagePreview.style.display = 'block';
-    imagePreview.innerHTML = '<div style="color:var(--muted);">Drop or upload an image to preview</div>';
-    processBtn.disabled = true;
-  </script>
+<h3>Supported Image Formats</h3>
+<ul>
+<li>JPG / JPEG</li>
+<li>PNG</li>
+<li>WebP</li>
+<li>BMP</li>
+<li>TIFF</li>
+</ul>
+
+<h3>Features</h3>
+<ul>
+<li>100% free — no sign-up or payment required</li>
+<li>Works in your browser — no files uploaded to any server</li>
+<li>Supports multiple languages including English, Hindi, Spanish, French, German, Arabic, Urdu, Chinese, Japanese and Korean</li>
+<li>Extract text from screenshots, photos, scanned documents and more</li>
+<li>Copy extracted text or download as a TXT file</li>
+</ul>
+
+<h3>Privacy</h3>
+<p>All OCR processing happens entirely in your browser using Tesseract.js. Your images are never uploaded to any server, and no data is stored. Your files stay on your device.</p>
+</section>
+
+<section class="pad">
+<h2>Frequently Asked Questions</h2>
+<details>
+<summary>How can I extract text from an image online for free?</summary>
+<p>Simply upload your image to our Image to Text Converter — it's completely free with no sign-up required. The OCR processing happens in your browser using Tesseract.js, so it works instantly without uploading files to any server.</p>
+</details>
+<details>
+<summary>Can I convert JPG to editable text?</summary>
+<p>Yes. Upload any JPG or JPEG image and the OCR engine will extract all visible text, which you can then copy or download as a TXT file. The quality depends on the clarity of the text in the image.</p>
+</details>
+<details>
+<summary>Does this tool support PNG images?</summary>
+<p>Yes. PNG, JPG, WebP, BMP and TIFF images are all supported. The tool works with any common image format that contains visible text.</p>
+</details>
+<details>
+<summary>Can I extract text from screenshots?</summary>
+<p>Absolutely. Screenshots work great with our OCR tool. Just upload the screenshot and the text will be extracted. This works for phone screenshots, desktop captures, and any other image containing text.</p>
+</details>
+<details>
+<summary>Can I copy and download extracted text?</summary>
+<p>Yes. After the text is extracted, you can copy it to your clipboard with one click or download it as a .txt file for use in any application.</p>
+</details>
+<details>
+<summary>Is this Image to Text Converter free?</summary>
+<p>Yes, it's 100% free with no usage limits, no sign-up required, and no hidden fees. All processing happens in your browser.</p>
+</details>
+<details>
+<summary>Does OCR work with blurry images?</summary>
+<p>OCR accuracy depends on image quality. Clear, high-contrast text produces the best results. Blurry, low-resolution, or heavily stylized text may not be recognized accurately. For best results, use images with clear, readable text.</p>
+</details>
+<details>
+<summary>Are uploaded images stored on any server?</summary>
+<p>No. All OCR processing happens entirely in your browser using Tesseract.js. Your images are never uploaded to any server and no data is stored. Your files stay completely on your device.</p>
+</details>
+</section>
+
+<section class="ft-related">
+<h3>Related Tools</h3>
+<div class="ft-related__grid">
+<a class="ft-related__link" href="/image-compressor"><h4>Image Compressor</h4><p>Reduce image file size while maintaining quality.</p></a>
+<a class="ft-related__link" href="/youtube-thumbnail-downloader"><h4>YouTube Thumbnail Downloader</h4><p>Download YouTube video thumbnails in any resolution.</p></a>
+<a class="ft-related__link" href="/pdf-compressor"><h4>PDF Compressor</h4><p>Compress PDF files in the browser without uploading them.</p></a>
+</div>
+</section>
+</main>
+
+<footer>
+<div class="wrap">
+<div class="foot-top">
+<div class="foot-about">
+<a class="brand" href="/"><span class="brand-mark">⌁</span><span>Fixer<span>Tools</span></span></a>
+<p>Every little tool, one fast place. Free online tools designed to make everyday digital tasks simpler.</p>
+</div>
+<nav class="foot-links"><a href="/about">About</a><a href="/privacy-policy">Privacy Policy</a><a href="/terms-and-conditions">Terms of Service</a><a href="/disclaimer">Disclaimer</a><a href="/contact">Contact</a></nav>
+</div>
+<div class="copyright"><span>© 2024 FixerTools. All rights reserved.</span><a href="/sitemap.xml">Sitemap</a></div>
+</div>
+</footer>
+
+<script>
+(function(){
+const dropZone = document.getElementById('dropZone');
+const fileInput = document.getElementById('fileInput');
+const preview = document.getElementById('preview');
+const previewImg = document.getElementById('previewImg');
+const result = document.getElementById('result');
+const progress = document.getElementById('progress');
+const progressFill = document.getElementById('progressFill');
+const progressText = document.getElementById('progressText');
+const messageBox = document.getElementById('messageBox');
+const extractBtn = document.getElementById('extractBtn');
+const actions = document.getElementById('actions');
+const copyBtn = document.getElementById('copyBtn');
+const downloadBtn = document.getElementById('downloadBtn');
+const clearBtn = document.getElementById('clearBtn');
+const ocrLang = document.getElementById('ocrLang');
+
+let currentFile = null;
+
+const ACCEPTED = ['image/jpeg','image/png','image/webp','image/bmp','image/tiff'];
+
+function showError(msg){
+messageBox.innerHTML = '<div class="ocr-error">'+msg+'</div>';
+}
+function showSuccess(msg){
+messageBox.innerHTML = '<div class="ocr-success">'+msg+'</div>';
+}
+function clearMessages(){
+messageBox.innerHTML = '';
+}
+
+function handleFile(file){
+clearMessages();
+if(!ACCEPTED.includes(file.type)){
+showError('Unsupported file type. Please upload a JPG, PNG, WebP, BMP or TIFF image.');
+return;
+}
+if(file.size > 20*1024*1024){
+showError('File too large. Maximum size is 20 MB.');
+return;
+}
+currentFile = file;
+const reader = new FileReader();
+reader.onload = function(e){
+previewImg.src = e.target.result;
+preview.style.display = 'block';
+extractBtn.style.display = 'flex';
+actions.style.display = 'none';
+result.textContent = '';
+result.setAttribute('data-placeholder','Extracted text will appear here...');
+};
+reader.readAsDataURL(file);
+}
+
+dropZone.addEventListener('click', function(){
+fileInput.click();
+});
+
+dropZone.addEventListener('dragover', function(e){
+e.preventDefault();
+dropZone.classList.add('dragover');
+});
+
+dropZone.addEventListener('dragleave', function(){
+dropZone.classList.remove('dragover');
+});
+
+dropZone.addEventListener('drop', function(e){
+e.preventDefault();
+dropZone.classList.remove('dragover');
+if(e.dataTransfer.files.length){
+handleFile(e.dataTransfer.files[0]);
+}
+});
+
+fileInput.addEventListener('change', function(){
+if(fileInput.files.length){
+handleFile(fileInput.files[0]);
+}
+});
+
+extractBtn.addEventListener('click', async function(){
+if(!currentFile) return;
+extractBtn.disabled = true;
+extractBtn.textContent = 'Processing...';
+progress.style.display = 'block';
+progressFill.style.width = '0%';
+progressText.textContent = 'Initializing OCR...';
+clearMessages();
+
+try{
+const lang = ocrLang.value;
+const worker = await Tesseract.createWorker(lang, 1, {
+logger: function(m){
+if(m.status === 'recognizing text'){
+const pct = Math.round(m.progress * 100);
+progressFill.style.width = pct + '%';
+progressText.textContent = 'Extracting text... ' + pct + '%';
+} else if(m.status === 'loading language traineddata'){
+progressText.textContent = 'Loading language data...';
+} else if(m.status === 'initializing api'){
+progressText.textContent = 'Initializing OCR engine...';
+}
+}
+});
+
+const {data} = await worker.recognize(currentFile);
+const text = data.text.trim();
+
+if(text){
+result.textContent = text;
+result.removeAttribute('data-placeholder');
+showSuccess('Text extracted successfully! ' + text.length + ' characters.');
+actions.style.display = 'flex';
+} else {
+showError('No text was found in this image. Try a clearer image or check the language setting.');
+}
+
+await worker.terminate();
+}catch(err){
+showError('OCR processing failed: ' + (err.message || 'Unknown error'));
+console.error(err);
+}
+
+progress.style.display = 'none';
+extractBtn.disabled = false;
+extractBtn.innerHTML = '<i class="fa-solid fa-magnifying-glass"></i> Extract Text';
+});
+
+copyBtn.addEventListener('click', async function(){
+const text = result.textContent;
+if(!text) return;
+try{
+await navigator.clipboard.writeText(text);
+showSuccess('Text copied to clipboard!');
+}catch{
+const ta = document.createElement('textarea');
+ta.value = text;
+document.body.appendChild(ta);
+ta.select();
+document.execCommand('copy');
+document.body.removeChild(ta);
+showSuccess('Text copied to clipboard!');
+}
+});
+
+downloadBtn.addEventListener('click', function(){
+const text = result.textContent;
+if(!text) return;
+const blob = new Blob([text], {type:'text/plain'});
+const url = URL.createObjectURL(blob);
+const a = document.createElement('a');
+a.href = url;
+a.download = 'extracted-text.txt';
+a.click();
+URL.revokeObjectURL(url);
+showSuccess('Text downloaded as TXT file!');
+});
+
+clearBtn.addEventListener('click', function(){
+currentFile = null;
+fileInput.value = '';
+preview.style.display = 'none';
+previewImg.src = '';
+result.textContent = '';
+result.setAttribute('data-placeholder','Extracted text will appear here...');
+actions.style.display = 'none';
+extractBtn.style.display = 'none';
+progress.style.display = 'none';
+clearMessages();
+});
+
+// Mobile menu
+const menuBtn = document.getElementById('menuBtn');
+if(menuBtn){
+menuBtn.addEventListener('click', function(){
+const navlinks = document.querySelector('.navlinks');
+if(navlinks){
+const isOpen = navlinks.style.display === 'flex';
+navlinks.style.display = isOpen ? 'none' : 'flex';
+navlinks.style.position = 'absolute';
+navlinks.style.top = '78px';
+navlinks.style.left = '0';
+navlinks.style.right = '0';
+navlinks.style.background = 'var(--bg)';
+navlinks.style.flexDirection = 'column';
+navlinks.style.padding = '20px';
+navlinks.style.borderBottom = '1px solid var(--line)';
+navlinks.style.zIndex = '99';
+menuBtn.setAttribute('aria-expanded', String(!isOpen));
+}
+});
+}
+})();
+</script>
 </body>
 </html>
