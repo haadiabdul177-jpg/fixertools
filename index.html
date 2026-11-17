@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<link rel="icon" href="/favicon.ico" sizes="any"/>
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"/>
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"/>
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"/>
+<link rel="icon" href="./favicon.ico" sizes="any"/>
+<link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png"/>
+<link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png"/>
+<link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png"/>
 <meta charset="utf-8"/>
 <meta name="google-adsense-account" content="ca-pub-1000892808455531">
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
@@ -23,8 +23,8 @@
 <script type="application/ld+json">
   {"@context":"https://schema.org","@type":"WebSite","name":"FixerTools","url":"https://fixertools.online/","description":"Free online calculators, converters, text and image tools."}
   </script>
-<script src="/tools-data.js" defer></script>
-<link href="/style.css" rel="stylesheet"/></head>
+<script src="./tools-data.js" defer></script>
+<link href="./style.css" rel="stylesheet"/></head>
 <body data-page="index">
 <header class="topbar">
 <div class="wrap nav">
@@ -89,6 +89,7 @@
 <a class="tool-card" data-category="Converters" href="/volume-converter"><span class="tool-icon">🧪</span><h3>Volume Converter</h3><p>Convert between common volume measurement units.</p><span class="tool-link">Use tool &rarr;</span></a>
 <a class="tool-card" data-category="Image Tools" href="/image-compressor"><span class="tool-icon">🗜️</span><h3>Image Compressor</h3><p>Reduce image file size for easier sharing and upload.</p><span class="tool-link">Use tool &rarr;</span></a>
 <a class="tool-card" data-category="Image Tools" href="/youtube-thumbnail-downloader"><span class="tool-icon">🖼️</span><h3>YouTube Thumbnail Downloader</h3><p>Download YouTube thumbnails in HD quality for free.</p><span class="tool-link">Use tool &rarr;</span></a>
+<a class="tool-card" data-category="Image Tools" href="/image-to-text"><span class="tool-icon">📷</span><h3>Image to Text Converter</h3><p>Extract text from images using OCR technology.</p><span class="tool-link">Use tool &rarr;</span></a>
 <a class="tool-card" data-category="Other Tools" href="/pdf-compressor"><span class="tool-icon">📄</span><h3>PDF Compressor</h3><p>Compress PDF files in the browser without uploading them.</p><span class="tool-link">Use tool &rarr;</span></a>
 </div>
 <div class="empty" id="emptyState">No tools found. Try another search.</div>
@@ -182,7 +183,7 @@
       [['All','All tools']].concat(built.names.filter(n=>TOOLS.some(t=>t.cat===n)).map(n=>[n,n])).forEach(([k,label])=>{
         const b=document.createElement('button');b.type='button';b.className='filter';b.dataset.filter=k;b.textContent=label;
         b.addEventListener('click',()=>setFilter(k));wrap.append(b);});
-      topIn.placeholder='Search '+TOOLS.length+' tools: age, QR, JSON, BMI, PDF...';
+      topIn.placeholder='Search '+TOOLS.length+' tools: age, QR, JSON, BMI, Image to Text, PDF...';
     }else{
       TOOLS=fromPage();   /* data file missing: keep the page working from its own static cards */
       filterButtons().forEach(b=>b.addEventListener('click',()=>setFilter(b.dataset.filter)));

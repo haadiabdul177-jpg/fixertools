@@ -8,7 +8,7 @@
  * Field guide
  *   id            unique, lowercase, hyphenated. Normally equals the page filename.
  *   name          the visible tool name.
- *   url           the public path, starting with "/" and WITHOUT ".html".
+ *   url           the public path, root-relative and WITHOUT ".html" (clean URL).
  *   category      one of the category names listed in FIXERTOOLS.categories.
  *   description   one short sentence shown on cards and in search results.
  *   keywords      extra words people may search for (homepage search uses them).
@@ -188,6 +188,17 @@ window.FIXERTOOLS = {
       keywords: ["pdf", "compress", "reduce size", "pdf compressor", "smaller pdf", "pdf file size", "compress pdf online", "pdf optimizer"],
       icon: "📄",
       relatedTools: ["image-compressor", "json-formatter", "qr-code-generator", "word-counter", "case-converter"],
+      status: "active"
+    },
+    {
+      id: "image-to-text",
+      name: "Image to Text Converter",
+      url: "/image-to-text",
+      category: "Image Tools",
+      description: "Extract text from images using OCR technology.",
+      keywords: ["image", "text", "OCR", "extract", "converter", "JPG", "PNG", "photo", "screenshot", "free"],
+      icon: "📷",
+      relatedTools: ["bmi-calculator", "percentage-calculator", "word-counter", "case-converter", "pdf-compressor"],
       status: "active"
     }
   ]
