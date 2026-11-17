@@ -36,6 +36,8 @@
     p = p.replace(/\/index\.html?$/i, "/");
     p = p.replace(/\.html?$/i, "");
     if (p.length > 1) p = p.replace(/\/+$/, "");
+    /* Normalise "./" prefix so relative and absolute paths match. */
+    if (p.charAt(0) === "." && p.charAt(1) === "/") p = p.slice(2);
     return p.toLowerCase() || "/";
   }
 
@@ -50,7 +52,8 @@
     var out = [];
     data.tools.forEach(function (t) {
       if (!t || t.status !== "active") return;
-      if (!isText(t.id) || !isText(t.name) || !isText(t.url) || t.url.charAt(0) !== "/") return;
+      if (!isText(t.id) || !isText(t.name) || !isText(t.url)) return;
+      if (t.url.charAt(0) !== "/" && t.url.charAt(0) !== ".") return;
       if (ids[t.id]) return; /* duplicate id: keep the first */
       ids[t.id] = true;
       out.push(t);
